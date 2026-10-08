@@ -7,7 +7,7 @@ mera.health engineering-intern take-home (`brief.md`). A hospital asked: "which 
 
 ## Hard rules
 1. **Never edit `PLAN.md`.** It was committed before any code, and the brief says not to change it. If the plan turns out wrong, record that in `DECISIONS.md` §0.
-2. **Log every critical decision in `DECISIONS.md` when it's made**, in the right section (§0 pre-code, §1 terms, §2 data problems, §3 flagged for review, §4 can't be trusted for, §5 looked up). Keep it within 2 pages: about 1,100 words now, so trim when adding.
+2. **Log every critical decision in `DECISIONS.md` when it's made**, in the right section (§0 pre-code, §1 terms, §2 data problems, §3 flagged for review, §4 can't be trusted for, §5 looked up). The brief says 2 pages max, but the user's call is: **going over is fine; losing important information is not.** Trim repetition only, never specifics (names, counts, cases).
 3. **Never modify `export/`.** All cleaning happens in code, and every change is logged via `log_fix()` to `output/data_fixes.csv`. A silent change, merge or drop is a rejection criterion in the brief.
 4. **Never merge suspected duplicate patients.** Flag both records to REVIEW and combine their history only to compute the due date. A wrong merge means a call to the wrong person.
 5. **Never match people on name alone.** Same-name different-people exist (Lakshmi Devi, Ravi Kumar, Sunitha Rao).
@@ -49,10 +49,11 @@ python -m venv .venv
 - [x] overdue.py, with hand checks: exclusions, review list, duplicate pairs, call-list spot checks against raw CSVs
 - [x] DECISIONS.md (first full version)
 - [x] User sent the 5-question email. **No reply yet.** When it arrives, update definitions/constants, re-run, update DECISIONS, reply.txt and figures.
-- [x] reply.txt (200 words exactly, counting the "[your name]" placeholder; every figure checked against the 2026-10-08 run)
+- [x] reply.txt (195 words, signed by the user; 45 overdue / 38 callable; every figure checked against the 2026-10-08 run)
 - [x] README.md with run instructions (tested on pandas 3.0.6 and 2.3.3)
+- [x] Review fixes: "impaired fasting glucose" → prediabetes; booking-vs-note disagreement shown; caller flag for "overdue only after export end"; `--default-months` / `--grace-days` flags; `check_assumptions.py` (32 of 38 robust); current ADA 2026 citations
 - [ ] Final pass: re-run, check every number in the docs matches, trim DECISIONS to 2 pages
 - [ ] User exports the agent transcripts
 
 ## Note
-`Downloads/CLAUDE.md` belongs to a different project (VLM ID forgery) and loads here only because it sits in a parent folder. Ignore it.
+The unrelated `Downloads/CLAUDE.md` (VLM ID-forgery project) has been moved out by the user. If an unrelated parent CLAUDE.md ever loads again, ignore it.

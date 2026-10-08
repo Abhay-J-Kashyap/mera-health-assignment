@@ -1,16 +1,18 @@
 Hi Meenakshi,
 
-The call list is ready: 38 diabetic patients who have missed their check-up, as of 8 October. Open call_list.html, most overdue first. Each row has the phone number, date of birth to confirm, and a note for the caller.
+As of 8 October, 45 diabetic patients have missed their check-up. 38 can be called now: open call_list.html, most overdue first. Each row has the phone number, date of birth to confirm, and a note for the caller.
 
 How I decided:
-- Diabetic: a doctor wrote diabetes in their notes, or they take diabetes medicine. Diabetes only during pregnancy and "borderline sugar" are not included.
-- Overdue: more than two weeks past the review date their doctor set. Where no date was set, I used three months after their last diabetes visit. Tell me if your doctors prefer a different gap.
+- Diabetic: a doctor wrote diabetes in their notes, or they take diabetes medicine. Diabetes only in pregnancy and "borderline sugar" are not included.
+- Overdue: over two weeks past the review date their doctor set. Where no date was set, I used three months after their last diabetes visit. Tell me if your doctors prefer a different gap.
 
-Please ask a doctor to look at 8 patients whose blood tests show high sugar but who have no diabetes diagnosis on record. Some were told to come back with reports and never did.
+The other 7 need your records team first: 3 patients registered twice, 3 with no phone number, and 1 with an impossible date of birth.
 
-For your records team: 4 patients are registered twice, 3 overdue patients have no phone number, and 1 has an impossible date of birth. 3 patients have died and 3 moved away; this is only in doctors' notes, so please update their records.
+Please ask a doctor to look at 8 patients whose blood tests show high sugar but who have no diabetes diagnosis on record. Some never came back with their reports.
 
-The list only sees records up to 29 September; please check for existing bookings before calling.
+3 patients have died and 3 moved away. This is only in doctors' notes, so please update their records.
+
+The list only sees records up to 29 September; please check for bookings before calling.
 
 Thanks,
-[your name]
+Abhay J Kashyap
