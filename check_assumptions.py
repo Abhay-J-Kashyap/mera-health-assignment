@@ -5,9 +5,9 @@ import sys
 import pandas as pd
 
 PY = sys.executable
-BASE = ["--as-of", "2026-10-08"]
+BASE = []  # the bare command: as of the export's last visit date
 VARIANTS = {
-    "as of export end (2026-09-29)": ["--as-of", "2026-09-29"],
+    "as of a later date (2026-10-08)": ["--as-of", "2026-10-08"],
     "default gap 6 months": BASE + ["--default-months", "6"],
     "default gap 2 months": BASE + ["--default-months", "2"],
     "grace 0 days": BASE + ["--grace-days", "0"],
