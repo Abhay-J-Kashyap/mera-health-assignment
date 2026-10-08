@@ -534,7 +534,8 @@ def table(df, cols, headers, cells=None):
 def outcome_select(r):
     options = '<option value=""></option>' + "".join(f"<option>{html.escape(o)}</option>" for o in OUTCOMES)
     attrs = " ".join(f'data-{k}="{html.escape(str(r[k]), quote=True)}"' for k in ("mrn", "name", "phone"))
-    return f'<select class="outcome" {attrs}>{options}</select>'
+    # The span carries the chosen text for printing: a dropdown can't wrap and gets cut off.
+    return f'<select class="outcome" {attrs}>{options}</select><span class="outcome-print"></span>'
 
 
 # Keeps dropdown choices in this browser (per list date) and exports them as a CSV for the
@@ -545,8 +546,10 @@ let saved = {};
 try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
 document.querySelectorAll("select.outcome").forEach(s => {
   if (saved[s.dataset.mrn]) s.value = saved[s.dataset.mrn];
+  s.nextElementSibling.textContent = s.value;
   s.addEventListener("change", () => {
     saved[s.dataset.mrn] = s.value;
+    s.nextElementSibling.textContent = s.value;
     try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
   });
 });
@@ -570,11 +573,11 @@ body{{font-family:Arial,sans-serif;font-size:13px;margin:24px;color:#111}}
 table{{border-collapse:collapse;width:100%;margin-bottom:28px}}
 th,td{{border:1px solid #999;padding:4px 6px;text-align:left;vertical-align:top}}
 th{{background:#eee}} .note{{background:#fff8dc;padding:8px;border:1px solid #e0c060}}
-th:last-child{{min-width:140px}} select.outcome{{width:100%;max-width:220px}}
+th:last-child{{min-width:140px}} select.outcome{{width:100%;max-width:220px}} .outcome-print{{display:none}}
 @page{{size:landscape}}
 @media print{{body{{margin:8mm}} h2{{page-break-before:always}} h2:first-of-type{{page-break-before:auto}}
 tr{{page-break-inside:avoid}} thead{{display:table-header-group}} .no-print{{display:none}}
-select.outcome{{appearance:none;-webkit-appearance:none;border:none;background:none;font:inherit;color:inherit}}}}
+select.outcome{{display:none}} .outcome-print{{display:inline}}}}
 </style>
 <h1>Diabetes follow-up call list</h1>
 <p>As of <b>{as_of.date()}</b>. Built from the export up to {export_end.date()}; visits after that are not included.</p>
