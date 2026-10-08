@@ -76,20 +76,20 @@ I used Claude Code throughout; the transcripts are in `transcripts/`, unedited. 
 - **Plan before code.** I stopped the agent from writing `PLAN.md` until I had reviewed it and iterated on it. I decided what went in the email to the hospital, and the plan was committed before any code. I also reiterated the plan multiple times before writing the code. 
 - **Decisions logged as they happen.** I created the `DECISIONS.md`. I then set a standing rule that every critical decision is logged when it's made, and had a project `CLAUDE.md` written so the rules survive across sessions.
 - **Specifics over length.** To fit 2 pages, the agent cut the names of the patients whose status depends on assumptions. I ruled that losing specifics is worse than going over the length limit. Later I set a firm 2-page limit. It was met by moving "What I'd do next" into this README and removing repetition, with every definition, name and count kept.
-- **Reviews of the first version found 6 issues the agent had missed.** The reviews were partly my own and partly an independent review I ran in a separate agent session. I checked each point and decided what to change:
+- **An independent review of the first version found 6 issues the agent had missed.** I ran the review in a separate agent session; that session's transcript is included. I checked each point and decided what to change, and I also checked the data myself, e.g. looking up SVH026167 in `visits.csv`. The 6 issues:
   1. "Impaired fasting glucose" written out wasn't recognised as prediabetes.
-  2. A booked date silently overrode a conflicting interval in the doctor's note.
+  2. An appointment date silently overrode a conflicting interval in the doctor's note.
   3. The reply undercounted overdue patients, counting only the callable ones.
-  4. Two limits weren't stated: the export starts in Oct 2023, and future bookings *are* in it.
+  4. Two limits weren't stated: the export starts in Oct 2023, and future appointment dates *are* in it.
   5. The ADA sources were old summaries.
   6. Nothing showed how much the list depends on the assumptions.
 
-  This agent verified each one against the data before changing anything; for #6 it found one more name than the review had. A second round of review, again partly mine and partly the separate session, led to:
+  This agent verified each one against the data before changing anything; for #6 it found one more name than the review had. Further rounds from the separate session, each checked and decided by me, led to:
   - the export-date default
   - the split review lists
   - the borderline flag
   - showing doctors every diabetic-range result
 
-  It also pointed out places where my documents had fallen out of step with the outputs.
+  They also pointed out places where my documents had fallen out of step with the outputs, or claimed more than the data supports (e.g. treating `next_appointment` as a confirmed booking).
 - **What the agent caught or corrected itself:** profiling disproved the plan's drug rule (insulin given in pregnancy). It also claimed a pandas 2 bug, then tested it and withdrew the claim.
 - **Agreements:** when the agent asked me to choose (stack, output, the 3-month default, flagging duplicates instead of merging), I picked its recommended option each time. I agreed with its reasons; I didn't overrule it on those.
