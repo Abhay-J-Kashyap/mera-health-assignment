@@ -34,7 +34,7 @@ mera.health engineering-intern take-home (`brief.md`). A hospital asked: "which 
 | `overdue.py` | The tool: load and clean, read notes, classify, follow-up, outputs |
 | `check_assumptions.py` | Re-runs `overdue.py` under alternative assumptions and diffs the call list |
 | `output/` | call_list.csv/.html, review_for_doctor.csv, review_for_records_team.csv, exclusions.csv, all_patients.csv, data_fixes.csv, summary.txt (not committed) |
-| `DECISIONS.md` | Graded deliverable, max 2 pages |
+| `DECISIONS.md` | Graded deliverable. The brief says max 2 pages; the user chose to exceed it rather than lose specifics (see rule 2) |
 | `reply.txt` | Graded deliverable: email to Meenakshi, max 200 words, non-technical, not a doctor |
 
 ## Commands (Windows, PowerShell)
@@ -54,11 +54,9 @@ python -m venv .venv
 - [x] DECISIONS.md (first full version)
 - [x] User sent the 5-question email. **No reply yet.** When it arrives, update definitions/constants, re-run, update DECISIONS, reply.txt and figures.
 - [x] reply.txt (197 words, signed by the user; as of 29 Sep: 42 overdue / 35 callable / 4 borderline; 8 for a doctor, 7 for the records team)
-- [x] Iteration 3: export-date default; review split by who acts (pairs shown once); borderline flag; Outcome and Other-visits columns; DECISIONS §6 "What I'd do next"; README "How I worked with the agent" (user to confirm wording)
+- [x] Iteration 3: export-date default; review split by who acts (pairs shown once); borderline flag; Outcome and Other-visits columns; DECISIONS §6 "What I'd do next"; README "How I worked with the agent" (wording confirmed and edited by the user; reviews described as partly the user's own and partly a separate agent session, as the user stated)
+- [x] Doctor list shows every diabetic-range result (4 of 8 have two or more); print rows don't split across pages
 - [x] README.md with run instructions (tested on pandas 3.0.6 and 2.3.3)
-- [x] Review fixes: "impaired fasting glucose" → prediabetes; booking-vs-note disagreement shown; caller flag for "overdue only after export end"; `--default-months` / `--grace-days` flags; `check_assumptions.py` (32 of 38 robust); current ADA 2026 citations
-- [ ] Final pass: re-run, check every number in the docs matches, trim DECISIONS to 2 pages
-- [ ] User exports the agent transcripts, unedited, to `transcripts/` (the README already says they're there)
-
-## Note
-The unrelated `Downloads/CLAUDE.md` (VLM ID-forgery project) has been moved out by the user. If an unrelated parent CLAUDE.md ever loads again, ignore it.
+- [x] Review fixes: "impaired fasting glucose" → prediabetes; booking-vs-note disagreement shown; caller flag for "overdue only after export end"; `--default-months` / `--grace-days` flags; `check_assumptions.py`; current ADA 2026 citations
+- [x] Final pass: re-ran the bare command; every figure in DECISIONS, reply and README matches (21 checks). DECISIONS stays over 2 pages by the user's choice.
+- [ ] **Before submitting:** user exports the agent transcripts, unedited, to `transcripts/`. The README already says they're there, so this must happen.

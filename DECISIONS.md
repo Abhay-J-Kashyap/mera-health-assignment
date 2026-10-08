@@ -19,7 +19,7 @@ Figures below are from `python overdue.py`, measured as of the export's last vis
   - gestational diabetes only (2)
   - prediabetes / borderline sugars (4)
   - one diabetic-range HbA1c that was normal on repeat (3). ADA requires two abnormal results.
-- *Caught in my review of the first version:* "Impaired fasting glucose" written out in full wasn't recognised as prediabetes, only the abbreviation "IFG". It's fixed, and that patient moved from NOT_DIABETIC to EXCLUDED.
+- *Caught in review of the first version:* "Impaired fasting glucose" written out in full wasn't recognised as prediabetes, only the abbreviation "IFG". It's fixed, and that patient moved from NOT_DIABETIC to EXCLUDED.
 - *Wrongly left out:* diabetics whose notes use none of our words and who take only metformin; anyone diagnosed elsewhere.
 - *Wrongly included:* a note like "?DM" (query diabetes) would count. I saw none, but the check is a word match, not a reading.
 
@@ -57,7 +57,7 @@ Every change is logged to `output/data_fixes.csv` with its csv line.
 | 3 overdue diabetics had sugar tests in Sept 2026 but no visit since 2025 | Kept on the list, with a caller note. Either they skipped review or the export is missing visits. |
 
 ## 3. Flagged for a person instead of deciding (19 records, 15 people, two lists)
-- **For a doctor (`review_for_doctor.csv`, 8 people):** diabetic-range blood results but no diagnosis recorded. Examples: HbA1c 8.2% with "increased thirst"; 8.1% "reports to be collected, review SOS"; 6.6% after gestational diabetes. A diagnosis needs a doctor (and, per ADA, a second abnormal result). One of the 8, Md. Rafiq, is also registered twice; his row says so. Probably the most important output.
+- **For a doctor (`review_for_doctor.csv`, 8 people):** diabetic-range blood results but no diagnosis recorded. Examples: HbA1c 8.2% with "increased thirst"; 8.1% "reports to be collected, review SOS"; 6.6% after gestational diabetes. A diagnosis needs a doctor (and, per ADA, a second abnormal result). Each row lists every diabetic-range result across the person's records. 4 of the 8 already have two or more; the other 4 have one result, not yet repeated. One of the 8, Md. Rafiq, is also registered twice; his row says so and combines both records' results. Probably the most important output.
 - **For the records team (`review_for_records_team.csv`, 7 people):** 3 people registered twice (all overdue; merge, then call), 3 overdue patients with no phone, and 1 with an impossible date of birth.
 
 ## 4. What this can't be trusted for
