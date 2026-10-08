@@ -37,7 +37,10 @@ DIABETES = re.compile(r"diabet|\bt1dm\b|\bt2dm\b|\bdm2?\b|\bniddm\b|\biddm\b|\bo
 NEGATED_OR_FAMILY = re.compile(
     r"\bno h/o\b|\bdenies\b|non-?diabetic|\bf/h\b|family history|\bfather\b|\bmother\b|\bparents?\b|\bbrother\b|\bsister\b"
 )
-PREDIABETES = re.compile(r"pre-?diabet|\bigt\b|\bifg\b|sugars?\s+borderline|borderline\s+(?:high\s+)?sugars?")
+PREDIABETES = re.compile(
+    r"pre-?diabet|\bigt\b|\bifg\b|impaired (?:fasting glucose|glucose tolerance)"
+    r"|sugars?\s+borderline|borderline\s+(?:high\s+)?sugars?"
+)
 GESTATIONAL = re.compile(r"\bgdm\b|gestational")
 PREGNANCY = re.compile(r"\banc\b|\bpnc\b|\bgdm\b|gestational|pregnan")
 TYPE_1 = re.compile(r"\bt1dm\b|type\s*1\b|juvenile")
@@ -270,7 +273,7 @@ def diabetes_evidence(v, labs):
     return is_diabetic, "; ".join(parts)
 
 
-def follow_up(v, lab, as_of):
+def follow_up(v, lab, as_of, export_end):
     """Due date from the last diabetes review visit, and whether it's overdue."""
     reviews = v[v["is_review"]].sort_values("visit_date")
     basis_note = ""
@@ -278,36 +281,46 @@ def follow_up(v, lab, as_of):
         reviews = v[v["diabetes"].map(bool) & ~v["pregnancy"]].sort_values("visit_date")
         basis_note = " (no diabetes review visit found; last visit mentioning diabetes used)"
     last = reviews.iloc[-1]
+    offset, phrase = stated_interval(last["notes"])
+    note_due = last["visit_date"] + offset if offset is not None else None
     if pd.notna(last["next_appointment"]):
+        # A booked date wins over the interval in the note: the patient holds that booking.
+        # When they disagree by over a month, say so rather than choosing silently.
         due, basis = last["next_appointment"], "next appointment date set by doctor"
+        if note_due is not None and abs((due - note_due).days) > 30:
+            basis += f"; note said \"{phrase}\" (due {note_due.date()}), booked date used"
+    elif note_due is not None:
+        due, basis = note_due, f"doctor wrote \"{phrase}\""
     else:
-        offset, phrase = stated_interval(last["notes"])
-        if offset is not None:
-            due, basis = last["visit_date"] + offset, f"doctor wrote \"{phrase}\""
-        else:
-            due = last["visit_date"] + pd.DateOffset(months=DEFAULT_INTERVAL_MONTHS)
-            basis = f"no date in note; default {DEFAULT_INTERVAL_MONTHS} months"
+        due = last["visit_date"] + pd.DateOffset(months=DEFAULT_INTERVAL_MONTHS)
+        basis = f"no date in note; default {DEFAULT_INTERVAL_MONTHS} months"
     days_overdue = (as_of - due).days
+    overdue = days_overdue > GRACE_DAYS
+    # Overdue only because time has passed since the export ended: they may have visited since.
+    after_export = overdue and (export_end - due).days <= GRACE_DAYS
     later = v[v["visit_date"] > last["visit_date"]]
     other = "; ".join(f"seen in {r.department} on {r.visit_date.date()} (not a diabetes review)"
                       for r in later.itertuples())
     # Sugar tests done after the last review: the patient came in, but no doctor has
     # seen the results. Still overdue, but the caller needs to know.
     tested = lab[lab["collected_on"] > last["visit_date"]].sort_values("collected_on")
-    tests_note = ""
+    caller_flags = ""
     if len(tested):
         t = tested.iloc[-1]
-        tests_note = (f"had sugar tests on {t['collected_on'].date()} but no doctor review since: "
+        caller_flags = (f"had sugar tests on {t['collected_on'].date()} but no doctor review since: "
                       f"book a review to go over results")
+    if after_export:
+        caller_flags = "; ".join(filter(None, [caller_flags, (
+            f"only became overdue after the export ends ({export_end.date()}): check for a visit since")]))
     return {
         "last_diabetes_visit": last["visit_date"].date(), "last_doctor": last["doctor"],
         "last_visit_note": last["notes"], "due_date": due.date(), "due_basis": basis + basis_note,
-        "days_overdue": int(days_overdue), "overdue": days_overdue > GRACE_DAYS, "later_visits": other,
-        "tests_note": tests_note,
+        "days_overdue": int(days_overdue), "overdue": overdue, "later_visits": other,
+        "caller_flags": caller_flags,
     }
 
 
-def classify(patients, visits, labs, as_of):
+def classify(patients, visits, labs, as_of, export_end):
     phone_owners = patients[patients["phone"] != ""].groupby("phone")["mrn"].agg(list)
     same_person = patients[(patients["phone"] != "") & patients.duplicated(["dob", "phone"], keep=False)]
     pair_of = {}
@@ -381,9 +394,9 @@ def classify(patients, visits, labs, as_of):
             continue
 
         # Diabetic. Work out follow-up across every record that may be this person.
-        fu = follow_up(visits[visits["mrn"].isin(mrns)], labs[labs["mrn"].isin(mrns)], as_of)
+        fu = follow_up(visits[visits["mrn"].isin(mrns)], labs[labs["mrn"].isin(mrns)], as_of, export_end)
         row.update(fu)
-        notes = [fu["tests_note"]] if fu["tests_note"] else []
+        notes = [fu["caller_flags"]] if fu["caller_flags"] else []
         if v["type_1"].any():
             notes.append("Type 1 diabetes")
         if age < ADULT_AGE:
@@ -482,14 +495,22 @@ or has died or moved, note it and tell the records team. Do not discuss test res
 
 
 def main():
+    global DEFAULT_INTERVAL_MONTHS, GRACE_DAYS
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--as-of", default=date.today().isoformat(), help="date to measure overdue from (YYYY-MM-DD)")
-    as_of = pd.Timestamp(parser.parse_args().as_of)
+    parser.add_argument("--default-months", type=int, default=DEFAULT_INTERVAL_MONTHS,
+                        help="follow-up gap when the doctor wrote no date (default: %(default)s)")
+    parser.add_argument("--grace-days", type=int, default=GRACE_DAYS,
+                        help="days past due before someone counts as overdue (default: %(default)s)")
+    args = parser.parse_args()
+    as_of = pd.Timestamp(args.as_of)
+    DEFAULT_INTERVAL_MONTHS, GRACE_DAYS = args.default_months, args.grace_days
 
     patients, visits, labs, rx = load()
     visits = annotate_visits(visits, rx)
-    result = classify(patients, visits, labs, as_of)
-    write_outputs(result, as_of, visits["visit_date"].max())
+    export_end = visits["visit_date"].max()
+    result = classify(patients, visits, labs, as_of, export_end)
+    write_outputs(result, as_of, export_end)
 
 
 if __name__ == "__main__":

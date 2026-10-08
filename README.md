@@ -29,4 +29,14 @@ Leave out `--as-of` to measure from today. To keep the install separate, create 
 - `reply.txt`: the email back to the hospital.
 - `profile_export.py`: read-only data profiling. Its report is in `profiling/`.
 
-Assumptions you may want to change are constants at the top of `overdue.py`: `DEFAULT_INTERVAL_MONTHS` (3), `GRACE_DAYS` (14), and the diagnostic thresholds.
+## Changing the assumptions
+Two assumptions await the hospital's answer, and both can be changed without editing code:
+
+```
+python overdue.py --default-months 6 --grace-days 30
+```
+
+- `--default-months` (default 3) is the follow-up gap when the doctor wrote no date.
+- `--grace-days` (default 14) is how many days past due before a patient counts as overdue.
+
+`python check_assumptions.py` shows which call-list names change under different as-of dates, default gaps and grace periods. Diagnostic thresholds are constants at the top of `overdue.py`.
