@@ -17,7 +17,7 @@ To keep the install separate, create a virtual environment first: `python -m ven
 ## Output (`output/`)
 | File | For | Contents |
 |---|---|---|
-| `call_list.html` | Front desk | Printable list (landscape): who to call, most overdue first, with a caller note, other visits since, and a blank Outcome column. Also the two review lists below. |
+| `call_list.html` | Front desk | Printable list (landscape): who to call, most overdue first, with a caller note and other visits since. The two review lists below are included. Each row has an **Outcome dropdown** (see below). |
 | `call_list.csv` | Front desk / Excel | Same call list, plus the diabetes evidence for each patient and an empty `outcome` column |
 | `review_for_doctor.csv` | Doctor | High blood-sugar results with no diabetes diagnosis recorded. Not for the front desk to call. |
 | `review_for_records_team.csv` | Records team | Records to fix before anyone calls: registered twice (shown once), no phone, impossible date of birth |
@@ -25,6 +25,20 @@ To keep the install separate, create a virtual environment first: `python -m ven
 | `all_patients.csv` | Audit | Every patient's status and reason, one row per hospital number |
 | `data_fixes.csv` | Audit | Every change made to the data, with its csv line |
 | `summary.txt` | Audit | Counts per status (they add up to the 300 patients), review counts, borderline calls |
+
+### Recording call outcomes
+After each call, pick an outcome in `call_list.html`:
+- Booked follow-up appointment
+- Already has an appointment
+- No answer: try again
+- Asked to call back later
+- Declined follow-up
+- Wrong / not-working number (tell records team)
+- Treated elsewhere or moved away (tell records team)
+- Patient has died (tell records team)
+- Other (tell records team)
+
+Choices are kept in that browser on that computer only (per list date). **Export outcomes (CSV)** saves them as a file to send to the records team. On a printout, a chosen outcome prints as text and a blank one leaves space to write. These choices are provisional until the hospital says how it records calls.
 
 ## Other files
 - `PLAN.md`: the plan, committed before any code.

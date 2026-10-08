@@ -37,7 +37,7 @@ A booked date wins over the note, because the patient holds that booking. Where 
 - **30-day grace instead of 14:** Manjula D (28 days overdue) and Rashmi Bhat (17) drop off.
 - **The other way:** measuring to 8 Oct, or using no grace, adds Renuka Iyengar, Vimala P and Lakshmi Devi (SVH028218). A 2-month default adds Vimala P. If run for a later date, anyone overdue only because time has passed since the export is also flagged borderline.
 
-**"Patient"** is one person, not one MRN. **"Can call"** means a phone exists and identity can be confirmed. Each row has a date of birth, a caller note, any non-diabetes visits since (e.g. "seen in Dental on 4 Aug"), and a blank Outcome column for the caller.
+**"Patient"** is one person, not one MRN. **"Can call"** means a phone exists and identity can be confirmed. Each row has a date of birth, a caller note, and any non-diabetes visits since (e.g. "seen in Dental on 4 Aug"). It also has an Outcome dropdown: booked, already booked, no answer, call back, declined, and four outcomes marked "tell records team" (wrong number, moved or treated elsewhere, died, other). Choices stay in that browser only and are exported as a CSV for the records team. Nothing is sent anywhere. The list of outcomes is provisional until the hospital answers question 5.
 
 ## 2. Data problems and what I did
 Every change is logged to `output/data_fixes.csv` with its csv line.

@@ -56,6 +56,7 @@ python -m venv .venv
 - [x] reply.txt (197 words, signed by the user; as of 29 Sep: 42 overdue / 35 callable / 4 borderline; 8 for a doctor, 7 for the records team)
 - [x] Iteration 3: export-date default; review split by who acts (pairs shown once); borderline flag; Outcome and Other-visits columns; DECISIONS §6 "What I'd do next"; README "How I worked with the agent" (wording confirmed and edited by the user; reviews described as partly the user's own and partly a separate agent session, as the user stated)
 - [x] Doctor list shows every diabetic-range result (4 of 8 have two or more); print rows don't split across pages
+- [x] Outcome dropdown in call_list.html (`OUTCOMES` in overdue.py). Kept in browser localStorage per list date, plus an "Export outcomes (CSV)" button. Tested in Node against a fake page; still to check in a real browser.
 - [x] README.md with run instructions (tested on pandas 3.0.6 and 2.3.3)
 - [x] Review fixes: "impaired fasting glucose" → prediabetes; booking-vs-note disagreement shown; caller flag for "overdue only after export end"; `--default-months` / `--grace-days` flags; `check_assumptions.py`; current ADA 2026 citations
 - [x] Final pass: re-ran the bare command; every figure in DECISIONS, reply and README matches (21 checks). DECISIONS stays over 2 pages by the user's choice.

@@ -457,6 +457,20 @@ CALL_COLUMNS = ["name", "mrn", "dob", "age", "phone", "caller_note", "days_overd
                 "last_diabetes_visit", "last_doctor", "later_visits", "diabetes_evidence", "outcome"]
 REVIEW_COLUMNS = ["name", "mrn", "phone", "reason", "diabetes_evidence"]
 
+# Choices for the Outcome dropdown on the printed call list. Provisional until the hospital
+# says how it records calls (question 5 of the email).
+OUTCOMES = [
+    "Booked follow-up appointment",
+    "Already has an appointment",
+    "No answer: try again",
+    "Asked to call back later",
+    "Declined follow-up",
+    "Wrong / not-working number (tell records team)",
+    "Treated elsewhere or moved away (tell records team)",
+    "Patient has died (tell records team)",
+    "Other (tell records team)",
+]
+
 
 def per_person(review):
     """One row per person: a double-registered person's records collapse into a single row.
@@ -505,11 +519,46 @@ def write_outputs(result, as_of, export_end):
     print(f"\nWritten to {OUT}/")
 
 
-def table(df, cols, headers):
+def table(df, cols, headers, cells=None):
+    """cells maps a column to a function that renders that cell's HTML itself."""
+    cells = cells or {}
     head = "".join(f"<th>{h}</th>" for h in headers)
-    body = "".join("<tr>" + "".join(f"<td>{html.escape(str(r[c]))}</td>" for c in cols) + "</tr>"
+    body = "".join("<tr>" + "".join(f"<td>{cells[c](r) if c in cells else html.escape(str(r[c]))}</td>"
+                                    for c in cols) + "</tr>"
                    for _, r in df.iterrows())
     return f"<table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>"
+
+
+def outcome_select(r):
+    options = '<option value=""></option>' + "".join(f"<option>{html.escape(o)}</option>" for o in OUTCOMES)
+    attrs = " ".join(f'data-{k}="{html.escape(str(r[k]), quote=True)}"' for k in ("mrn", "name", "phone"))
+    return f'<select class="outcome" {attrs}>{options}</select>'
+
+
+# Keeps dropdown choices in this browser (per list date) and exports them as a CSV for the
+# records team. Without this, choices would be lost when the page is closed.
+OUTCOME_SCRIPT = """<script>
+const KEY = "diabetes-call-outcomes-" + AS_OF;
+let saved = {};
+try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+document.querySelectorAll("select.outcome").forEach(s => {
+  if (saved[s.dataset.mrn]) s.value = saved[s.dataset.mrn];
+  s.addEventListener("change", () => {
+    saved[s.dataset.mrn] = s.value;
+    try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+  });
+});
+document.getElementById("export-outcomes").addEventListener("click", () => {
+  const q = v => '"' + String(v).replace(/"/g, '""') + '"';
+  const rows = [["mrn", "name", "phone", "outcome"].map(q).join(",")];
+  document.querySelectorAll("select.outcome").forEach(s =>
+    rows.push([s.dataset.mrn, s.dataset.name, s.dataset.phone, s.value].map(q).join(",")));
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([rows.join("\\r\\n")], {type: "text/csv"}));
+  a.download = "call_outcomes_" + AS_OF + ".csv";
+  a.click();
+});
+</script>"""
 
 
 def write_html(call, for_doctor, for_records, as_of, export_end):
@@ -519,25 +568,31 @@ body{{font-family:Arial,sans-serif;font-size:13px;margin:24px;color:#111}}
 table{{border-collapse:collapse;width:100%;margin-bottom:28px}}
 th,td{{border:1px solid #999;padding:4px 6px;text-align:left;vertical-align:top}}
 th{{background:#eee}} .note{{background:#fff8dc;padding:8px;border:1px solid #e0c060}}
-th:last-child{{min-width:140px}}
+th:last-child{{min-width:140px}} select.outcome{{width:100%;max-width:220px}}
 @page{{size:landscape}}
 @media print{{body{{margin:8mm}} h2{{page-break-before:always}} h2:first-of-type{{page-break-before:auto}}
-tr{{page-break-inside:avoid}} thead{{display:table-header-group}}}}
+tr{{page-break-inside:avoid}} thead{{display:table-header-group}} .no-print{{display:none}}
+select.outcome{{appearance:none;-webkit-appearance:none;border:none;background:none;font:inherit;color:inherit}}}}
 </style>
 <h1>Diabetes follow-up call list</h1>
 <p>As of <b>{as_of.date()}</b>. Built from the export up to {export_end.date()}; visits after that are not included.</p>
 <p class="note">Before calling: confirm name and date of birth. If the patient already has a booking, or has died
-or moved, write it in Outcome and tell the records team. Do not discuss test results on the phone.</p>
+or moved, record it in Outcome and tell the records team. Do not discuss test results on the phone.</p>
+<p class="no-print">Choose an Outcome after each call. Choices are kept in this browser on this computer only.
+When done, press <button id="export-outcomes" type="button">Export outcomes (CSV)</button> and send the file to the
+records team. On paper, a blank Outcome is space to write in.</p>
 <h2>Call ({len(call)}): most overdue first</h2>
 {table(call, ["name", "mrn", "dob", "age", "phone", "caller_note", "days_overdue", "due_date",
               "last_diabetes_visit", "last_doctor", "due_basis", "later_visits", "outcome"],
        ["Name", "MRN", "Date of birth", "Age", "Phone", "Note for caller", "Days overdue", "Was due",
-        "Last diabetes visit", "Doctor", "Why this due date", "Other visits since", "Outcome"])}
+        "Last diabetes visit", "Doctor", "Why this due date", "Other visits since", "Outcome"],
+       cells={"outcome": outcome_select})}
 <h2>For a doctor to check ({len(for_doctor)}): not for the front desk to call</h2>
 {table(for_doctor, ["name", "mrn", "phone", "reason"], ["Name", "MRN", "Phone", "What needs checking"])}
 <h2>For the records team to fix before anyone calls ({len(for_records)})</h2>
 {table(for_records, ["name", "mrn", "phone", "reason"], ["Name", "MRN", "Phone", "What needs fixing"])}
 """
+    page += OUTCOME_SCRIPT.replace("AS_OF", f'"{as_of.date()}"')
     (OUT / "call_list.html").write_text(page, encoding="utf-8")
 
 
