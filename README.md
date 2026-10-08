@@ -42,7 +42,7 @@ Choices are kept in that browser on that computer only (per list date). **Export
 
 ## Other files
 - `PLAN.md`: the plan, committed before any code.
-- `DECISIONS.md`: definitions, data problems, what was flagged for a person, limits, and what I'd do next.
+- `DECISIONS.md`: definitions, data problems, what was flagged for a person, and limits.
 - `reply.txt`: the email back to the hospital.
 - `profile_export.py`: read-only data profiling. Its report is in `profiling/`.
 - `check_assumptions.py`: which call-list names change if the assumptions change.
@@ -60,12 +60,22 @@ python overdue.py --default-months 6 --grace-days 30
 
 `python check_assumptions.py` shows which call-list names change under different as-of dates, default gaps and grace periods. The rows that would change are marked "borderline" in the call list. Diagnostic thresholds are constants at the top of `overdue.py`.
 
+## What I'd do next
+1. **Apply the hospital's answers** when they arrive: the definitions, `--default-months` and `--grace-days`, then re-run and update every figure.
+2. **Check the appointment book.** Matching the call list against the real booking system would remove the biggest wrong-call risk (DECISIONS §4).
+3. **A merge workflow for duplicate records,** confirmed by a person, so merged patients go back into the normal flow.
+4. **Record call outcomes properly,** once the hospital says how they'll use the list (question 5). The Outcome dropdown is a stand-in.
+5. **Reach patients last seen before Oct 2023** from an older export.
+6. **Let doctors set priority.** Ordering by clinical risk (e.g. HbA1c) is a clinical judgement. I'd offer it as an option for doctors to choose, not a default.
+7. **Eye, foot and kidney checks** ("fundus check due", "urine microalbumin adv") as separate overdue items.
+8. **A small test set for the note reader:** the phrases that fooled it (negations, "impaired fasting glucose"), so later changes can't bring those mistakes back.
+
 ## How I worked with the agent
 I used Claude Code throughout; the transcripts are in `transcripts/`, unedited. Where I steered or corrected it:
 
 - **Plan before code.** I stopped the agent from writing `PLAN.md` until I had reviewed it and iterated on it. I decided what went in the email to the hospital, and the plan was committed before any code. I also reiterated the plan multiple times before writing the code. 
 - **Decisions logged as they happen.** I created the `DECISIONS.md`. I then set a standing rule that every critical decision is logged when it's made, and had a project `CLAUDE.md` written so the rules survive across sessions.
-- **Specifics over length.** To fit 2 pages, the agent cut the names of the patients whose status depends on assumptions. I ruled that losing specifics is worse than going over the length limit.
+- **Specifics over length.** To fit 2 pages, the agent cut the names of the patients whose status depends on assumptions. I ruled that losing specifics is worse than going over the length limit. Later I set a firm 2-page limit. It was met by moving "What I'd do next" into this README and removing repetition, with every definition, name and count kept.
 - **Reviews of the first version found 6 issues the agent had missed.** The reviews were partly my own and partly an independent review I ran in a separate agent session. I checked each point and decided what to change:
   1. "Impaired fasting glucose" written out wasn't recognised as prediabetes.
   2. A booked date silently overrode a conflicting interval in the doctor's note.

@@ -146,6 +146,32 @@ for p, n in joined[joined != ""].value_counts().head(40).items():
 say("Diabetes-mention visits with neither an interval phrase nor next_appointment (sample):")
 show(visits[diab_visit & ~has_interval & ~has_nappt], ["visit_id", "mrn", "visit_date", "notes"], max_rows=25)
 
+# Is next_appointment a booking the patient keeps? For dates that fell due by the end of the
+# export, count those followed by a visit by the same patient within 14 days of the date. A match
+# must come after the visit that set the date: SVH029235 had a second visit on the same day,
+# which an earlier version of this check counted. (Raw dates; the one year typo in visits.csv
+# belongs to a patient with no next_appointment, so fixing it changes nothing here.)
+export_end = vdate.max()
+due_by_end = visits[nappt.notna() & (nappt <= export_end)]
+by_mrn = pd.DataFrame({"mrn": visits["mrn"], "d": vdate}).groupby("mrn")
+
+
+def visits_near(row):
+    """Days from the appointment date to each later visit by the patient within 14 days."""
+    d = by_mrn.get_group(row["mrn"])["d"]
+    days = (d[d > vdate[row.name]] - nappt[row.name]).dt.days
+    return days[days.abs() <= 14]
+
+
+near = [visits_near(row) for _, row in due_by_end.iterrows()]
+n = len(due_by_end)
+within = sum(len(x) > 0 for x in near)
+on_or_after = sum((x >= 0).any() for x in near)
+nearest_after = sum(len(x) > 0 and x.iloc[x.abs().argmin()] >= 0 for x in near)
+say(f"next_appointment dates due by the export end ({export_end.date()}): {n}")
+say(f"  followed by a visit within 14 days of the date: {within} of {n}; "
+    f"with a visit on or after the date: {on_or_after} (nearest visit on or after: {nearest_after})")
+
 # ---------------------------------------------------------------------------
 section("6. LAB RESULTS")
 say("Lab rows whose MRN is not in patients.csv:")

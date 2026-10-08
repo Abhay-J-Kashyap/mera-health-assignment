@@ -285,11 +285,13 @@ def follow_up(v, lab, as_of, export_end):
     offset, phrase = stated_interval(last["notes"])
     note_due = last["visit_date"] + offset if offset is not None else None
     if pd.notna(last["next_appointment"]):
-        # A booked date wins over the interval in the note: the patient holds that booking.
-        # When they disagree by over a month, say so rather than choosing silently.
+        # The doctor-set next_appointment date wins over the interval in the note. The export
+        # can't tell us whether it's a confirmed booking: only 17 of 206 such dates due by the
+        # export end were followed by a visit within 14 days (profile_export.py). When they
+        # disagree by over a month, say so rather than choosing silently.
         due, basis = last["next_appointment"], "next appointment date set by doctor"
         if note_due is not None and abs((due - note_due).days) > 30:
-            basis += f"; note said \"{phrase}\" (due {note_due.date()}), booked date used"
+            basis += f"; note said \"{phrase}\" (due {note_due.date()}), appointment date used"
     elif note_due is not None:
         due, basis = note_due, f"doctor wrote \"{phrase}\""
     else:

@@ -7,7 +7,7 @@ mera.health engineering-intern take-home (`brief.md`). A hospital asked: "which 
 
 ## Hard rules
 1. **Never edit `PLAN.md`.** It was committed before any code, and the brief says not to change it. If the plan turns out wrong, record that in `DECISIONS.md` §0.
-2. **Log every critical decision in `DECISIONS.md` when it's made**, in the right section (§0 pre-code, §1 terms, §2 data problems, §3 flagged for review, §4 can't be trusted for, §5 looked up). The brief says 2 pages max, but the user's call is: **going over is fine; losing important information is not.** Trim repetition only, never specifics (names, counts, cases).
+2. **Log every critical decision in `DECISIONS.md` when it's made**, in the right section (§0 pre-code, §1 terms, §2 data problems, §3 flagged for review, §4 can't be trusted for, §5 looked up). **Hold the brief's 2-page limit (about 1,150 prose words).** Make room by cutting repetition first and moving non-required material (e.g. "What I'd do next") to the README. Never cut definitions, named patients, counts, or the four things the brief asks for.
 3. **Never modify `export/`.** All cleaning happens in code, and every change is logged via `log_fix()` to `output/data_fixes.csv`. A silent change, merge or drop is a rejection criterion in the brief.
 4. **Never merge suspected duplicate patients.** Flag both records to REVIEW and combine their history only to compute the due date. A wrong merge means a call to the wrong person.
 5. **Never match people on name alone.** Same-name different-people exist (Lakshmi Devi, Ravi Kumar, Sunitha Rao).
@@ -34,7 +34,8 @@ mera.health engineering-intern take-home (`brief.md`). A hospital asked: "which 
 | `overdue.py` | The tool: load and clean, read notes, classify, follow-up, outputs |
 | `check_assumptions.py` | Re-runs `overdue.py` under alternative assumptions and diffs the call list |
 | `output/` | call_list.csv/.html, review_for_doctor.csv, review_for_records_team.csv, exclusions.csv, all_patients.csv, data_fixes.csv, summary.txt (not committed) |
-| `DECISIONS.md` | Graded deliverable. The brief says max 2 pages; the user chose to exceed it rather than lose specifics (see rule 2) |
+| `DECISIONS.md` | Graded deliverable, max 2 pages (rule 2) |
+| `README.md` | Run instructions, outputs, "What I'd do next", "How I worked with the agent" (user's voice; don't change claims without the user) |
 | `reply.txt` | Graded deliverable: email to Meenakshi, max 200 words, non-technical, not a doctor |
 
 ## Commands (Windows, PowerShell)
@@ -53,11 +54,17 @@ python -m venv .venv
 - [x] overdue.py, with hand checks: exclusions, review list, duplicate pairs, call-list spot checks against raw CSVs
 - [x] DECISIONS.md (first full version)
 - [x] User sent the 5-question email. **No reply yet.** When it arrives, update definitions/constants, re-run, update DECISIONS, reply.txt and figures.
-- [x] reply.txt (197 words, signed by the user; as of 29 Sep: 42 overdue / 35 callable / 4 borderline; 8 for a doctor, 7 for the records team)
+- [x] reply.txt (199 words, signed by the user; as of 29 Sep: 42 overdue / 35 callable / 4 borderline; 8 for a doctor, 7 for the records team; states coverage: patients last seen before Oct 2023 aren't in the export, and visits after 29 Sep aren't seen)
 - [x] Iteration 3: export-date default; review split by who acts (pairs shown once); borderline flag; Outcome and Other-visits columns; DECISIONS §6 "What I'd do next"; README "How I worked with the agent" (wording confirmed and edited by the user; reviews described as partly the user's own and partly a separate agent session, as the user stated)
 - [x] Doctor list shows every diabetic-range result (4 of 8 have two or more); print rows don't split across pages
 - [x] Outcome dropdown in call_list.html (`OUTCOMES` in overdue.py). Kept in browser localStorage per list date, plus an "Export outcomes (CSV)" button. Tested in Node against a fake page; still to check in a real browser.
 - [x] README.md with run instructions (tested on pandas 3.0.6 and 2.3.3)
 - [x] Review fixes: "impaired fasting glucose" → prediabetes; booking-vs-note disagreement shown; caller flag for "overdue only after export end"; `--default-months` / `--grace-days` flags; `check_assumptions.py`; current ADA 2026 citations
 - [x] Final pass: re-ran the bare command; every figure in DECISIONS, reply and README matches (21 checks). DECISIONS stays over 2 pages by the user's choice.
+- [x] Documentation fixes from an independent review (all statuses unchanged; call_list.csv byte-identical):
+  - reply.txt states coverage (199 words). Verified: all 300 patients have a visit, earliest 2023-10-02 after the year fix.
+  - `next_appointment` is described as the date the doctor set, not a confirmed booking. `profile_export.py` attendance check: 17 of 206 dates due by the export end were followed by a later visit within 14 days, 6 with a visit on or after the date (4 if judged by the nearest visit). A match must come after the visit that set the date: an earlier version counted SVH029235's same-day second visit and gave 18. DECISIONS §1 and §4 and the `follow_up()` comment are updated.
+  - "Booked" wording removed: DECISIONS says "date set for"; the tool's reason text says "appointment date used". Only those 2 reason strings in all_patients.csv changed.
+  - DECISIONS §1 answers PLAN.md's Type 1 children question: same list, caller note to speak to a parent.
+  - DECISIONS cut to 2 pages (1,192 raw / about 1,145 prose words). §6 "What I'd do next" moved to the README.
 - [ ] **Before submitting:** user exports the agent transcripts, unedited, to `transcripts/`. The README already says they're there, so this must happen.

@@ -221,6 +221,8 @@ Diabetes-mention visits with neither an interval phrase nor next_appointment (sa
    V042516 SVH026237 2025-04-21                                                                                           T2DM. Home GRBS 115-148. c/o tingling both feet. Cont same
    V042557 SVH027405 2025-06-02                                                                                 T2DM, FBS 144, PPBS 214, no fresh complaints, urine microalbumin adv
   ... 21 more
+next_appointment dates due by the export end (2026-09-29): 206
+  followed by a visit within 14 days of the date: 17 of 206; with a visit on or after the date: 6 (nearest visit on or after: 4)
 
 ==============================================================================
 6. LAB RESULTS
