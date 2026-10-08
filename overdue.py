@@ -384,12 +384,21 @@ def classify(patients, visits, labs, as_of, export_end):
 
         if not diabetic:
             if lab_high:
-                history = ("after gestational diabetes; " if v["gestational"].any() else
-                           "previously recorded as borderline/prediabetes; " if v["prediabetes"].any() else "")
-                test = a1c if a1c is not None and a1c["std_value"] >= HBA1C_DIABETIC else fpg
-                unit = "%" if test["test"] == "hba1c" else " mg/dL"
-                done("REVIEW", f"{same_as}blood test in diabetic range but no diabetes diagnosis recorded: {history}"
-                               f"latest {test['test_name']} {test['std_value']}{unit} on {test['collected_on'].date()}. "
+                history = ("Had gestational diabetes. " if v["gestational"].any() else
+                           "Previously recorded as borderline/prediabetes. " if v["prediabetes"].any() else "")
+                # Every diabetic-range result across all of this person's records, so the doctor
+                # can see whether there is the second result a diagnosis needs (ADA Rec 2.1b).
+                person_labs = labs[labs["mrn"].isin(mrns)]
+                high = person_labs[
+                    ((person_labs["test"] == "hba1c") & (person_labs["std_value"] >= HBA1C_DIABETIC))
+                    | ((person_labs["test"] == "fasting_glucose") & (person_labs["std_value"] >= FPG_DIABETIC))
+                ].sort_values("collected_on")
+                results = ", ".join(
+                    f"{'HbA1c' if r.test == 'hba1c' else 'fasting glucose'} {r.std_value:g}"
+                    f"{'%' if r.test == 'hba1c' else ' mg/dL'} ({r.collected_on.date()})" for r in high.itertuples())
+                count = (f"{len(high)} diabetic-range results" if len(high) > 1
+                         else "1 diabetic-range result, not yet repeated")
+                done("REVIEW", f"{same_as}No diabetes diagnosis recorded, but {count}: {results}. {history}"
                                f"Doctor to decide; not for the front desk", "doctor")
             elif ever_high:
                 done("EXCLUDED", f"one HbA1c in diabetic range, not confirmed on repeat (latest {a1c['std_value']}%)")
@@ -512,7 +521,8 @@ th,td{{border:1px solid #999;padding:4px 6px;text-align:left;vertical-align:top}
 th{{background:#eee}} .note{{background:#fff8dc;padding:8px;border:1px solid #e0c060}}
 th:last-child{{min-width:140px}}
 @page{{size:landscape}}
-@media print{{body{{margin:8mm}} h2{{page-break-before:always}} h2:first-of-type{{page-break-before:auto}}}}
+@media print{{body{{margin:8mm}} h2{{page-break-before:always}} h2:first-of-type{{page-break-before:auto}}
+tr{{page-break-inside:avoid}} thead{{display:table-header-group}}}}
 </style>
 <h1>Diabetes follow-up call list</h1>
 <p>As of <b>{as_of.date()}</b>. Built from the export up to {export_end.date()}; visits after that are not included.</p>
