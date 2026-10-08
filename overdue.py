@@ -107,7 +107,10 @@ def load():
 
     visits = read("visits.csv")
     visits["visit_date"] = pd.to_datetime(visits["visit_date"], format="%Y-%m-%d")
-    visits["next_appointment"] = pd.to_datetime(visits["next_appointment"].replace("", None), format="%Y-%m-%d")
+    # Blank means no appointment. (.where, not .replace("", None): on pandas 2.x that fills blanks
+    # with the previous row's date.)
+    nappt = visits["next_appointment"]
+    visits["next_appointment"] = pd.to_datetime(nappt.where(nappt != ""), format="%Y-%m-%d")
     fix_year_typos(visits, "visit_date", "visits.csv")
 
     labs = read("lab_results.csv")
