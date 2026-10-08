@@ -1,0 +1,553 @@
+
+==============================================================================
+1. SHAPE
+==============================================================================
+patients       rows= 300  exact-duplicate rows=0  blanks={'phone': 8}
+visits         rows= 815  exact-duplicate rows=0  blanks={'next_appointment': 582}
+lab_results    rows= 425  exact-duplicate rows=4  blanks={'unit': 12, 'reference_range': 8}
+prescriptions  rows= 540  exact-duplicate rows=0  blanks={}
+
+==============================================================================
+2. PATIENTS
+==============================================================================
+Duplicate MRNs: 0
+Unparseable dob: 0  unparseable registered_on: 0
+Born after registration:
+        mrn               name        dob sex      phone registered_on
+  SVH027832 Subramanian Angadi 2025-08-20   M 9000043812    2024-06-25
+Missing phone:
+        mrn                  name        dob sex phone registered_on
+  SVH024791         Dinesh Murthy 1992-10-22   M          2016-11-28
+  SVH025063        Ganesh Iyengar 1958-02-21   M          2017-10-07
+  SVH026593       Noorjahan Mulla 1955-10-01   F          2022-09-12
+  SVH027648               Vidya B 1960-10-03   F          2024-05-02
+  SVH028319          Geetha Gowda 1952-07-14   F          2024-08-18
+  SVH028414        Mohan Hiremath 1986-12-16   M          2024-09-02
+  SVH030076 Chandrashekar Biradar 1977-01-02   M          2025-08-22
+  SVH030189            Gowramma R 1978-06-01   F          2025-10-18
+Phone numbers shared by more than one MRN:
+        mrn             name        dob sex      phone registered_on
+  SVH028463       Asif Mulla 1962-09-29   M 9000032917    2024-09-13
+  SVH030783     Ayesha Mulla 1967-02-04   F 9000032917    2026-08-08
+  SVH030869     Nazeer Mulla 1996-01-18   M 9000032917    2026-09-29
+  SVH025473        Md. Rafiq 1976-08-02   M 9000037901    2019-02-03
+  SVH029873   Mohammed Rafiq 1976-08-02   M 9000037901    2025-07-18
+  SVH027082 Padmavathi Reddy 1959-05-25   F 9000040001    2023-12-29
+  SVH030772      Padma Reddy 1959-05-25   F 9000040001    2026-07-27
+  SVH026167  Revathi Pandian 1974-10-08   F 9000043929    2021-05-11
+  SVH029084          Meena P 1947-04-04   F 9000043929    2025-01-22
+  SVH030711  Shanthi Biradar 2003-03-13   F 9000043929    2026-07-10
+  SVH027925       Shivakumar 1967-08-18   M 9000053186    2024-07-03
+  SVH029107   Shivakumar H M 1967-08-18   M 9000053186    2025-01-29
+  SVH027000       A. Farzana 1990-12-21   F 9000090725    2023-10-24
+  SVH029481    Nasreen A Ali 2017-03-28   F 9000090725    2025-03-07
+  SVH030327         Nazeer A 1977-09-17   M 9000090725    2025-11-27
+  SVH027863    Joseph Dsouza 1977-08-08   M 9000098302    2024-06-26
+  SVH029322   Joseph D'Souza 1977-08-08   M 9000098302    2025-02-28
+Same DOB + same phone (suspected same person, different MRN):
+        mrn             name        dob sex      phone registered_on
+  SVH025473        Md. Rafiq 1976-08-02   M 9000037901    2019-02-03
+  SVH029873   Mohammed Rafiq 1976-08-02   M 9000037901    2025-07-18
+  SVH027082 Padmavathi Reddy 1959-05-25   F 9000040001    2023-12-29
+  SVH030772      Padma Reddy 1959-05-25   F 9000040001    2026-07-27
+  SVH027925       Shivakumar 1967-08-18   M 9000053186    2024-07-03
+  SVH029107   Shivakumar H M 1967-08-18   M 9000053186    2025-01-29
+  SVH027863    Joseph Dsouza 1977-08-08   M 9000098302    2024-06-26
+  SVH029322   Joseph D'Souza 1977-08-08   M 9000098302    2025-02-28
+Same name, different MRN (must NOT be merged on name alone):
+        mrn         name        dob sex      phone registered_on
+  SVH027405 Lakshmi Devi 1986-08-04   F 9000079394    2024-03-14
+  SVH028218 Lakshmi Devi 1975-12-28   F 9000071078    2024-08-11
+  SVH025157   Ravi Kumar 1997-05-22   M 9000022321    2017-12-20
+  SVH029181   Ravi Kumar 1970-04-01   M 9000015550    2025-01-31
+  SVH028152  Sunitha Rao 1982-09-01   F 9000041359    2024-07-25
+  SVH029364  Sunitha Rao 1967-11-21   F 9000063623    2025-03-01
+
+==============================================================================
+3. VISITS
+==============================================================================
+Duplicate visit_id: 0
+Unparseable visit_date: 0
+  (none)
+visit_date range: 2015-03-28 .. 2026-09-29
+next_appointment filled: 233 of 815; unparseable: 0
+next_appointment on or before its own visit_date:
+  (none)
+Visits whose MRN is not in patients.csv:
+  (none)
+Same MRN, same date, more than one visit:
+  visit_id       mrn visit_date       department                                                                                                  notes
+   V042723 SVH029235 2025-09-22 General Medicine                                  review; sugars running high; c/o burning soles; review after 3 months
+   V042725 SVH029235 2025-09-22 General Medicine pain and swelling R great toe x 2 days; MTP joint tender, erythema +; low purine diet, plenty of water
+Departments:
+   333  'General Medicine'
+   115  'Diabetology'
+    71  'Orthopaedics'
+    62  'Dermatology'
+    45  'ENT'
+    44  'Paediatrics'
+    36  'Emergency'
+    32  'OBG'
+    28  'Dental'
+    27  'Ophthalmology'
+    22  'Cardiology'
+Doctors (department):
+   211  'Dr. Anitha Hegde' (General Medicine)
+    71  'Dr. Farhan Qureshi' (Orthopaedics)
+    28  'Dr. Harini Balan' (Dental)
+    44  'Dr. Joseph Kurian' (Paediatrics)
+    32  'Dr. Kavya Menon' (OBG)
+    38  'Dr. Meghana Kamath' (Diabetology)
+    62  'Dr. Nandini Iyengar' (Dermatology)
+    36  'Dr. Naveen Poojary' (Emergency)
+   122  'Dr. Prakash Shenoy' (General Medicine)
+    27  'Dr. Rekha Pillai' (Ophthalmology)
+    77  'Dr. Srikanth Rao' (Diabetology)
+    22  'Dr. Sunil Deshpande' (Cardiology)
+    45  'Dr. Vikram Gowda' (ENT)
+
+==============================================================================
+4. WHAT THE NOTES SAY ABOUT DIABETES
+==============================================================================
+Diabetes-like tokens in notes (token: count):
+    50  diabetes
+    40  diabetic
+    36  dm
+    30  t2dm
+    23  oha
+    13  dm2
+     5  gdm
+     4  dka
+     3  niddm
+     3  t1dm
+     1  igt
+     1  prediabetes
+Notes matching [gestational]: 6 visits, 3 patients
+  visit_id       mrn visit_date department                                                                                               notes
+   V042260 SVH027966 2024-09-25        OBG                                      ANC 27 wks. GDM. Metformin 500 mg BD started. Diet counselling
+   V042273 SVH028068 2024-10-08        OBG               ANC 28 wks. OGTT: fasting 98, 2 hr 164 - GDM. MNT adv, SMBG chart given. Review 2 wks
+   V042286 SVH027966 2024-10-25        OBG                                          GDM on metformin. Sugars controlled. Cont, growth scan adv
+   V042315 SVH028326 2024-11-15        OBG ANC 26 wks. Gestational diabetes, OGTT abnormal. Started on insulin, 6 U before meals. SMBG 4 point
+   V042318 SVH028068 2024-11-17        OBG                                    GDM on diet control. Sugars acceptable on chart. Growth scan adv
+   V042362 SVH028326 2024-12-13        OBG                                    GDM on insulin. FBS 92, PP 128. Growth scan: AGA. Cont same dose
+Notes matching [prediabetes / igt / borderline]: 7 visits, 7 patients
+  visit_id       mrn visit_date       department                                                                                         notes
+   V042344 SVH028864 2024-12-03 General Medicine                                  IGT. Adv wt reduction, brisk walk 30 min. Rpt HbA1c 6 months
+   V042525 SVH029638 2025-05-01 General Medicine Reports reviewed. Sugars borderline. Adv diet control, wt reduction. Rpt HbA1c after 3 months
+   V042530 SVH029659 2025-05-06 General Medicine                             came with reports; sugars borderline high; adv diet, rpt 6 months
+   V042671 SVH025926 2025-08-13 General Medicine                   wt 88 kg; pre-diabetic range sugars; diet counselling done; review 6 months
+   V042733 SVH028721 2025-10-01 General Medicine                Came for general check up. Wt 68 kg, BP 120/78. Lipids borderline, diet advice
+   V042867 SVH024742 2025-12-24 General Medicine                             Prediabetes - HbA1c 6.2. Adv lifestyle modification. Rpt 6 months
+   V042986 SVH028218 2026-03-11 General Medicine         Master health check, no complaints. BP 126/80, BMI 26. Lipids borderline, diet advice
+Notes matching [type 1 / juvenile]: 9 visits, 3 patients
+  visit_id       mrn visit_date  department                                                                                                                           notes
+   V042206 SVH028258 2024-08-14 Paediatrics                                            T1DM, on basal bolus, SMBG 110-260, Pre-meal sugars 140-190, Cont same insulin doses
+   V042261 SVH025870 2024-09-25 Paediatrics                              k/c/o juvenile diabetes, HbA1c 8.4, Wt 44 kg, Parents giving injections regularly, Review 3 months
+   V042514 SVH028258 2025-04-19 Paediatrics T1DM, on basal bolus, HbA1c 8.0, Parents giving injections regularly, Missed afternoon doses at school, Cont same insulin doses
+   V042539 SVH025870 2025-05-15 Paediatrics                        Juvenile diabetes since age 4, No DKA episodes, Missed afternoon doses at school, Night dose incr by 2 U
+   V042611 SVH029838 2025-07-14 Paediatrics                      Type 1 DM on insulin, HbA1c 10.2, Injection sites normal, Pre-meal sugars 140-190, Cont same insulin doses
+   V042842 SVH028258 2025-12-09 Paediatrics                                            T1DM, on basal bolus, HbA1c 10.1, Wt 28 kg, No DKA episodes, Cont same insulin doses
+   V042853 SVH025870 2025-12-16 Paediatrics                         Juvenile diabetes on insulin, Parents giving injections regularly, Hypo x 2 last month, Review 3 months
+   V042994 SVH029838 2026-03-21 Paediatrics                                 Type 1 DM, on basal bolus, SMBG 110-260, Parents giving injections regularly, Reduce night dose
+   V043136 SVH029838 2026-08-11 Paediatrics                                             k/c/o Type 1 DM, SMBG 110-260, Wt 45 kg, Counselled parents re diet, sick day rules
+Notes matching [deceased]: 3 visits, 3 patients
+  visit_id       mrn visit_date       department                                                                                                                                         notes
+   V042478 SVH025339 2025-03-21 General Medicine                                                                Attender came for records. Informed pt expired at home last month. File closed
+   V042492 SVH026086 2025-04-04 General Medicine                                                adm with sepsis, DKA; shifted to ICU; pt expired on 4/4/2025; death summary given to attenders
+   V042743 SVH025698 2025-10-10        Emergency brought with chest pain, sweating x 2 hrs. ECG: ant wall STEMI. sudden collapse, CPR x 30 min, could not be revived. declared expired 5:40 am
+Notes matching [transferred / relocated]: 3 visits, 3 patients
+  visit_id       mrn visit_date       department                                                                                                                                                         notes
+   V042727 SVH024860 2025-09-24      Diabetology                                                     Relocated to Hyderabad. Transfer of care letter issued. To f/u with local physician, records handed over.
+   V042828 SVH025512 2025-12-03 General Medicine                                                          came for transfer summary; will continue f/u near native place; transferred care to another hospital
+   V042950 SVH028346 2026-02-10      Diabetology Review. FBS 104. BP 131/82. Adv diet + daily walk. r/v 3/12. Pt relocating to Pune with son. Transferred care to another hospital, summary and reports given.
+
+==============================================================================
+5. HOW FOLLOW-UP INTENT IS WRITTEN
+==============================================================================
+Diabetes-mention visits: 173
+next_appt  False  True 
+interval               
+False         46     35
+True          38     54
+Interval phrases found (all visits):
+    76  review 3 months
+    27  review 1 month
+    23  review 6 wks
+    22  review 2 months
+    21  sos
+    17  r/v 3 /12
+    15  rpt 1 wk
+    14  review 2 wks
+    14  review 1 wk
+    13  review 2 days
+    12  tomorrow
+     9  review 3 days
+     8  r/v 6 /12
+     7  rpt 6 wks
+     5  yearly
+     4  review 4 wks
+     3  review 1 yr
+     3  r/v 3 days
+     3  review 3 wks
+     3  rpt 3 months
+     2  rpt 6 months
+     1  rpt 1 month
+     1  review 6 months
+Diabetes-mention visits with neither an interval phrase nor next_appointment (sample):
+  visit_id       mrn visit_date                                                                                                                                                notes
+   V041992 SVH025313 2023-11-22                                                                                                             Type 2 diabetes. Rpt FBS/PPBS next visit
+   V042002 SVH025811 2023-11-28                                                        k/c/o DM since 2016. HbA1c 6.2. FBS 108, PPBS 167. No hypo episodes. Refer ophthal for fundus
+   V042078 SVH027348 2024-03-11                                                                                      type 2 diabetes; HbA1c 10.2; FBS 206; wt 74 kg; dose stepped up
+   V042081 SVH027405 2024-03-14                                                                                                T2DM (3 yrs), HbA1c 7.3, c/o nocturia, cont same meds
+   V042143 SVH025811 2024-06-02                                                                                        k/c/o DM. Home GRBS 106-138. BP 138/94. Adv diet + daily walk
+   V042168 SVH027832 2024-06-25                                                                             Diabetic. FBS 146. c/o burning soles. Insulin discussed, pt not willing.
+   V042179 SVH027999 2024-07-08                                                                                           NIDDM since 2023. F 128 / PP 195. Rpt FBS/PPBS next visit.
+   V042206 SVH028258 2024-08-14                                                                 T1DM, on basal bolus, SMBG 110-260, Pre-meal sugars 140-190, Cont same insulin doses
+   V042219 SVH028319 2024-08-18                                                                                                   T2DM since 2016; FBS 113, PPBS 192; cont same meds
+   V042223 SVH028346 2024-08-25                                                                             known diabetic; HbA1c 6.1; FBS 121 PPBS 167; fundus check due; cont same
+   V042231 SVH026465 2024-09-05                                                                                      k/c/o DM since 2012. Home GRBS 141-195. Rpt FBS/PPBS next visit
+   V042239 SVH028463 2024-09-13                                                                                                type 2 diabetes x 1 yrs; F 174 / PP 255; cont same Rx
+   V042270 SVH027113 2024-10-04                                                                                                        k/c/o DM. Sugars running high. Incr OHA dose.
+   V042290 SVH027082 2024-10-29                                                           Type 2 diabetes since 2013. FBS 150, PPBS 223. Compliant with meds. Urine microalbumin adv
+   V042291 SVH027355 2024-10-29                                                                                                                    T2DM. c/o tiredness. Cont same Rx
+   V042296 SVH025948 2024-11-03                                                                                    type 2 DM; FBS 176 PPBS 247; walking 30 min daily; cont same meds
+   V042302 SVH026193 2024-11-07                                                                                                    known diabetic; home GRBS 115-171; cont same meds
+   V042311 SVH025030 2024-11-10                                              known diabetic x 2 yrs, HbA1c 10.0, sugars running high, walking 30 min daily, refer ophthal for fundus
+   V042380 SVH028557 2025-01-08                                                             Atypical chest pain x 1 wk. Denies diabetes, smoking. ECG: NSR. TMT negative, reassured.
+   V042409 SVH028218 2025-02-01                                                                                                          DM2 (8 yrs). F 228 / PP 341. Incr OHA dose.
+   V042417 SVH029204 2025-02-07                                                                                                  DM2; FBS 160 PPBS 242; pedal pulses felt; cont same
+   V042471 SVH026131 2025-03-16                                               wt 84 kg, BMI 30; family history of diabetes (both parents); RBS 104; adv diet, exercise, wt reduction
+   V042490 SVH027782 2025-04-02                                                                                                      Diabetic (3 yrs). F 132 / PP 207. Cont same Rx.
+   V042516 SVH026237 2025-04-21                                                                                           T2DM. Home GRBS 115-148. c/o tingling both feet. Cont same
+   V042557 SVH027405 2025-06-02                                                                                 T2DM, FBS 144, PPBS 214, no fresh complaints, urine microalbumin adv
+  ... 21 more
+
+==============================================================================
+6. LAB RESULTS
+==============================================================================
+Lab rows whose MRN is not in patients.csv:
+  (none)
+Test name / unit / reference range combinations:
+    21  'A1C'                        unit='%'          ref='<5.7'
+     3  'Creatinine'                 unit=''           ref=''
+     1  'Creatinine'                 unit=''           ref='0.6-1.2'
+    23  'Creatinine'                 unit='mg/dL'      ref='0.6-1.2'
+     2  'ESR'                        unit='mm/hr'      ref='0-20'
+    76  'FBS'                        unit='mg/dL'      ref='70-100'
+     8  'Fasting Glucose'            unit='mmol/L'     ref='3.9-5.5'
+     3  'Glucose (F)'                unit='mg/dL'      ref='70-110'
+     2  'Glucose (PP)'               unit='mg/dL'      ref='<140'
+    17  'Glycated Hb'                unit='mmol/mol'   ref='20-42'
+     1  'Hb'                         unit=''           ref=''
+    20  'Hb'                         unit='g/dL'       ref='12.0-16.0'
+     3  'HbA1c'                      unit=''           ref=''
+   127  'HbA1c'                      unit='%'          ref='4.0-5.6'
+     1  'LDL'                        unit=''           ref='<100'
+    17  'LDL'                        unit='mg/dL'      ref='<100'
+    41  'PPBS'                       unit='mg/dL'      ref='<140'
+     1  'Platelet Count'             unit=''           ref='1.5-4.5'
+     6  'Platelet Count'             unit='lakh/cumm'  ref='1.5-4.5'
+     2  'Post Prandial Glucose'      unit='mmol/L'     ref='<7.8'
+    13  'TSH'                        unit='mIU/L'      ref='0.4-4.5'
+    12  'Total Cholesterol'          unit='mg/dL'      ref='<200'
+     1  'Triglycerides'              unit='mg/dL'      ref='<150'
+     2  'Uric Acid'                  unit='mg/dL'      ref='3.5-7.2'
+     1  'Urine Microalbumin'         unit=''           ref='<30'
+    11  'Urine Microalbumin'         unit='mg/L'       ref='<30'
+     1  'Vitamin B12'                unit=''           ref=''
+     7  'Vitamin B12'                unit='pg/mL'      ref='200-900'
+     2  'Vitamin D'                  unit='ng/mL'      ref='30-100'
+Date formats in collected_on:
+   390  DD/MM/YYYY
+    35  D Mon YY
+  (none)
+  slash dates read as DD/MM: unparseable=0, out-of-order steps=4
+  slash dates read as MM/DD: unparseable=238, out-of-order steps=1
+collected_on range: 2023-10-02 .. 2027-02-27
+Lab dates after the last visit date (2026-09-29):
+        mrn test_name value  unit reference_range collected_on
+  SVH027355       FBS   173 mg/dL          70-100   19/12/2026
+  SVH030138     HbA1c   7.7     %         4.0-5.6   27/02/2027
+Exact duplicate lab rows:
+        mrn         test_name value  unit reference_range collected_on
+  SVH028667 Total Cholesterol   232 mg/dL            <200   08/11/2024
+  SVH028667 Total Cholesterol   232 mg/dL            <200   08/11/2024
+  SVH025620        Creatinine   1.0 mg/dL         0.6-1.2   14/09/2025
+  SVH025620        Creatinine   1.0 mg/dL         0.6-1.2   14/09/2025
+  SVH027221             HbA1c   6.8     %         4.0-5.6   11/12/2025
+  SVH027221             HbA1c   6.8     %         4.0-5.6   11/12/2025
+  SVH025881              PPBS   244 mg/dL            <140   10/08/2026
+  SVH025881              PPBS   244 mg/dL            <140   10/08/2026
+Rows with blank unit:
+        mrn          test_name value unit reference_range collected_on
+  SVH024980         Creatinine   1.0                        11/04/2024
+  SVH026769         Creatinine   1.1                        26/09/2024
+  SVH029350         Creatinine   0.6                        28/02/2025
+  SVH029373        Vitamin B12   280                        03/03/2025
+  SVH026389                 Hb  14.5                        10/05/2025
+  SVH025079                LDL   128                 <100   29/09/2025
+  SVH025668 Urine Microalbumin   107                  <30   13/11/2025
+  SVH029659              HbA1c    65                        17/11/2025
+  SVH027596              HbA1c    65                        21/11/2025
+  SVH029625              HbA1c    68                        27/04/2026
+  SVH030191         Creatinine   1.4              0.6-1.2   15/07/2026
+  SVH027161     Platelet Count  3.52              1.5-4.5   23/09/2026
+
+==============================================================================
+7. PRESCRIPTIONS
+==============================================================================
+Prescription rows whose MRN is not in patients.csv:
+  (none)
+Prescriptions whose visit_id is not in visits.csv: 0 rows, 0 visit_ids
+  (none)
+Prescriptions whose MRN differs from the MRN on its visit:
+  (none)
+Prescriptions dated differently from their visit:
+  (none)
+Distinct drugs after stripping Tab./T./Inj. prefixes (count):
+   103  metformin
+    50  glimepiride
+    38  telmisartan
+    38  atorvastatin
+    24  dapagliflozin
+    23  sitagliptin
+    20  insulin glargine
+    18  metformin sr
+    13  paracetamol
+     9  aceclofenac
+     8  vildagliptin
+     7  glimepiride + metformin
+     7  levocetirizine
+     7  fluticasone nasal spray
+     6  ibuprofen
+     6  budesonide-formoterol inhaler
+     6  diclofenac gel
+     6  gliclazide mr
+     6  amoxicillin-clavulanate
+     6  albendazole
+     6  insulin degludec
+     6  insulin lispro
+     6  chlorhexidine mouthwash
+     6  amoxicillin
+     5  permethrin 5% lotion
+     5  human mixtard 30/70
+     5  amlodipine
+     5  cetirizine
+     5  mometasone cream
+     4  levothyroxine
+     4  voglibose
+     4  nitrofurantoin
+     4  insulin aspart
+     4  ibuprofen + paracetamol
+     3  luliconazole cream
+     3  ambroxol
+     3  prednisolone
+     3  saline nasal drops
+     3  ferrous ascorbate + folic acid
+     3  clopidogrel
+     3  iron + folic acid
+     3  etoricoxib
+     3  moxifloxacin eye drops
+     3  fexofenadine
+     2  itraconazole
+     2  aceclofenac + paracetamol
+     2  azithromycin
+     2  ketoconazole lotion
+     2  ondansetron
+     2  mefenamic acid
+     2  drotaverine
+     2  folic acid
+     2  calcium + vitamin d3
+     2  zinc
+     2  aspirin
+     2  pantoprazole
+     2  thiocolchicoside
+     1  olopatadine eye drops
+     1  naproxen
+     1  sucralfate
+     1  clobetasol oint
+     1  metoprolol
+     1  montelukast
+     1  cholecalciferol
+     1  ors sachet
+     1  betahistine
+     1  salbutamol inhaler
+     1  adapalene gel
+     1  doxycycline
+     1  iron
+     1  ciprofloxacin ear drops
+
+==============================================================================
+8. WHO LOOKS DIABETIC, BY SIGNAL (rough; for finding disagreements only)
+==============================================================================
+note-documented diabetes: 93   any glucose-lowering drug: 93   metformin-only: 29   any HbA1c >= 6.5%: 82
+all three agree: 69
+Lab says diabetic (HbA1c >= 6.5%), no diabetes note: 13
+  SVH025442 'P. Mary'  a1c%=[6.6, 5.9]  drugs=[]
+      note: Routine eye check; IOP 14/16; Refractive error; Glasses prescribed
+      note: Came with reports. HbA1c 6.6, FBS 112. Lifestyle modification adv. No medication now, rpt 3 months
+  SVH025473 'Md. Rafiq'  a1c%=[8.2]  drugs=[]
+      note: c/o wt gain, tiredness, on thyroxine 50 mcg. TSH 8.6. Incr thyroxine to 75 mcg, rpt TSH 6 wks
+      note: c/o increased thirst, tiredness x 1 month. Adv FBS, HbA1c. Review with reports
+  SVH026798 'Subramanian G Kattimani'  a1c%=[8.0, 7.9]  drugs=['ibuprofen']
+      note: Slipped in bathroom, pain L ankle. Tenderness over lat malleolus, X-ray NAD. Ankle sprain gr II. Crepe bandage
+      note: Feeling better. No fresh complaints. Review SOS.
+  SVH027221 'S. Rathnamma'  a1c%=[6.8, 6.8]  drugs=[]
+      note: Executive health check. BP 136/84. Reports awaited. Review with reports
+  SVH027596 'Tejas Iyengar'  a1c%=[8.1]  drugs=[]
+      note: Annual health check up. BP 126/80, BMI 26. Adv regular exercise, review yearly
+      note: c/o polyuria, tiredness x 3 wks. Adv HbA1c, urine R/E. Review with reports
+  SVH027966 'Yashoda Naidu'  a1c%=[6.6]  drugs=['iron + folic acid', 'metformin']
+      note: ANC 16 wks, no complaints. BP 110/70, FHS +. Iron, calcium started. OGTT at 24-28 wks
+      note: ANC 27 wks. GDM. Metformin 500 mg BD started. Diet counselling
+  SVH029322 "Joseph D'Souza"  a1c%=[8.1]  drugs=['glimepiride', 'insulin glargine', 'metformin']
+      note: f/u, HbA1c 8.1, review 3 months with HbA1c
+      note: f/u, FBS 155, PPBS 245, add 2nd OHA
+  SVH029446 'Shwetha Joshi'  a1c%=[6.5, 5.8]  drugs=[]
+      note: Came with reports. HbA1c 6.5, FBS 112. Lifestyle modification adv. No medication now, rpt 3 months
+      note: f/u. Wt reduced 4 kg. Rpt report satisfactory. Cont diet, exercise
+  SVH029597 'Gowramma Angadi'  a1c%=[7.5, 8.1]  drugs=[]
+      note: c/o recurrent boils x 2 months; adv FBS, HbA1c; antibiotics x 5 days
+      note: boils healed; reports to be collected; review SOS
+  SVH029638 'Bhaskar S Bhat'  a1c%=[6.5, 5.7]  drugs=[]
+      note: Reports reviewed. Sugars borderline. Adv diet control, wt reduction. Rpt HbA1c after 3 months
+      note: f/u. Wt reduced 4 kg. Rpt report satisfactory. Cont diet, exercise
+  SVH029659 'Santosh Biradar'  a1c%=[6.2, 8.1]  drugs=[]
+      note: came with reports; sugars borderline high; adv diet, rpt 6 months
+  SVH029830 'Subramanian Kumar'  a1c%=[8.2, 7.8]  drugs=['cetirizine', 'mometasone cream']
+      note: Health check package. BP 134/84, BMI 28. Reports awaited
+      note: c/o burning feet x 2 months. Adv B12, rpt sugars. Review with reports
+  SVH029873 'Mohammed Rafiq'  a1c%=[8.1]  drugs=[]
+      note: c/o burning feet x 3 wks; sugars high on report; adv diet, rpt after 1 month
+On a glucose-lowering drug, no diabetes note: 8
+  SVH025191 'Nasreen P Sait'  a1c%=[5.0]  drugs=['folic acid', 'metformin sr']
+      note: c/o acne, irregular periods x 6 months. USG: PCO morphology. PCOS. Metformin SR 500 mg OD, review 3 months
+      note: PCOS review. Tolerating metformin. Cont
+  SVH027966 'Yashoda Naidu'  a1c%=[6.6]  drugs=['iron + folic acid', 'metformin']
+      note: ANC 16 wks, no complaints. BP 110/70, FHS +. Iron, calcium started. OGTT at 24-28 wks
+      note: ANC 27 wks. GDM. Metformin 500 mg BD started. Diet counselling
+  SVH028326 'Uma Chettiar'  a1c%=[5.4]  drugs=['insulin aspart', 'iron + folic acid']
+      note: ANC 16 wks, no complaints. BP 110/70, FHS +. Iron, calcium started. OGTT at 24-28 wks
+      note: ANC 26 wks. Gestational diabetes, OGTT abnormal. Started on insulin, 6 U before meals. SMBG 4 point
+  SVH028876 'Lissy R Rodrigues'  a1c%=[5.4]  drugs=['folic acid', 'metformin']
+      note: Oligomenorrhoea x 1 yr, hirsutism +. PCOD. HbA1c 5.4, TSH normal. Metformin 500 mg BD, lifestyle modification
+      note: f/u PCOD. Wt reduced 3 kg. Cont same
+  SVH029107 'Shivakumar H M'  a1c%=[]  drugs=['human mixtard 30/70']
+      note: f/u; FBS 186; cont same meds; review 2 months
+      note: f/u visit; FBS 180 PPBS 262; adv diet + daily walk
+  SVH029322 "Joseph D'Souza"  a1c%=[8.1]  drugs=['glimepiride', 'insulin glargine', 'metformin']
+      note: f/u, HbA1c 8.1, review 3 months with HbA1c
+      note: f/u, FBS 155, PPBS 245, add 2nd OHA
+  SVH029693 'Shalini Das'  a1c%=[5.2]  drugs=['metformin']
+      note: k/c/o PCOS, anxious to conceive. USG: polycystic ovaries, AFC 22 each. Cont metformin, folic acid, ovulation i
+      note: PCOS, cycles 45-60 days. Cont metformin 500 mg BD. Review 3 months
+  SVH030554 'Uma Moolya'  a1c%=[5.3]  drugs=['metformin']
+      note: c/o irregular cycles x 8 months, wt gain. USG: b/l polycystic ovaries. PCOS. Start metformin 500 mg BD, OCP x 
+      note: PCOS f/u. Cycles regular on Rx. Cont metformin, wt reduction adv
+Metformin is their only glucose-lowering drug: 29
+  SVH024860 'Sudha Iyengar'  a1c%=[7.8, 7.8]  drugs=['aceclofenac', 'atorvastatin', 'calcium + vitamin d3', 'metformin']
+      note: Type 2 diabetes. Sugars running high. c/o burning soles. Review 1 month.
+      note: f/u visit. HbA1c 7.8. Refer ophthal for fundus.
+  SVH025030 'N. Anitha'  a1c%=[10.0, 9.4]  drugs=['metformin']
+      note: known diabetic x 2 yrs, HbA1c 10.0, sugars running high, walking 30 min daily, refer ophthal for fundus
+      note: hypothyroid on thyroxine, f/u; TSH 3.2; cont same dose
+  SVH025191 'Nasreen P Sait'  a1c%=[5.0]  drugs=['folic acid', 'metformin sr']
+      note: c/o acne, irregular periods x 6 months. USG: PCO morphology. PCOS. Metformin SR 500 mg OD, review 3 months
+      note: PCOS review. Tolerating metformin. Cont
+  SVH025313 'Yogesh Raman'  a1c%=[7.4, 7.3]  drugs=['metformin']
+      note: Type 2 diabetes. Rpt FBS/PPBS next visit
+      note: Routine f/u. HbA1c 7.3. FBS 150. Review 6 wks
+  SVH025512 'Anitha Babu'  a1c%=[7.6, 7.6, 7.7]  drugs=['metformin']
+      note: type 2 diabetes; HbA1c 7.6; sugars running high; no fresh complaints; review 6 wks
+      note: IHD f/u, effort tolerance good. ECG: old q waves. Cont antiplatelets, statin.
+  SVH025698 'Joseph Philip'  a1c%=[]  drugs=['metformin', 'ors sachet']
+      note: diabetic since 2012, FBS 144 PPBS 200, review 3 months with HbA1c
+      note: Vomiting, loose motions since yesterday. Mild dehydration, BP 100/70. IV fluids 1 pint given in OPD, review to
+  SVH025948 'Raghavendra K Biradar'  a1c%=[8.3]  drugs=['atorvastatin', 'metformin']
+      note: type 2 DM; FBS 176 PPBS 247; walking 30 min daily; cont same meds
+      note: type 2 DM; HbA1c 8.3; home GRBS 152-208; pedal pulses felt; cont same Rx; review 2 months
+  SVH026507 'J. Balaji'  a1c%=[11.2, 10.9]  drugs=['atorvastatin', 'metformin']
+      note: Type II diabetes (3 yrs). HbA1c 11.2. FBS 248, PPBS 373. c/o burning soles. Insulin discussed, pt not willing.
+      note: came for f/u; sugars running high; adv diet + daily walk; r/v 3/12
+  SVH026702 'B. Vasantha'  a1c%=[7.1, 7.6]  drugs=['amoxicillin', 'atorvastatin', 'ibuprofen + paracetamol', 'metformin']
+      note: type 2 DM, F 135 / PP 216, irregular with diet, cont same
+      note: food lodgement, pain on chewing x 6 months. pulpitis 26. RCT adv
+  SVH027348 'Annamma Lobo'  a1c%=[10.2, 10.8]  drugs=['atorvastatin', 'metformin', 'telmisartan']
+      note: type 2 diabetes; HbA1c 10.2; FBS 206; wt 74 kg; dose stepped up
+      note: annual health check up; reports reviewed - WNL
+  SVH027510 'Aishwarya P Salian'  a1c%=[8.3]  drugs=['metformin']
+      note: Diabetes mellitus. HbA1c 8.3. Fundus check due. Rpt FBS/PPBS next visit.
+      note: Routine f/u. FBS 194. Wt 63 kg. Cont same Rx.
+  SVH027832 'Subramanian Angadi'  a1c%=[]  drugs=['atorvastatin', 'metformin']
+      note: Diabetic. FBS 146. c/o burning soles. Insulin discussed, pt not willing.
+      note: Came for f/u. Home GRBS 131-161. Missed meds x 2 wks. Refer ophthal for fundus. Review 2 months
+  SVH027902 'Karthik Moolya'  a1c%=[6.5, 6.2]  drugs=['metformin']
+      note: DM2 x 6 yrs. F 120 / PP 177. Walking 30 min daily. Rpt FBS/PPBS next visit
+      note: DM2 since 2018. FBS 124. Review after 3 months
+  SVH027966 'Yashoda Naidu'  a1c%=[6.6]  drugs=['iron + folic acid', 'metformin']
+      note: ANC 16 wks, no complaints. BP 110/70, FHS +. Iron, calcium started. OGTT at 24-28 wks
+      note: ANC 27 wks. GDM. Metformin 500 mg BD started. Diet counselling
+  SVH028271 'Rashmi Bhat'  a1c%=[11.2]  drugs=['metformin']
+      note: diabetic; HbA1c 11.2; sugars running high; wt 85 kg; review 2 months
+      note: diabetic; FBS 225, PPBS 371; missed meds x 2 wks; insulin discussed, pt not willing
+  SVH028346 'Madhusudan B Pillai'  a1c%=[6.1]  drugs=['aspirin', 'metformin']
+      note: known diabetic; HbA1c 6.1; FBS 121 PPBS 167; fundus check due; cont same
+      note: Post PTCA f/u, asymptomatic. BP 124/78, pulse 68. Lipid profile rpt adv.
+  SVH028582 'Chaitra Gowda'  a1c%=[8.1]  drugs=['atorvastatin', 'metformin']
+      note: diabetes mellitus - newly diagnosed, FBS 163, c/o tingling both feet, start metformin 500 mg BD, diet chart gi
+  SVH028876 'Lissy R Rodrigues'  a1c%=[5.4]  drugs=['folic acid', 'metformin']
+      note: Oligomenorrhoea x 1 yr, hirsutism +. PCOD. HbA1c 5.4, TSH normal. Metformin 500 mg BD, lifestyle modification
+      note: f/u PCOD. Wt reduced 3 kg. Cont same
+  SVH028910 'R. Bhavya'  a1c%=[]  drugs=['diclofenac gel', 'metformin']
+      note: diabetes mellitus, FBS 125, PPBS 153, no hypo episodes, cont same, review after 3 months
+      note: f/u, FBS 128 PPBS 169, missed meds x 2 wks, cont same meds, r/v 6/12
+  SVH028972 'Usha R'  a1c%=[9.5, 9.2]  drugs=['atorvastatin', 'metformin', 'telmisartan']
+      note: Diabetic since 2023. HbA1c 9.5. FBS 191, PPBS 285. c/o tiredness. Cont same
+      note: f/u. Home GRBS 174-222. Pedal pulses felt. Review 3 months with HbA1c
+  SVH029007 'Chetan P'  a1c%=[7.2, 7.5]  drugs=['metformin', 'moxifloxacin eye drops', 'telmisartan']
+      note: Diabetic - 2 yrs. HbA1c 7.2. FBS 123 PPBS 227. Review 6 wks
+      note: Foreign body sensation L eye since yesterday; Antibiotic drops, review tomorrow
+  SVH029084 'Meena P'  a1c%=[8.3]  drugs=['atorvastatin', 'metformin', 'thiocolchicoside']
+      note: NIDDM (14 yrs). Sugars not under control. Dose stepped up. Review after 3 months.
+      note: NIDDM (14 yrs). Sugars not under control. Fundus check due. Cont same Rx. Review 6 wks.
+  SVH029235 'Subramanian Chettiar'  a1c%=[10.0]  drugs=['atorvastatin', 'metformin', 'telmisartan']
+      note: known diabetic since 2020; F 211 / PP 293; irregular with diet; insulin discussed, pt not willing; review 6 wk
+      note: review; sugars running high; c/o burning soles; review after 3 months
+  SVH029693 'Shalini Das'  a1c%=[5.2]  drugs=['metformin']
+      note: k/c/o PCOS, anxious to conceive. USG: polycystic ovaries, AFC 22 each. Cont metformin, folic acid, ovulation i
+      note: PCOS, cycles 45-60 days. Cont metformin 500 mg BD. Review 3 months
+  SVH029767 'K. Madhusudan'  a1c%=[8.5, 9.0]  drugs=['atorvastatin', 'metformin', 'telmisartan']
+      note: known diabetic, HbA1c 8.5, home GRBS 158-202, wt 60 kg, refer ophthal for fundus
+      note: Fall at home, pain L wrist. X-ray: undisplaced # distal radius. # distal radius. Below elbow cast applied, rev
+  SVH030006 'Dinesh Poojary'  a1c%=[10.2]  drugs=['metformin']
+      note: diabetes mellitus - newly diagnosed; HbA1c 10.2; F 215 / PP 305; c/o tingling both feet; start metformin 500 m
+  SVH030347 'Pradeep Achar'  a1c%=[7.0]  drugs=['metformin', 'telmisartan']
+      note: Type 2 diabetes. Home GRBS 119-167. Cont same meds.
+      note: Type 2 diabetes since 2019. HbA1c 7.0. Home GRBS 124-166. Missed meds x 2 wks. Review 2 months.
+  SVH030462 'Kiran Verma'  a1c%=[9.7]  drugs=['metformin']
+      note: New case of diabetes mellitus. FBS 205 PPBS 291. BP 140/79. Start metformin 500 mg BD. Diet + exercise counsel
+  SVH030554 'Uma Moolya'  a1c%=[5.3]  drugs=['metformin']
+      note: c/o irregular cycles x 8 months, wt gain. USG: b/l polycystic ovaries. PCOS. Start metformin 500 mg BD, OCP x 
+      note: PCOS f/u. Cycles regular on Rx. Cont metformin, wt reduction adv
+Diabetes note but no glucose-lowering drug and no HbA1c >= 6.5%: 8
+  SVH025378 'Gracy F'  a1c%=[5.3]  drugs=[]
+      note: Stiff neck x 2 days, works on computer. X-ray C-spine: loss of lordosis. Postural neck pain. Ergonomic advice,
+      note: Itching all over, worse at night x 3 days. Permethrin overnight, rpt after 1 wk, treat all contacts
+  SVH025407 'Veena Mudaliar'  a1c%=[]  drugs=[]
+      note: L knee pain x 2 months. No h/o diabetes. X-ray: OA gr II. IA steroid inj given, review 3 wks.
+  SVH025828 'Lalitha A'  a1c%=[]  drugs=[]
+      note: c/o tiredness x 2 wks. F/h: father diabetic on insulin, mother HTN. BP 122/78. CBC, TSH sent
+  SVH026131 'Nagamma Pandian'  a1c%=[]  drugs=[]
+      note: wt 84 kg, BMI 30; family history of diabetes (both parents); RBS 104; adv diet, exercise, wt reduction
+      note: LBA radiating to R leg x 6 months. SLR 60 deg on R. MRI if no relief in 2 wks.
+  SVH026328 'Shanthi Bangera'  a1c%=[]  drugs=['cetirizine']
+      note: Itchy lesions hands after using detergent, 6 months. Avoid irritants, antihistamine HS
+      note: Pre-op assessment for cataract sx RE; Non-diabetic, non-hypertensive; ECG WNL; Fit for surgery under LA
+  SVH028557 'Devaraj Joshi'  a1c%=[]  drugs=[]
+      note: c/o L knee pain x 6 wks, worse on climbing stairs. Medial joint line tenderness. IA injection discussed, revie
+      note: Atypical chest pain x 1 wk. Denies diabetes, smoking. ECG: NSR. TMT negative, reassured.
+  SVH030117 'Mathew Fernandes'  a1c%=[]  drugs=[]
+      note: Father diabetic (on insulin), Parents worried, child passing urine often, Urine sugar nil, RBS 88, Reassured
+  SVH030471 'N. Ashok'  a1c%=[]  drugs=[]
+      note: throat pain, difficulty swallowing x 2 days, tonsils enlarged gr II, congested, antibiotics x 5 days, warm sal
+      note: review, reports NAD, cont Rx
