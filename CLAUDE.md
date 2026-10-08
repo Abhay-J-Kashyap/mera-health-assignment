@@ -14,14 +14,15 @@ mera.health engineering-intern take-home (`brief.md`). A hospital asked: "which 
 6. **Every patient gets exactly one status with a written reason.** Statuses: CALL, NOT_DUE, REVIEW, EXCLUDED, NOT_DIABETIC. The counts must sum to the number of rows in `patients.csv` (300).
 7. **Uncertain means REVIEW, not CALL.** Lab-only diabetic-range results go to a doctor, not the front desk.
 8. **Never commit `output/`** (names and phone numbers; regenerated each run) or `.venv/`.
-9. **Don't state numbers you haven't produced.** Figures in `DECISIONS.md`, `reply.txt` and the README come from an actual run (`--as-of 2026-10-08`). If a rule changes, re-run and update every figure.
+9. **Don't state numbers you haven't produced.** Figures in `DECISIONS.md`, `reply.txt` and the README come from an actual **bare** run (`python overdue.py`, as of the export's last date, 2026-09-29). If a rule changes, re-run and update every figure.
 10. **Commit as you go, never squash.** The git history is graded. End commit messages with the Co-Authored-By line used in earlier commits.
 11. **Health-data care beats convenience.** Before a change that alters who is on the call list, re-run and diff the call list and say who moved and why.
 
 ## Working definitions (details and reasons in DECISIONS.md §1)
 - **Diabetic:** a diabetes mention in a note clause (negations and family history removed; prediabetes and gestational clauses excluded), or a non-metformin glucose-lowering drug. Evidence from pregnancy visits is ignored.
 - **Follow-up visit:** diabetes or sugar content in Diabetology, General Medicine or Paediatrics, or a glucose-lowering drug prescribed. A lab test alone doesn't count.
-- **Overdue:** more than 14 days past the due date. The due date comes from `next_appointment`, else the interval written in the note, else 3 months.
+- **Overdue:** more than 14 days past the due date, measured by default as of the export's last visit date. The due date comes from `next_appointment` (shown alongside the note when they disagree), else the interval written in the note, else 3 months.
+- **Borderline:** a CALL row that wouldn't survive a 6-month default, a 30-day grace, or measuring from the export date gets "check the appointment book first". It must match `check_assumptions.py`.
 - These are working assumptions until the hospital answers the 5-question email (see DECISIONS §0). If they answer, update the constants at the top of `overdue.py` and DECISIONS.
 
 ## Files
@@ -31,7 +32,8 @@ mera.health engineering-intern take-home (`brief.md`). A hospital asked: "which 
 | `PLAN.md` | Pre-code plan (frozen) |
 | `profile_export.py` → `profiling/profile_report.txt` | Read-only data profiling (committed) |
 | `overdue.py` | The tool: load and clean, read notes, classify, follow-up, outputs |
-| `output/` | call_list.csv/.html, needs_review.csv, exclusions.csv, all_patients.csv, data_fixes.csv, summary.txt (not committed) |
+| `check_assumptions.py` | Re-runs `overdue.py` under alternative assumptions and diffs the call list |
+| `output/` | call_list.csv/.html, review_for_doctor.csv, review_for_records_team.csv, exclusions.csv, all_patients.csv, data_fixes.csv, summary.txt (not committed) |
 | `DECISIONS.md` | Graded deliverable, max 2 pages |
 | `reply.txt` | Graded deliverable: email to Meenakshi, max 200 words, non-technical, not a doctor |
 
@@ -39,7 +41,9 @@ mera.health engineering-intern take-home (`brief.md`). A hospital asked: "which 
 ```
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
-.\.venv\Scripts\python overdue.py --as-of 2026-10-08    # default as-of is today
+.\.venv\Scripts\python overdue.py                        # reference run: as of export end (2026-09-29)
+.\.venv\Scripts\python overdue.py --as-of 2026-10-08    # measure to another date
+.\.venv\Scripts\python check_assumptions.py
 .\.venv\Scripts\python profile_export.py
 ```
 
@@ -49,11 +53,12 @@ python -m venv .venv
 - [x] overdue.py, with hand checks: exclusions, review list, duplicate pairs, call-list spot checks against raw CSVs
 - [x] DECISIONS.md (first full version)
 - [x] User sent the 5-question email. **No reply yet.** When it arrives, update definitions/constants, re-run, update DECISIONS, reply.txt and figures.
-- [x] reply.txt (195 words, signed by the user; 45 overdue / 38 callable; every figure checked against the 2026-10-08 run)
+- [x] reply.txt (197 words, signed by the user; as of 29 Sep: 42 overdue / 35 callable / 4 borderline; 8 for a doctor, 7 for the records team)
+- [x] Iteration 3: export-date default; review split by who acts (pairs shown once); borderline flag; Outcome and Other-visits columns; DECISIONS §6 "What I'd do next"; README "How I worked with the agent" (user to confirm wording)
 - [x] README.md with run instructions (tested on pandas 3.0.6 and 2.3.3)
 - [x] Review fixes: "impaired fasting glucose" → prediabetes; booking-vs-note disagreement shown; caller flag for "overdue only after export end"; `--default-months` / `--grace-days` flags; `check_assumptions.py` (32 of 38 robust); current ADA 2026 citations
 - [ ] Final pass: re-run, check every number in the docs matches, trim DECISIONS to 2 pages
-- [ ] User exports the agent transcripts
+- [ ] User exports the agent transcripts, unedited, to `transcripts/` (the README already says they're there)
 
 ## Note
 The unrelated `Downloads/CLAUDE.md` (VLM ID-forgery project) has been moved out by the user. If an unrelated parent CLAUDE.md ever loads again, ignore it.

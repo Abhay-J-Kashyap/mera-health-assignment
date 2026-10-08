@@ -1,18 +1,16 @@
 Hi Meenakshi,
 
-As of 8 October, 45 diabetic patients have missed their check-up. 38 can be called now: open call_list.html, most overdue first. Each row has the phone number, date of birth to confirm, and a note for the caller.
+As of 29 September, the last date in your export, 42 diabetic patients have missed their check-up. 35 can be called now: open call_list.html, most overdue first. Each row has the phone number, date of birth to confirm, a caller note and space for the outcome. Four are marked "borderline": please check the appointment book before calling them.
 
 How I decided:
 - Diabetic: a doctor wrote diabetes in their notes, or they take diabetes medicine. Diabetes only in pregnancy and "borderline sugar" are not included.
 - Overdue: over two weeks past the review date their doctor set. Where no date was set, I used three months after their last diabetes visit. Tell me if your doctors prefer a different gap.
 
-The other 7 need your records team first: 3 patients registered twice, 3 with no phone number, and 1 with an impossible date of birth.
-
-Please ask a doctor to look at 8 patients whose blood tests show high sugar but who have no diabetes diagnosis on record. Some never came back with their reports.
+The page also has two short lists:
+- For a doctor: 8 patients whose blood tests show high sugar but who have no diabetes diagnosis on record.
+- For your records team: the other 7 overdue patients, who are registered twice, have no phone number, or have an impossible date of birth.
 
 3 patients have died and 3 moved away. This is only in doctors' notes, so please update their records.
-
-The list only sees records up to 29 September; please check for bookings before calling.
 
 Thanks,
 Abhay J Kashyap
