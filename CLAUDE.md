@@ -1,0 +1,58 @@
+# CLAUDE.md
+
+Instructions for the coding agent working in this repo. Read before changing anything.
+
+## What this is
+mera.health engineering-intern take-home (`brief.md`). A hospital asked: "which diabetic patients are overdue for follow-up so the front desk can call them". The data is the messy export in `export/`. The brief grades **process and care**, not code: how "diabetic" and "overdue" are defined, how data problems are handled, what goes to a person instead of being decided, and a reasoning trail that can be explained. Time budget: about 4 hours.
+
+## Hard rules
+1. **Never edit `PLAN.md`.** It was committed before any code, and the brief says not to change it. If the plan turns out wrong, record that in `DECISIONS.md` §0.
+2. **Log every critical decision in `DECISIONS.md` when it's made**, in the right section (§0 pre-code, §1 terms, §2 data problems, §3 flagged for review, §4 can't be trusted for, §5 looked up). Keep it within 2 pages: about 1,100 words now, so trim when adding.
+3. **Never modify `export/`.** All cleaning happens in code, and every change is logged via `log_fix()` to `output/data_fixes.csv`. A silent change, merge or drop is a rejection criterion in the brief.
+4. **Never merge suspected duplicate patients.** Flag both records to REVIEW and combine their history only to compute the due date. A wrong merge means a call to the wrong person.
+5. **Never match people on name alone.** Same-name different-people exist (Lakshmi Devi, Ravi Kumar, Sunitha Rao).
+6. **Every patient gets exactly one status with a written reason.** Statuses: CALL, NOT_DUE, REVIEW, EXCLUDED, NOT_DIABETIC. The counts must sum to the number of rows in `patients.csv` (300).
+7. **Uncertain means REVIEW, not CALL.** Lab-only diabetic-range results go to a doctor, not the front desk.
+8. **Never commit `output/`** (names and phone numbers; regenerated each run) or `.venv/`.
+9. **Don't state numbers you haven't produced.** Figures in `DECISIONS.md`, `reply.txt` and the README come from an actual run (`--as-of 2026-10-08`). If a rule changes, re-run and update every figure.
+10. **Commit as you go, never squash.** The git history is graded. End commit messages with the Co-Authored-By line used in earlier commits.
+11. **Health-data care beats convenience.** Before a change that alters who is on the call list, re-run and diff the call list and say who moved and why.
+
+## Working definitions (details and reasons in DECISIONS.md §1)
+- **Diabetic:** a diabetes mention in a note clause (negations and family history removed; prediabetes and gestational clauses excluded), or a non-metformin glucose-lowering drug. Evidence from pregnancy visits is ignored.
+- **Follow-up visit:** diabetes or sugar content in Diabetology, General Medicine or Paediatrics, or a glucose-lowering drug prescribed. A lab test alone doesn't count.
+- **Overdue:** more than 14 days past the due date. The due date comes from `next_appointment`, else the interval written in the note, else 3 months.
+- These are working assumptions until the hospital answers the 5-question email (see DECISIONS §0). If they answer, update the constants at the top of `overdue.py` and DECISIONS.
+
+## Files
+| Path | Role |
+|---|---|
+| `brief.md`, `email.txt`, `export/` | Inputs as received (do not edit) |
+| `PLAN.md` | Pre-code plan (frozen) |
+| `profile_export.py` → `profiling/profile_report.txt` | Read-only data profiling (committed) |
+| `overdue.py` | The tool: load and clean, read notes, classify, follow-up, outputs |
+| `output/` | call_list.csv/.html, needs_review.csv, exclusions.csv, all_patients.csv, data_fixes.csv, summary.txt (not committed) |
+| `DECISIONS.md` | Graded deliverable, max 2 pages |
+| `reply.txt` | Graded deliverable: email to Meenakshi, max 200 words, non-technical, not a doctor |
+
+## Commands (Windows, PowerShell)
+```
+python -m venv .venv
+.\.venv\Scripts\python -m pip install -r requirements.txt
+.\.venv\Scripts\python overdue.py --as-of 2026-10-08    # default as-of is today
+.\.venv\Scripts\python profile_export.py
+```
+
+## Status
+- [x] PLAN.md committed before code
+- [x] Profiling
+- [x] overdue.py, with hand checks: exclusions, review list, duplicate pairs, call-list spot checks against raw CSVs
+- [x] DECISIONS.md (first full version)
+- [ ] User sends the 5-question email to the hospital (check with the user; don't assume it was sent)
+- [ ] reply.txt (≤200 words, plain language, the review-list finding up front)
+- [ ] README.md with run instructions
+- [ ] Final pass: re-run, check every number in the docs matches, trim DECISIONS to 2 pages
+- [ ] User exports the agent transcripts
+
+## Note
+`Downloads/CLAUDE.md` belongs to a different project (VLM ID forgery) and loads here only because it sits in a parent folder. Ignore it.
