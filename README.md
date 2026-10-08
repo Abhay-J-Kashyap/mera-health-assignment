@@ -92,4 +92,4 @@ I used Claude Code throughout; the transcripts are in `transcripts/`, unedited. 
 
   They also pointed out places where my documents had fallen out of step with the outputs, or claimed more than the data supports (e.g. treating `next_appointment` as a confirmed booking).
 - **What the agent caught or corrected itself:** profiling disproved the plan's drug rule (insulin given in pregnancy). It also claimed a pandas 2 bug, then tested it and withdrew the claim.
-- **Agreements:** when the agent asked me to choose (stack, output, the 3-month default, flagging duplicates instead of merging), I picked its recommended option each time. I agreed with its reasons; I didn't overrule it on those.
+- **Agreements:** when the agent and me were discussing and reiterating on things like (stack, output, the 3-month default, flagging duplicates instead of merging), we arrived at a decision which is best for this particular use case.
