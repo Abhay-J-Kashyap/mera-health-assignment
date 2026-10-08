@@ -48,9 +48,9 @@ python -m venv .venv
 - [x] Profiling
 - [x] overdue.py, with hand checks: exclusions, review list, duplicate pairs, call-list spot checks against raw CSVs
 - [x] DECISIONS.md (first full version)
-- [ ] User sends the 5-question email to the hospital (check with the user; don't assume it was sent)
-- [ ] reply.txt (≤200 words, plain language, the review-list finding up front)
-- [ ] README.md with run instructions
+- [x] User sent the 5-question email. **No reply yet.** When it arrives, update definitions/constants, re-run, update DECISIONS, reply.txt and figures.
+- [x] reply.txt (200 words exactly, counting the "[your name]" placeholder; every figure checked against the 2026-10-08 run)
+- [x] README.md with run instructions (tested on pandas 3.0.6 and 2.3.3)
 - [ ] Final pass: re-run, check every number in the docs matches, trim DECISIONS to 2 pages
 - [ ] User exports the agent transcripts
 
