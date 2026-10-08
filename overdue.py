@@ -2,8 +2,8 @@
 
 Run:
     pip install -r requirements.txt
-    python overdue.py                      # as of today
-    python overdue.py --as-of 2026-10-08   # as of a given date
+    python overdue.py                      # as of the export's last visit date
+    python overdue.py --as-of 2026-10-08   # as of a given date, e.g. today
 
 Reads export/*.csv (never modifies them) and writes everything to output/.
 Every patient in patients.csv ends up with exactly one status and a reason:
@@ -17,7 +17,6 @@ The rules are explained in DECISIONS.md.
 import argparse
 import html
 import re
-from datetime import date
 from pathlib import Path
 
 import pandas as pd
@@ -27,6 +26,8 @@ OUT = Path("output")
 
 DEFAULT_INTERVAL_MONTHS = 3  # most common interval doctors write here; ADA: quarterly if not at goal
 GRACE_DAYS = 14
+ALT_DEFAULT_MONTHS = 6  # alternatives a call must survive to not be flagged borderline
+ALT_GRACE_DAYS = 30  # (the same variations check_assumptions.py runs)
 HBA1C_DIABETIC = 6.5  # %, ADA diagnostic threshold
 FPG_DIABETIC = 126  # mg/dL fasting glucose, ADA diagnostic threshold
 ADULT_AGE = 18
@@ -296,8 +297,18 @@ def follow_up(v, lab, as_of, export_end):
         basis = f"no date in note; default {DEFAULT_INTERVAL_MONTHS} months"
     days_overdue = (as_of - due).days
     overdue = days_overdue > GRACE_DAYS
-    # Overdue only because time has passed since the export ended: they may have visited since.
-    after_export = overdue and (export_end - due).days <= GRACE_DAYS
+    # Borderline: overdue now, but not under one of the alternatives check_assumptions.py tries.
+    # Such a call is the likeliest to be unnecessary, so the caller checks the appointment book.
+    fragile = []
+    if overdue:
+        if (export_end - due).days <= GRACE_DAYS:
+            fragile.append(f"only became overdue after the export ends ({export_end.date()})")
+        if basis.startswith("no date in note"):
+            alt_due = last["visit_date"] + pd.DateOffset(months=ALT_DEFAULT_MONTHS)
+            if (as_of - alt_due).days <= GRACE_DAYS:
+                fragile.append(f"due date is our {DEFAULT_INTERVAL_MONTHS}-month estimate, not the doctor's")
+        if days_overdue <= ALT_GRACE_DAYS:
+            fragile.append(f"less than {ALT_GRACE_DAYS} days overdue")
     later = v[v["visit_date"] > last["visit_date"]]
     other = "; ".join(f"seen in {r.department} on {r.visit_date.date()} (not a diabetes review)"
                       for r in later.itertuples())
@@ -309,9 +320,9 @@ def follow_up(v, lab, as_of, export_end):
         t = tested.iloc[-1]
         caller_flags = (f"had sugar tests on {t['collected_on'].date()} but no doctor review since: "
                       f"book a review to go over results")
-    if after_export:
+    if fragile:
         caller_flags = "; ".join(filter(None, [caller_flags, (
-            f"only became overdue after the export ends ({export_end.date()}): check for a visit since")]))
+            f"borderline ({', '.join(fragile)}): check the appointment book first")]))
     return {
         "last_diabetes_visit": last["visit_date"].date(), "last_doctor": last["doctor"],
         "last_visit_note": last["notes"], "due_date": due.date(), "due_basis": basis + basis_note,
@@ -336,13 +347,14 @@ def classify(patients, visits, labs, as_of, export_end):
         v = visits[visits["mrn"] == p.mrn].sort_values("visit_date")
         lab = labs[labs["mrn"] == p.mrn]
         age = (as_of - p.dob).days // 365
-        row = {"mrn": p.mrn, "name": p.name, "dob": p.dob.date(), "age": age, "phone": p.phone,
-               "status": "", "reason": "",
-               "diabetes_evidence": "", "caller_note": ""}
-        mrns = pair_of.get(p.mrn, [p.mrn])
+        mrns = sorted(pair_of.get(p.mrn, [p.mrn]))
         others = [m for m in mrns if m != p.mrn]
-        same_as = (f"Probably the same person as {', '.join(others)} (same date of birth and phone); "
+        # Worded the same for every record of the person, so review lists can show them once.
+        same_as = (f"Registered twice: {' and '.join(mrns)} (same date of birth and phone); "
                    f"merge the records. " if others else "")
+        row = {"mrn": p.mrn, "name": p.name, "dob": p.dob.date(), "age": age, "phone": p.phone,
+               "status": "", "reason": "", "action_by": "", "person_key": "|".join(mrns),
+               "diabetes_evidence": "", "caller_note": ""}
         # If any record of this person is diabetic, all of them are treated as diabetic.
         diabetic = any(evidence_of[m][0] for m in mrns)
         row["diabetes_evidence"] = evidence_of[p.mrn][1]
@@ -354,8 +366,8 @@ def classify(patients, visits, labs, as_of, export_end):
             fpg is not None and fpg["std_value"] >= FPG_DIABETIC)
         ever_high = ((lab["test"] == "hba1c") & (lab["std_value"] >= HBA1C_DIABETIC)).any()
 
-        def done(status, reason):
-            row["status"], row["reason"] = status, reason
+        def done(status, reason, action_by=""):
+            row["status"], row["reason"], row["action_by"] = status, reason, action_by
             rows.append(row)
 
         if len(died):
@@ -364,7 +376,8 @@ def classify(patients, visits, labs, as_of, export_end):
         if len(moved):
             when = moved.iloc[-1]["visit_date"]
             if (v["visit_date"] > when).any():
-                done("REVIEW", f"care transferred on {when.date()} but visited again later; check if back")
+                done("REVIEW", f"care transferred on {when.date()} but visited again later; check if back",
+                     "records team")
             else:
                 done("EXCLUDED", f"care transferred to another hospital: \"{moved.iloc[-1]['notes']}\" ({when.date()})")
             continue
@@ -377,7 +390,7 @@ def classify(patients, visits, labs, as_of, export_end):
                 unit = "%" if test["test"] == "hba1c" else " mg/dL"
                 done("REVIEW", f"{same_as}blood test in diabetic range but no diabetes diagnosis recorded: {history}"
                                f"latest {test['test_name']} {test['std_value']}{unit} on {test['collected_on'].date()}. "
-                               f"Doctor to decide; not for the front desk")
+                               f"Doctor to decide; not for the front desk", "doctor")
             elif ever_high:
                 done("EXCLUDED", f"one HbA1c in diabetic range, not confirmed on repeat (latest {a1c['std_value']}%)")
             elif v["gestational"].any():
@@ -412,14 +425,16 @@ def classify(patients, visits, labs, as_of, export_end):
         if others:
             done("REVIEW", f"{same_as}Then call if needed. Combined records: last diabetes visit "
                            f"{fu['last_diabetes_visit']}, due {fu['due_date']}, "
-                           f"{'OVERDUE ' + str(fu['days_overdue']) + ' days' if fu['overdue'] else 'not overdue'}")
+                           f"{'OVERDUE ' + str(fu['days_overdue']) + ' days' if fu['overdue'] else 'not overdue'}",
+                 "records team")
         elif not fu["overdue"]:
             done("NOT_DUE", f"follow-up due {fu['due_date']} ({fu['due_basis']})")
         elif p.phone == "":
-            done("REVIEW", f"overdue {fu['days_overdue']} days but no phone number on record")
+            done("REVIEW", f"overdue {fu['days_overdue']} days but no phone number on record", "records team")
         elif p.dob > p.registered_on:
             done("REVIEW", f"overdue {fu['days_overdue']} days but date of birth on record ({p.dob.date()}) is after "
-                           f"registration ({p.registered_on.date()}); fix before calling so identity can be checked")
+                           f"registration ({p.registered_on.date()}); fix before calling so identity can be checked",
+                 "records team")
         else:
             done("CALL", f"overdue {fu['days_overdue']} days: follow-up was due {fu['due_date']} "
                          f"({fu['due_basis']})")
@@ -430,18 +445,34 @@ def classify(patients, visits, labs, as_of, export_end):
 # Output
 # =============================================================================
 CALL_COLUMNS = ["name", "mrn", "dob", "age", "phone", "caller_note", "days_overdue", "due_date", "due_basis",
-                "last_diabetes_visit", "last_doctor", "later_visits", "diabetes_evidence"]
+                "last_diabetes_visit", "last_doctor", "later_visits", "diabetes_evidence", "outcome"]
+REVIEW_COLUMNS = ["name", "mrn", "phone", "reason", "diabetes_evidence"]
+
+
+def per_person(review):
+    """One row per person: a double-registered person's records collapse into a single row.
+    (all_patients.csv keeps one row per MRN.)"""
+    return (review.groupby("person_key", sort=False)
+            .agg(name=("name", " / ".join), mrn=("mrn", " / ".join),
+                 phone=("phone", lambda s: " / ".join(sorted(set(s) - {""}))),
+                 reason=("reason", "first"), action_by=("action_by", "first"),
+                 diabetes_evidence=("diabetes_evidence", " | ".join))
+            .reset_index(drop=True))
 
 
 def write_outputs(result, as_of, export_end):
     OUT.mkdir(exist_ok=True)
     call = result[result["status"] == "CALL"].sort_values("days_overdue", ascending=False)
     call = call.astype({"days_overdue": int})  # only diabetic rows have it, so it was read as float
-    review = result[result["status"] == "REVIEW"].sort_values("mrn")
+    call["outcome"] = ""  # for the caller to fill in: booked, wrong number, moved, died...
+    review = per_person(result[result["status"] == "REVIEW"].sort_values("mrn"))
+    for_doctor = review[review["action_by"] == "doctor"]
+    for_records = review[review["action_by"] == "records team"]
     excluded = result[result["status"] == "EXCLUDED"].sort_values("mrn")
 
     call[CALL_COLUMNS].to_csv(OUT / "call_list.csv", index=False)
-    review[["name", "mrn", "phone", "reason", "diabetes_evidence"]].to_csv(OUT / "needs_review.csv", index=False)
+    for_doctor[REVIEW_COLUMNS].to_csv(OUT / "review_for_doctor.csv", index=False)
+    for_records[REVIEW_COLUMNS].to_csv(OUT / "review_for_records_team.csv", index=False)
     excluded[["name", "mrn", "reason"]].to_csv(OUT / "exclusions.csv", index=False)
     result[["mrn", "name", "status", "reason"]].to_csv(OUT / "all_patients.csv", index=False)
     pd.DataFrame(fixes, columns=["file", "csv_line", "field", "old", "new", "reason"]).to_csv(
@@ -455,10 +486,12 @@ def write_outputs(result, as_of, export_end):
         *[f"{s:13s} {counts.get(s, 0):4d}" for s in ["CALL", "NOT_DUE", "REVIEW", "EXCLUDED", "NOT_DIABETIC"]],
         f"{'TOTAL':13s} {len(result):4d}  (patients.csv has {len(result)} rows)",
         "",
+        f"REVIEW, per person: {len(for_doctor)} for a doctor, {len(for_records)} for the records team",
+        f"Borderline calls (check the appointment book first): {int(call['caller_note'].str.contains('borderline').sum())}",
         f"Data fixes applied: {len(fixes)} (see data_fixes.csv)",
     ]
     (OUT / "summary.txt").write_text("\n".join(summary) + "\n", encoding="utf-8")
-    write_html(call, review, as_of, export_end)
+    write_html(call, for_doctor, for_records, as_of, export_end)
     print("\n".join(summary))
     print(f"\nWritten to {OUT}/")
 
@@ -470,26 +503,30 @@ def table(df, cols, headers):
     return f"<table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>"
 
 
-def write_html(call, review, as_of, export_end):
+def write_html(call, for_doctor, for_records, as_of, export_end):
     page = f"""<!doctype html><meta charset="utf-8"><title>Diabetes follow-up call list</title>
 <style>
 body{{font-family:Arial,sans-serif;font-size:13px;margin:24px;color:#111}}
 table{{border-collapse:collapse;width:100%;margin-bottom:28px}}
 th,td{{border:1px solid #999;padding:4px 6px;text-align:left;vertical-align:top}}
 th{{background:#eee}} .note{{background:#fff8dc;padding:8px;border:1px solid #e0c060}}
+th:last-child{{min-width:140px}}
+@page{{size:landscape}}
 @media print{{body{{margin:8mm}} h2{{page-break-before:always}} h2:first-of-type{{page-break-before:auto}}}}
 </style>
 <h1>Diabetes follow-up call list</h1>
 <p>As of <b>{as_of.date()}</b>. Built from the export up to {export_end.date()}; visits after that are not included.</p>
-<p class="note">Before calling: confirm name and date of birth. If the patient has a booking we can't see,
-or has died or moved, note it and tell the records team. Do not discuss test results on the phone.</p>
+<p class="note">Before calling: confirm name and date of birth. If the patient already has a booking, or has died
+or moved, write it in Outcome and tell the records team. Do not discuss test results on the phone.</p>
 <h2>Call ({len(call)}): most overdue first</h2>
 {table(call, ["name", "mrn", "dob", "age", "phone", "caller_note", "days_overdue", "due_date",
-              "last_diabetes_visit", "last_doctor", "due_basis"],
+              "last_diabetes_visit", "last_doctor", "due_basis", "later_visits", "outcome"],
        ["Name", "MRN", "Date of birth", "Age", "Phone", "Note for caller", "Days overdue", "Was due",
-        "Last diabetes visit", "Doctor", "Why this due date"])}
-<h2>For a doctor or records staff to check first ({len(review)})</h2>
-{table(review, ["name", "mrn", "phone", "reason"], ["Name", "MRN", "Phone", "What needs checking"])}
+        "Last diabetes visit", "Doctor", "Why this due date", "Other visits since", "Outcome"])}
+<h2>For a doctor to check ({len(for_doctor)}): not for the front desk to call</h2>
+{table(for_doctor, ["name", "mrn", "phone", "reason"], ["Name", "MRN", "Phone", "What needs checking"])}
+<h2>For the records team to fix before anyone calls ({len(for_records)})</h2>
+{table(for_records, ["name", "mrn", "phone", "reason"], ["Name", "MRN", "Phone", "What needs fixing"])}
 """
     (OUT / "call_list.html").write_text(page, encoding="utf-8")
 
@@ -497,18 +534,20 @@ or has died or moved, note it and tell the records team. Do not discuss test res
 def main():
     global DEFAULT_INTERVAL_MONTHS, GRACE_DAYS
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--as-of", default=date.today().isoformat(), help="date to measure overdue from (YYYY-MM-DD)")
+    parser.add_argument("--as-of", default=None,
+                        help="date to measure overdue from (YYYY-MM-DD). Default: the export's last visit date, "
+                             "so the same export always gives the same list. Pass today's date to measure to today.")
     parser.add_argument("--default-months", type=int, default=DEFAULT_INTERVAL_MONTHS,
                         help="follow-up gap when the doctor wrote no date (default: %(default)s)")
     parser.add_argument("--grace-days", type=int, default=GRACE_DAYS,
                         help="days past due before someone counts as overdue (default: %(default)s)")
     args = parser.parse_args()
-    as_of = pd.Timestamp(args.as_of)
     DEFAULT_INTERVAL_MONTHS, GRACE_DAYS = args.default_months, args.grace_days
 
     patients, visits, labs, rx = load()
     visits = annotate_visits(visits, rx)
     export_end = visits["visit_date"].max()
+    as_of = pd.Timestamp(args.as_of) if args.as_of else export_end
     result = classify(patients, visits, labs, as_of, export_end)
     write_outputs(result, as_of, export_end)
 
