@@ -1,0 +1,816 @@
+visit_id,mrn,visit_date,department,doctor,notes,next_appointment
+V041941,SVH025454,2023-10-02,Ophthalmology,Dr. Rekha Pillai,"Itching, redness both eyes x 2 months; Papillae +; Cold compress, avoid rubbing",
+V041942,SVH024821,2023-10-02,General Medicine,Dr. Prakash Shenoy,"easy fatiguability x 2 wks; pallor +, no icterus; review 1 month",
+V041943,SVH024821,2023-10-08,General Medicine,Dr. Prakash Shenoy,f/u visit; improving; cont same x 1 more wk,
+V041944,SVH025378,2023-10-10,Orthopaedics,Dr. Farhan Qureshi,"Stiff neck x 2 days, works on computer. X-ray C-spine: loss of lordosis. Postural neck pain. Ergonomic advice, soft collar x 1 wk.",2023-11-07
+V041945,SVH024641,2023-10-12,Dermatology,Dr. Nandini Iyengar,"Ring lesion groin x 3 wks, itchy. Tinea cruris. Topical + oral antifungal x 4 wks",
+V041946,SVH024601,2023-10-13,Ophthalmology,Dr. Rekha Pillai,Routine eye check; Refraction done; Review 1 yr,
+V041947,SVH025751,2023-10-14,Emergency,Dr. Naveen Poojary,"breathlessness, wheeze since night. SpO2 93% RA, b/l wheeze. acute exacerbation asthma. nebulisation x 3, improved, discharged",
+V041950,SVH026960,2023-10-15,Diabetology,Dr. Srikanth Rao,Known diabetic. FBS 154 PPBS 220. c/o nocturia. Incr OHA dose. Review 6 wks.,2023-11-25
+V041952,SVH026669,2023-10-16,General Medicine,Dr. Anitha Hegde,"One sided throbbing headache x 3 wks, nausea +. No focal deficit, fundus normal. Migraine without aura. Headache diary, review 2 wks",
+V041954,SVH025331,2023-10-19,Diabetology,Dr. Srikanth Rao,Known diabetic x 12 yrs. HbA1c 6.2. FBS 125. Cont same Rx.,2024-02-17
+V041955,SVH024812,2023-10-19,Orthopaedics,Dr. Farhan Qureshi,"Fall at home, pain L wrist. # distal radius. Below elbow cast applied, review 2 wks.",
+V041957,SVH026808,2023-10-20,Dermatology,Dr. Nandini Iyengar,"Itching all over, worse at night x 3 days. Scabies. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V041958,SVH025454,2023-10-22,Orthopaedics,Dr. Farhan Qureshi,"Low back ache x 1/12. SLR 60 deg on L. Back strengthening ex, avoid forward bending.",
+V041961,SVH026465,2023-10-24,General Medicine,Dr. Anitha Hegde,k/c/o DM. HbA1c 7.3. F 132 / PP 210. Cont same Rx,2024-02-23
+V041963,SVH026562,2023-10-24,Dermatology,Dr. Nandini Iyengar,"Red itchy patches neck x 2 months. Eczema. Avoid irritants, antihistamine HS",
+V041965,SVH026798,2023-10-25,Orthopaedics,Dr. Farhan Qureshi,"Slipped in bathroom, pain L ankle. Tenderness over lat malleolus, X-ray NAD. Ankle sprain gr II. Crepe bandage, ice, limb elevation.",
+V041966,SVH025454,2023-10-26,Orthopaedics,Dr. Farhan Qureshi,Review. Reports NAD. Cont Rx.,
+V041967,SVH024989,2023-10-26,General Medicine,Dr. Anitha Hegde,"c/o cough with expectoration x 3 days. RS: b/l scattered rhonchi. Antibiotics x 5 days, steam inhalation",
+V041968,SVH025926,2023-10-29,Orthopaedics,Dr. Farhan Qureshi,"c/o back pain after lifting weight, 3 days. Paraspinal spasm +, no neuro deficit. Mechanical LBA. Analgesics, muscle relaxant x 5 days.",
+V041969,SVH026535,2023-10-29,General Medicine,Dr. Prakash Shenoy,T2DM x 3 yrs; HbA1c 10.3; c/o tiredness; cont same Rx; review 3 months with HbA1c,2024-01-24
+V041970,SVH026808,2023-10-29,Dermatology,Dr. Nandini Iyengar,No relief with previous Rx. Medication changed. Review 1 wk,
+V041972,SVH025730,2023-10-29,General Medicine,Dr. Anitha Hegde,"k/c/o asthma, breathlessness at night x 4 days. RS: b/l wheeze +. Nebulisation given, short course steroids",
+V041973,SVH024812,2023-10-29,Orthopaedics,Dr. Farhan Qureshi,f/u visit. Improving. Cont same x 1 more wk.,
+V041976,SVH026562,2023-10-29,Dermatology,Dr. Nandini Iyengar,Review. Reports NAD. Cont Rx,
+V041977,SVH026798,2023-10-30,Orthopaedics,Dr. Farhan Qureshi,Feeling better. No fresh complaints. Review SOS.,
+V041978,SVH025562,2023-11-02,Orthopaedics,Dr. Farhan Qureshi,"Slipped in bathroom, pain R ankle. Tenderness over lat malleolus, X-ray NAD. Crepe bandage, ice, limb elevation.",
+V041979,SVH024901,2023-11-04,Dermatology,Dr. Nandini Iyengar,"Red itchy patches neck x 3 wks. Erythematous papules, excoriation +. Topical steroid x 1 wk, emollients",
+V041980,SVH026093,2023-11-08,Dermatology,Dr. Nandini Iyengar,"Ring lesion groin x 2/52, itchy. Annular plaque with active border. Tinea cruris. Topical + oral antifungal x 4 wks",
+V041981,SVH024913,2023-11-08,Orthopaedics,Dr. Farhan Qureshi,"Stiff neck x 2 days, works on computer. ROM painful, no neuro deficit. Neck isometric ex, hot fomentation.",
+V041982,SVH026899,2023-11-09,Orthopaedics,Dr. Farhan Qureshi,"Pain R elbow x 6 wks. Tenderness over lat epicondyle. Rest, local steroid inj if no relief.",
+V041983,SVH026013,2023-11-12,Dermatology,Dr. Nandini Iyengar,"White patches over back x 6 wks. Fine scaly hypopigmented macules. Pityriasis versicolor. Antifungal lotion, review 4 wks",2024-01-11
+V041985,SVH026270,2023-11-12,General Medicine,Dr. Anitha Hegde,"HTN f/u, no complaints. BP 128/80, pulse 76. Incr telmisartan to 80 mg",2023-12-12
+V041988,SVH026093,2023-11-13,Dermatology,Dr. Nandini Iyengar,Review. Reports NAD. Cont Rx,
+V041990,SVH024767,2023-11-14,General Medicine,Dr. Anitha Hegde,"Fever with chills x 3 days. Temp 101 F, throat congested. Viral fever. Adv rest, r/v 3 days if fever persists",
+V041991,SVH024681,2023-11-20,OBG,Dr. Kavya Menon,"Heavy periods x 3 cycles. USG: fibroid 3 cm, ant wall. Tranexamic acid during periods, options discussed",2023-12-04
+V041992,SVH025313,2023-11-22,General Medicine,Dr. Anitha Hegde,Type 2 diabetes. Rpt FBS/PPBS next visit,
+V041995,SVH025079,2023-11-23,Dental,Dr. Harini Balan,"c/o toothache lower R x 2 days. RCT 1st sitting done, review 3 days",
+V041998,SVH027018,2023-11-23,Emergency,Dr. Naveen Poojary,"fall from bike, abrasions R leg. dressing done, review after 2 days",
+V041999,SVH025473,2023-11-28,General Medicine,Dr. Anitha Hegde,"c/o wt gain, tiredness, on thyroxine 50 mcg. TSH 8.6. Incr thyroxine to 75 mcg, rpt TSH 6 wks",2023-12-12
+V042002,SVH025811,2023-11-28,General Medicine,Dr. Anitha Hegde,"k/c/o DM since 2016. HbA1c 6.2. FBS 108, PPBS 167. No hypo episodes. Refer ophthal for fundus",
+V042005,SVH025512,2023-12-01,General Medicine,Dr. Prakash Shenoy,type 2 diabetes; HbA1c 7.6; sugars running high; no fresh complaints; review 6 wks,2024-01-13
+V042006,SVH024950,2023-12-01,Dermatology,Dr. Nandini Iyengar,Urticaria on and off x 6 months. Dermographism +. Antihistamine daily x 4 wks,
+V042007,SVH027018,2023-12-03,Emergency,Dr. Naveen Poojary,f/u. symptomatically better. complete the course,
+V042010,SVH026167,2023-12-08,General Medicine,Dr. Anitha Hegde,Type 2 diabetes. HbA1c 8.6. Incr OHA dose. Review 1 month,
+V042012,SVH025125,2023-12-10,General Medicine,Dr. Anitha Hegde,"Pain and swelling R great toe x 6 days. Low purine diet, plenty of water",
+V042013,SVH025125,2023-12-13,General Medicine,Dr. Anitha Hegde,f/u. Symptomatically better. Complete the course,
+V042014,SVH025913,2023-12-17,Orthopaedics,Dr. Farhan Qureshi,"L shoulder pain, unable to lift arm x 3 wks. Periarthritis shoulder. Physio, pendulum exercises.",
+V042016,SVH026433,2023-12-18,General Medicine,Dr. Prakash Shenoy,"c/o loose stools, crampy abdominal pain x 5 days; hydration fair, P/A soft; acute gastroenteritis; IV fluids 1 pint given in OPD, review tomorrow",2023-12-25
+V042017,SVH026817,2023-12-24,General Medicine,Dr. Anitha Hegde,k/c/o DM. HbA1c 8.4. Rpt FBS/PPBS next visit,2024-01-25
+V042019,SVH025963,2023-12-26,General Medicine,Dr. Anitha Hegde,"Loose stools x 2 days, 3 episodes/day. Mild dehydration, BP 100/70. ORS, probiotics, light diet",2024-01-09
+V042021,SVH026593,2023-12-27,General Medicine,Dr. Prakash Shenoy,"HTN f/u, no complaints; BP 150/94, pedal edema nil; salt restriction, review 1 month",2024-02-07
+V042024,SVH027082,2023-12-29,General Medicine,Dr. Anitha Hegde,Type 2 diabetes - 10 yrs. F 166 / PP 268. r/v 3/12,2024-03-30
+V042027,SVH025978,2023-12-30,Dermatology,Dr. Nandini Iyengar,"Itching all over, worse at night x 3 days. Burrows +, excoriated papules. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042030,SVH025562,2024-01-07,General Medicine,Dr. Prakash Shenoy,"came for general check up; adv regular exercise, review yearly",
+V042033,SVH026086,2024-01-13,General Medicine,Dr. Prakash Shenoy,type 2 diabetes since 2019; HbA1c 9.5; FBS 187 PPBS 296; review 1 month,
+V042036,SVH025620,2024-01-19,Emergency,Dr. Naveen Poojary,"severe L loin pain since morning, vomiting. ureteric colic. inj analgesic given, USG KUB adv",
+V042037,SVH026193,2024-01-21,General Medicine,Dr. Prakash Shenoy,"known diabetic x 5 yrs; HbA1c 6.2; FBS 101, PPBS 159; cont same meds; review 3 months with HbA1c",2024-04-22
+V042038,SVH026542,2024-01-23,Emergency,Dr. Naveen Poojary,"breathlessness, wheeze since night. SpO2 93% RA, b/l wheeze. acute exacerbation asthma. nebulisation x 3, improved, discharged",
+V042040,SVH027094,2024-01-25,Diabetology,Dr. Srikanth Rao,k/c/o DM - 8 yrs. F 98 / PP 154. Fundus check due. Cont same meds. Review 3 months with HbA1c.,2024-04-27
+V042041,SVH026308,2024-01-25,Paediatrics,Dr. Joseph Kurian,"Poor appetite, not gaining wt x 6 wks, Pallor +, wt below 3rd centile, Nutritional anaemia, Iron syrup x 3 months, diet advice",2024-02-01
+V042042,SVH026899,2024-01-26,Dental,Dr. Harini Balan,"food lodgement, pain on chewing x 6 months. pulpitis 26. extraction under LA done",
+V042043,SVH025562,2024-01-29,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042045,SVH025512,2024-01-31,Cardiology,Dr. Sunil Deshpande,"IHD f/u, effort tolerance good. ECG: old q waves. Cont antiplatelets, statin.",
+V042046,SVH026542,2024-02-01,Emergency,Dr. Naveen Poojary,feeling better. no fresh complaints. review SOS,
+V042047,SVH026410,2024-02-13,Paediatrics,Dr. Joseph Kurian,"Fever, running nose, cough x 1 wk, Syrup PCM SOS, nasal saline drops",
+V042048,SVH025528,2024-02-15,Dental,Dr. Harini Balan,c/o toothache lower R x 2 days. pulpitis 26. extraction under LA done,
+V042049,SVH025339,2024-02-18,General Medicine,Dr. Anitha Hegde,Known diabetic x 7 yrs. HbA1c 6.4. Sugars under control. Fundus check due. Urine microalbumin adv,2024-04-17
+V042050,SVH025376,2024-02-18,Dermatology,Dr. Nandini Iyengar,"Itchy lesions hands after using detergent, 2/52. Eczema. Topical steroid x 1 wk, emollients",2024-04-18
+V042052,SVH026153,2024-02-19,General Medicine,Dr. Anitha Hegde,Known diabetic since 2020. HbA1c 10.0. FBS 205. c/o tingling both feet. Rpt FBS/PPBS next visit. Review 6 wks,2024-03-30
+V042055,SVH027161,2024-02-19,Dermatology,Dr. Nandini Iyengar,"White patches over back x 1 month. Fine scaly hypopigmented macules. Pityriasis versicolor. Antifungal lotion, review 4 wks",
+V042058,SVH027200,2024-02-20,Dermatology,Dr. Nandini Iyengar,"Itchy rash both forearms x 5 days. Avoid irritants, antihistamine HS",
+V042059,SVH026034,2024-02-28,Emergency,Dr. Naveen Poojary,"dog bite R leg, 1 hr back. cat III bite, wound washed. ARV day 0 given, schedule explained",2024-03-27
+V042062,SVH027286,2024-03-01,ENT,Dr. Vikram Gowda,"recurrent throat pain, 6 episodes this year, post pharyngeal wall granular, chronic pharyngitis, gargles, avoid cold drinks",
+V042063,SVH027261,2024-03-02,Diabetology,Dr. Srikanth Rao,T2DM (13 yrs). HbA1c 7.8. Home GRBS 141-211. Compliant with meds. Dose stepped up. Review after 3 months.,
+V042064,SVH027311,2024-03-03,General Medicine,Dr. Prakash Shenoy,"vomiting, loose motions since yesterday; hydration fair, P/A soft; AGE; ORS, probiotics, light diet",
+V042067,SVH025913,2024-03-04,General Medicine,Dr. Anitha Hegde,"c/o lower abdominal pain, burning urine x 4 days. ?UTI - urine R/E, C/S sent. Plenty of oral fluids, antibiotics x 5 days",
+V042068,SVH024791,2024-03-06,General Medicine,Dr. Anitha Hegde,"Hypothyroid on thyroxine, f/u. TSH 3.2. Cont same dose",
+V042069,SVH027322,2024-03-06,Orthopaedics,Dr. Farhan Qureshi,"c/o neck pain x 1/12. Cervical spondylosis. Neck isometric ex, hot fomentation.",
+V042070,SVH025382,2024-03-06,Dermatology,Dr. Nandini Iyengar,Urticaria on and off x 3 months. Dermographism +. Chronic urticaria. Antihistamine daily x 4 wks,2024-03-13
+V042072,SVH027355,2024-03-08,General Medicine,Dr. Anitha Hegde,T2DM. FBS 154. Review 6 wks,2024-04-22
+V042075,SVH027376,2024-03-09,Dermatology,Dr. Nandini Iyengar,"Itchy lesions hands after using detergent, 1/12. Lichenified plaques. Topical steroid x 1 wk, emollients",
+V042077,SVH025913,2024-03-09,General Medicine,Dr. Anitha Hegde,No relief with previous Rx. Medication changed. Review 1 wk,
+V042078,SVH027348,2024-03-11,General Medicine,Dr. Prakash Shenoy,type 2 diabetes; HbA1c 10.2; FBS 206; wt 74 kg; dose stepped up,
+V042079,SVH027200,2024-03-11,Cardiology,Dr. Sunil Deshpande,"Atypical chest pain x 4 days. ECG, Echo normal. Reassured, review SOS.",
+V042080,SVH026093,2024-03-12,General Medicine,Dr. Anitha Hegde,"Vomiting, loose motions since yesterday. Mild dehydration, BP 100/70. IV fluids 1 pint given in OPD, review tomorrow",2024-06-10
+V042081,SVH027405,2024-03-14,Diabetology,Dr. Meghana Kamath,"T2DM (3 yrs), HbA1c 7.3, c/o nocturia, cont same meds",
+V042082,SVH027431,2024-03-14,General Medicine,Dr. Prakash Shenoy,"easy fatiguability x 2/52; iron deficiency anaemia; peripheral smear, B12 sent",
+V042083,SVH026093,2024-03-15,General Medicine,Dr. Anitha Hegde,Review. Reports NAD. Cont Rx,
+V042086,SVH027438,2024-03-15,OBG,Dr. Kavya Menon,"c/o painful periods x 2 cycles. Uterus normal size, USG NAD. Dysmenorrhoea. Analgesic during periods",
+V042087,SVH027000,2024-03-16,Emergency,Dr. Naveen Poojary,"dog bite L leg, 1 hr back. cat III bite, wound washed. ARV day 0 given, schedule explained",
+V042088,SVH027453,2024-03-20,Emergency,Dr. Naveen Poojary,"fall from bike, abrasions L leg. superficial abrasions, no bony tenderness. dressing done, review after 2 days",2024-05-19
+V042089,SVH027485,2024-03-21,Dental,Dr. Harini Balan,"sensitivity to cold x 2 wks. cervical abrasion 14, 24. desensitising paste, soft brush",
+V042092,SVH026960,2024-03-23,Diabetology,Dr. Srikanth Rao,f/u visit. F 148 / PP 249. Refer ophthal for fundus. Review 3 months with HbA1c.,
+V042095,SVH026256,2024-03-24,General Medicine,Dr. Prakash Shenoy,"dry cough x 2/52, worse at night; chest clear, SpO2 98% RA; allergic bronchitis; antihistamine HS, CXR if not better in 1 wk",
+V042096,SVH027496,2024-03-24,Emergency,Dr. Naveen Poojary,"fall from bike, abrasions L leg. superficial abrasions, no bony tenderness. dressing done, review after 2 days",
+V042097,SVH027200,2024-03-26,General Medicine,Dr. Anitha Hegde,"c/o loose stools, crampy abdominal pain x 3 days. Hydration fair, P/A soft. ORS, probiotics, light diet",
+V042098,SVH024860,2024-03-30,Diabetology,Dr. Srikanth Rao,Type 2 diabetes. Sugars running high. c/o burning soles. Review 1 month.,2024-05-02
+V042099,SVH027510,2024-03-31,Diabetology,Dr. Srikanth Rao,Diabetes mellitus. HbA1c 8.3. Fundus check due. Rpt FBS/PPBS next visit.,2024-06-30
+V042100,SVH027524,2024-03-31,Paediatrics,Dr. Joseph Kurian,"Poor appetite, not gaining wt x 6 wks, Pallor +, wt below 3rd centile, Iron syrup x 3 months, diet advice",
+V042103,SVH025548,2024-04-02,General Medicine,Dr. Anitha Hegde,"c/o burning micturition x 3 days. Afebrile, renal angle non tender. UTI. Plenty of oral fluids, antibiotics x 5 days",
+V042105,SVH027200,2024-04-03,General Medicine,Dr. Anitha Hegde,f/u visit. Improving. Cont same x 1 more wk,
+V042108,SVH024980,2024-04-10,General Medicine,Dr. Anitha Hegde,"Annual health check up. BP 126/80, BMI 26. Adv regular exercise, review yearly",2024-05-08
+V042109,SVH025256,2024-04-12,ENT,Dr. Vikram Gowda,"blocked nose, sneezing x 6 months, post nasal drip +, CT PNS if recurrent",
+V042110,SVH027485,2024-04-12,ENT,Dr. Vikram Gowda,"blocked nose, sneezing x 1 month, sinus tenderness +, DNS with allergic rhinitis, antihistamine HS, avoid dust",
+V042111,SVH026535,2024-04-18,General Medicine,Dr. Prakash Shenoy,review; FBS 227; review 3 months with HbA1c,2024-07-19
+V042113,SVH026086,2024-04-20,Orthopaedics,Dr. Farhan Qureshi,"c/o back pain after lifting weight, 5 days. Paraspinal spasm +, no neuro deficit. ?PIVD L4-L5. MRI if no relief in 2 wks.",
+V042114,SVH027526,2024-04-20,Emergency,Dr. Naveen Poojary,"severe R loin pain since morning, vomiting. inj analgesic given, USG KUB adv",
+V042116,SVH025331,2024-04-22,Diabetology,Dr. Srikanth Rao,Known diabetic. Home GRBS 114-154. Foot exam NAD. Cont same Rx. r/v 6/12.,2024-10-19
+V042117,SVH025790,2024-04-23,General Medicine,Dr. Prakash Shenoy,DM2; home GRBS 150-180; irregular with diet; urine microalbumin adv; review 2 months,
+V042118,SVH027547,2024-04-23,General Medicine,Dr. Anitha Hegde,"Vomiting, loose motions since yesterday. Acute gastroenteritis. ORS, probiotics, light diet",
+V042119,SVH027560,2024-04-24,General Medicine,Dr. Anitha Hegde,"Vomiting, loose motions since yesterday. Mild dehydration, BP 100/70. Acute gastroenteritis. IV fluids 1 pint given in OPD, review tomorrow",
+V042121,SVH027526,2024-04-25,Emergency,Dr. Naveen Poojary,came with reports. all WNL. reassured,
+V042123,SVH027596,2024-04-27,General Medicine,Dr. Anitha Hegde,"Annual health check up. BP 126/80, BMI 26. Adv regular exercise, review yearly",
+V042126,SVH026237,2024-05-01,General Medicine,Dr. Anitha Hegde,T2DM (5 yrs). HbA1c 6.9. Home GRBS 121-154. BP 142/79. Rpt FBS/PPBS next visit. Review after 3 months,
+V042129,SVH027634,2024-05-01,Ophthalmology,Dr. Rekha Pillai,"Itching, redness both eyes x 1/12; Papillae +; Cold compress, avoid rubbing",2024-05-22
+V042130,SVH027645,2024-05-02,Paediatrics,Dr. Joseph Kurian,"Fever, cold x 3 days, Temp 100.8 F, ears NAD, Acute pharyngitis, Tepid sponging, review 2 days",
+V042131,SVH027648,2024-05-02,General Medicine,Dr. Anitha Hegde,"c/o fever x 3 days, body ache. ?dengue, NS1 sent. PCM 650 SOS, plenty of fluids",
+V042132,SVH027656,2024-05-08,Orthopaedics,Dr. Farhan Qureshi,"Heel pain x 2 wks, worse in morning. MCR footwear, stretching ex.",
+V042133,SVH026256,2024-05-09,General Medicine,Dr. Prakash Shenoy,"cold, cough, throat pain x 2 days; cough syrup, warm fluids",
+V042134,SVH025668,2024-05-19,General Medicine,Dr. Prakash Shenoy,DM2; FBS 150; review 6 wks,
+V042136,SVH027690,2024-05-22,Cardiology,Dr. Sunil Deshpande,"c/o chest discomfort on exertion x 2 months. ECG: NSR, no ST-T changes. ?stable angina. TMT next visit.",
+V042137,SVH025442,2024-05-26,Ophthalmology,Dr. Rekha Pillai,Routine eye check; IOP 14/16; Refractive error; Glasses prescribed,
+V042139,SVH027690,2024-05-28,Cardiology,Dr. Sunil Deshpande,Came with reports. All WNL. Reassured.,
+V042140,SVH024817,2024-05-28,Dermatology,Dr. Nandini Iyengar,Urticaria on and off x 1 month. Antihistamine daily x 4 wks,2024-06-25
+V042141,SVH026328,2024-05-29,Dermatology,Dr. Nandini Iyengar,"Itchy lesions hands after using detergent, 6 months. Avoid irritants, antihistamine HS",2024-06-26
+V042142,SVH026562,2024-05-31,ENT,Dr. Vikram Gowda,"ear discharge R x 1 month, CSOM R, ear drops, keep ear dry",2024-06-28
+V042143,SVH025811,2024-06-02,General Medicine,Dr. Anitha Hegde,k/c/o DM. Home GRBS 106-138. BP 138/94. Adv diet + daily walk,
+V042146,SVH026167,2024-06-04,General Medicine,Dr. Anitha Hegde,Follow up visit. HbA1c 9.0. Home GRBS 169-219. Cont same Rx,2024-09-03
+V042147,SVH026465,2024-06-07,Orthopaedics,Dr. Farhan Qureshi,"c/o neck pain x 1/12. ROM painful, no neuro deficit. Cervical spondylosis. Neck isometric ex, hot fomentation.",
+V042150,SVH027715,2024-06-09,Orthopaedics,Dr. Farhan Qureshi,"Low back ache x 1/12. Lumbar spondylosis. Analgesics, muscle relaxant x 5 days.",
+V042152,SVH026234,2024-06-09,Dermatology,Dr. Nandini Iyengar,"Itchy lesions hands after using detergent, 2 wks. Lichenified plaques. Avoid irritants, antihistamine HS",
+V042155,SVH026465,2024-06-10,Orthopaedics,Dr. Farhan Qureshi,Feeling better. No fresh complaints. Review SOS.,
+V042156,SVH027741,2024-06-12,General Medicine,Dr. Prakash Shenoy,"c/o lower abdominal pain, burning urine x 5/7; UTI; plenty of oral fluids, antibiotics x 5 days",2024-07-12
+V042159,SVH027791,2024-06-18,Orthopaedics,Dr. Farhan Qureshi,"c/o L knee pain x 3 months, worse on climbing stairs. Medial joint line tenderness. Quadriceps strengthening ex, analgesics.",2024-07-16
+V042162,SVH027823,2024-06-20,General Medicine,Dr. Anitha Hegde,"Burning sensation in chest after food x 3 wks. P/A soft, mild epigastric tenderness. GERD. Small frequent meals, review SOS",2024-07-04
+V042163,SVH027741,2024-06-20,General Medicine,Dr. Prakash Shenoy,f/u; symptomatically better; complete the course,
+V042165,SVH025339,2024-06-21,General Medicine,Dr. Anitha Hegde,"Vomiting, loose motions since yesterday. Mild dehydration, BP 100/70. IV fluids 1 pint given in OPD, review tomorrow",
+V042166,SVH025339,2024-06-25,General Medicine,Dr. Anitha Hegde,f/u. Symptomatically better. Complete the course,
+V042168,SVH027832,2024-06-25,Diabetology,Dr. Srikanth Rao,"Diabetic. FBS 146. c/o burning soles. Insulin discussed, pt not willing.",
+V042169,SVH027863,2024-06-26,Diabetology,Dr. Srikanth Rao,Known diabetic since 2019. Home GRBS 148-192. Review after 3 months.,2024-09-21
+V042170,SVH026593,2024-06-27,Emergency,Dr. Naveen Poojary,"fall from bike, abrasions L leg. superficial abrasions, no bony tenderness. dressing done, review after 2 days",
+V042171,SVH025376,2024-07-01,Cardiology,Dr. Sunil Deshpande,"IHD f/u, effort tolerance good. BP 124/78, pulse 68. Review 3 months.",2024-08-12
+V042174,SVH027902,2024-07-02,General Medicine,Dr. Anitha Hegde,DM2 x 6 yrs. F 120 / PP 177. Walking 30 min daily. Rpt FBS/PPBS next visit,2024-08-03
+V042175,SVH027966,2024-07-04,OBG,Dr. Kavya Menon,"ANC 16 wks, no complaints. BP 110/70, FHS +. Iron, calcium started. OGTT at 24-28 wks",
+V042176,SVH027925,2024-07-06,Diabetology,Dr. Srikanth Rao,Known diabetic since 2021. FBS 194. No hypo episodes. Add 2nd OHA. Review 1 month.,
+V042179,SVH027999,2024-07-08,Diabetology,Dr. Srikanth Rao,NIDDM since 2023. F 128 / PP 195. Rpt FBS/PPBS next visit.,
+V042180,SVH028025,2024-07-09,General Medicine,Dr. Prakash Shenoy,c/o generalised weakness x 6 months; ?B12 deficiency; review 1 month,
+V042182,SVH026817,2024-07-10,ENT,Dr. Vikram Gowda,"c/o nasal block, headache x 3/7, post nasal drip +, antihistamine HS, avoid dust",
+V042183,SVH028039,2024-07-11,Emergency,Dr. Naveen Poojary,"fall from bike, abrasions R leg. dressing done, review after 2 days",
+V042184,SVH025512,2024-07-15,Diabetology,Dr. Srikanth Rao,"Came for f/u. FBS 150, PPBS 226. Cont same.",2024-09-10
+V042185,SVH028068,2024-07-19,OBG,Dr. Kavya Menon,"ANC 16 wks, no complaints. BP 110/70, FHS +. Iron, calcium started. OGTT at 24-28 wks",
+V042188,SVH028096,2024-07-19,Emergency,Dr. Naveen Poojary,"severe R loin pain since morning, vomiting. ureteric colic. inj analgesic given, USG KUB adv",
+V042189,SVH027094,2024-07-20,General Medicine,Dr. Anitha Hegde,f/u visit. HbA1c 6.0. c/o tiredness. r/v 3/12,
+V042190,SVH028104,2024-07-21,Orthopaedics,Dr. Farhan Qureshi,"c/o neck pain x 6 months. X-ray C-spine: loss of lordosis. Postural neck pain. Neck isometric ex, hot fomentation.",
+V042191,SVH027405,2024-07-22,General Medicine,Dr. Prakash Shenoy,T2DM; sugars running high; foot exam NAD; cont same Rx; r/v 3/12,2024-10-18
+V042193,SVH028117,2024-07-22,General Medicine,Dr. Anitha Hegde,"Came for general check up. Vitals normal, systemic exam NAD. Reports reviewed - WNL",
+V042195,SVH025344,2024-07-23,Ophthalmology,Dr. Rekha Pillai,"Itching, redness both eyes x 2/52; Papillae +; Allergic conjunctivitis; Cold compress, avoid rubbing",
+V042197,SVH026086,2024-07-25,Diabetology,Dr. Meghana Kamath,"came for f/u, sugars not under control, dose stepped up, r/v 3/12",
+V042198,SVH028152,2024-07-25,Dental,Dr. Harini Balan,pain upper L back tooth x 3/7. pulpitis 26. extraction under LA done,
+V042199,SVH026737,2024-07-26,Paediatrics,Dr. Joseph Kurian,"Noisy breathing, cough at night x 4 days, Hyper-reactive airway disease, Review 3 days",2024-08-02
+V042201,SVH025344,2024-07-27,Ophthalmology,Dr. Rekha Pillai,f/u visit; Improving; Cont same x 1 more wk,
+V042202,SVH028189,2024-07-31,Diabetology,Dr. Meghana Kamath,"DM2, HbA1c 10.0, home GRBS 192-261, adv diet + daily walk",2024-10-30
+V042203,SVH028194,2024-08-07,General Medicine,Dr. Anitha Hegde,"k/c/o HTN x 3 yrs, came for f/u. RFT, lipids adv",
+V042204,SVH025913,2024-08-10,ENT,Dr. Vikram Gowda,"recurrent cold, watering of nose, antihistamine HS, avoid dust",
+V042205,SVH028218,2024-08-11,Diabetology,Dr. Srikanth Rao,DM2 since 2017. HbA1c 10.8. Dose stepped up.,2024-10-12
+V042206,SVH028258,2024-08-14,Paediatrics,Dr. Joseph Kurian,"T1DM, on basal bolus, SMBG 110-260, Pre-meal sugars 140-190, Cont same insulin doses",
+V042208,SVH027823,2024-08-14,ENT,Dr. Vikram Gowda,"recurrent throat pain, 4 episodes this year, post pharyngeal wall granular, gargles, avoid cold drinks",2024-09-25
+V042211,SVH028271,2024-08-16,General Medicine,Dr. Prakash Shenoy,diabetic; HbA1c 11.2; sugars running high; wt 85 kg; review 2 months,
+V042214,SVH025730,2024-08-16,General Medicine,Dr. Anitha Hegde,"Body pains, low mood x 3 months. Vit D 14. Vit D 60K weekly x 8 wks",2024-10-15
+V042215,SVH025339,2024-08-17,General Medicine,Dr. Anitha Hegde,f/u visit. Home GRBS 107-177. Cont same meds,
+V042218,SVH028292,2024-08-17,General Medicine,Dr. Anitha Hegde,"c/o headache x 2/52, on and off. BP 118/76, CNS NAD. Analgesic SOS, sleep hygiene",
+V042219,SVH028319,2024-08-18,General Medicine,Dr. Prakash Shenoy,"T2DM since 2016; FBS 113, PPBS 192; cont same meds",
+V042220,SVH028326,2024-08-23,OBG,Dr. Kavya Menon,"ANC 16 wks, no complaints. BP 110/70, FHS +. Iron, calcium started. OGTT at 24-28 wks",
+V042221,SVH026960,2024-08-24,Diabetology,Dr. Srikanth Rao,"f/u. FBS 171, PPBS 263. Review after 3 months.",
+V042223,SVH028346,2024-08-25,General Medicine,Dr. Prakash Shenoy,known diabetic; HbA1c 6.1; FBS 121 PPBS 167; fundus check due; cont same,
+V042224,SVH025191,2024-08-28,OBG,Dr. Kavya Menon,"c/o acne, irregular periods x 6 months. USG: PCO morphology. PCOS. Metformin SR 500 mg OD, review 3 months",
+V042226,SVH028360,2024-08-31,General Medicine,Dr. Prakash Shenoy,"easy fatiguability x 2/52; iron deficiency anaemia; oral iron x 3 months, deworming",2024-11-29
+V042228,SVH028414,2024-09-02,Diabetology,Dr. Srikanth Rao,k/c/o DM. HbA1c 8.6. Sugars running high. Review after 3 months.,
+V042229,SVH027348,2024-09-03,General Medicine,Dr. Prakash Shenoy,annual health check up; reports reviewed - WNL,
+V042230,SVH027610,2024-09-03,Paediatrics,Dr. Joseph Kurian,"Cough, wheeze x 6 days, Chest: b/l wheeze, no retractions, Hyper-reactive airway disease, Review 3 days",
+V042231,SVH026465,2024-09-05,General Medicine,Dr. Anitha Hegde,k/c/o DM since 2012. Home GRBS 141-195. Rpt FBS/PPBS next visit,
+V042233,SVH026817,2024-09-07,General Medicine,Dr. Anitha Hegde,k/c/o DM. c/o tingling both feet. Add 2nd OHA,2024-12-04
+V042234,SVH028444,2024-09-07,General Medicine,Dr. Prakash Shenoy,"c/o epigastric pain, bloating x 2/52; no guarding, bowel sounds +; gastritis; small frequent meals, review SOS",2024-10-05
+V042235,SVH028452,2024-09-10,Diabetology,Dr. Srikanth Rao,Type 2 diabetes. HbA1c 6.8. Sugars acceptable. Missed meds x 2 wks. r/v 6/12.,
+V042236,SVH026872,2024-09-10,Dental,Dr. Harini Balan,"bleeding gums x 2/52. scaling done, OHI given",
+V042239,SVH028463,2024-09-13,General Medicine,Dr. Prakash Shenoy,type 2 diabetes x 1 yrs; F 174 / PP 255; cont same Rx,
+V042242,SVH028477,2024-09-13,Orthopaedics,Dr. Farhan Qureshi,"Stiff neck x 3 days, works on computer. X-ray C-spine: loss of lordosis. Neck isometric ex, hot fomentation.",2024-09-27
+V042243,SVH026872,2024-09-14,Dental,Dr. Harini Balan,came with reports. all WNL. reassured,
+V042246,SVH026237,2024-09-15,ENT,Dr. Vikram Gowda,"recurrent throat pain, 2 episodes this year, chronic pharyngitis, gargles, avoid cold drinks",
+V042247,SVH027147,2024-09-16,Paediatrics,Dr. Joseph Kurian,"High fever x 2 days, not feeding well, Throat congested, chest clear, Syrup PCM SOS, nasal saline drops",
+V042248,SVH027261,2024-09-17,Diabetology,Dr. Srikanth Rao,T2DM x 13 yrs. FBS 142. Wt 87 kg. Cont same.,2024-10-16
+V042251,SVH026153,2024-09-18,General Medicine,Dr. Anitha Hegde,Known diabetic (4 yrs). F 214 / PP 299. Pedal pulses felt. Cont same meds,2024-12-16
+V042253,SVH026350,2024-09-19,Orthopaedics,Dr. Farhan Qureshi,"Stiff neck x 3 days, works on computer. ROM painful, no neuro deficit. Neck isometric ex, hot fomentation.",
+V042256,SVH028477,2024-09-20,Orthopaedics,Dr. Farhan Qureshi,Feeling better. No fresh complaints. Review SOS.,
+V042257,SVH026737,2024-09-22,Emergency,Dr. Naveen Poojary,"fall from bike, abrasions R leg. superficial abrasions, no bony tenderness. dressing done, review after 2 days",
+V042259,SVH027147,2024-09-24,Paediatrics,Dr. Joseph Kurian,"Review, Reports NAD, Cont Rx",
+V042260,SVH027966,2024-09-25,OBG,Dr. Kavya Menon,ANC 27 wks. GDM. Metformin 500 mg BD started. Diet counselling,
+V042261,SVH025870,2024-09-25,Paediatrics,Dr. Joseph Kurian,"k/c/o juvenile diabetes, HbA1c 8.4, Wt 44 kg, Parents giving injections regularly, Review 3 months",2024-12-24
+V042262,SVH026769,2024-09-26,Cardiology,Dr. Sunil Deshpande,"Old IWMI, on regular Rx. Lipid profile rpt adv.",
+V042263,SVH025313,2024-09-29,General Medicine,Dr. Anitha Hegde,Routine f/u. HbA1c 7.3. FBS 150. Review 6 wks,2024-11-10
+V042266,SVH026535,2024-10-01,General Medicine,Dr. Prakash Shenoy,came for f/u; sugars not under control; BP 151/76; cont same,2024-11-02
+V042268,SVH025280,2024-10-03,General Medicine,Dr. Anitha Hegde,k/c/o DM x 4 yrs. FBS 171. Review after 3 months,
+V042269,SVH028388,2024-10-03,ENT,Dr. Vikram Gowda,"throat pain, difficulty swallowing x 3/7, acute tonsillitis, antibiotics x 5 days, warm saline gargles",
+V042270,SVH027113,2024-10-04,Diabetology,Dr. Srikanth Rao,k/c/o DM. Sugars running high. Incr OHA dose.,
+V042273,SVH028068,2024-10-08,OBG,Dr. Kavya Menon,"ANC 28 wks. OGTT: fasting 98, 2 hr 164 - GDM. MNT adv, SMBG chart given. Review 2 wks",
+V042275,SVH027355,2024-10-08,General Medicine,Dr. Anitha Hegde,"c/o giddiness on getting up x 3/7. Adequate fluids, rise slowly",
+V042277,SVH028517,2024-10-09,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Burrows +, excoriated papules. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042278,SVH028537,2024-10-09,General Medicine,Dr. Anitha Hegde,"Br asthma, occasional wheeze. Cont inhaler, technique checked",
+V042280,SVH028557,2024-10-12,Orthopaedics,Dr. Farhan Qureshi,"c/o L knee pain x 6 wks, worse on climbing stairs. Medial joint line tenderness. IA injection discussed, review 3 wks.",2024-11-23
+V042281,SVH025331,2024-10-13,Ophthalmology,Dr. Rekha Pillai,c/o blurring of vision for near; Presbyopia; Glasses prescribed,2024-10-20
+V042282,SVH025331,2024-10-14,Diabetology,Dr. Srikanth Rao,Known diabetic (13 yrs). HbA1c 6.8. Home GRBS 119-173. Rpt FBS/PPBS next visit.,2025-01-11
+V042283,SVH025223,2024-10-16,Emergency,Dr. Naveen Poojary,"cut injury R hand while cooking. CLW 3 cm, no tendon injury. suturing done under LA, TT given",2024-11-15
+V042285,SVH026237,2024-10-20,General Medicine,Dr. Anitha Hegde,Follow up visit. HbA1c 7.0. Home GRBS 123-166. Cont same. Review 1 month,
+V042286,SVH027966,2024-10-25,OBG,Dr. Kavya Menon,"GDM on metformin. Sugars controlled. Cont, growth scan adv",
+V042287,SVH025751,2024-10-26,Dermatology,Dr. Nandini Iyengar,"Dry scaly patches elbows, knees x 3 wks. Well defined scaly plaques. Psoriasis vulgaris. Emollients, topical steroid",
+V042289,SVH028561,2024-10-28,Orthopaedics,Dr. Farhan Qureshi,"R shoulder pain, unable to lift arm x 2 months. Physio, pendulum exercises.",
+V042290,SVH027082,2024-10-29,General Medicine,Dr. Anitha Hegde,"Type 2 diabetes since 2013. FBS 150, PPBS 223. Compliant with meds. Urine microalbumin adv",
+V042291,SVH027355,2024-10-29,General Medicine,Dr. Anitha Hegde,T2DM. c/o tiredness. Cont same Rx,
+V042294,SVH025668,2024-10-29,Orthopaedics,Dr. Farhan Qureshi,"Fall at home, pain R wrist. X-ray: undisplaced # distal radius. Below elbow cast applied, review 2 wks.",
+V042295,SVH028582,2024-10-31,Diabetology,Dr. Meghana Kamath,"diabetes mellitus - newly diagnosed, FBS 163, c/o tingling both feet, start metformin 500 mg BD, diet chart given",2024-11-14
+V042296,SVH025948,2024-11-03,General Medicine,Dr. Prakash Shenoy,type 2 DM; FBS 176 PPBS 247; walking 30 min daily; cont same meds,
+V042297,SVH028604,2024-11-03,Cardiology,Dr. Sunil Deshpande,"Post PTCA f/u, asymptomatic. Cont antiplatelets, statin.",
+V042298,SVH025063,2024-11-05,Diabetology,Dr. Meghana Kamath,"T2DM, HbA1c 8.3, FBS 175, PPBS 256, no hypo episodes, review 1 month",2024-12-08
+V042299,SVH027018,2024-11-05,General Medicine,Dr. Prakash Shenoy,"c/o epigastric pain, bloating x 2 wks; P/A soft, mild epigastric tenderness; GERD; UGI scopy if persists",
+V042302,SVH026193,2024-11-07,General Medicine,Dr. Prakash Shenoy,known diabetic; home GRBS 115-171; cont same meds,
+V042303,SVH028639,2024-11-07,Dermatology,Dr. Nandini Iyengar,Pigmentation cheeks x 3 wks. Symmetric macular pigmentation. Melasma. Strict sun protection,
+V042305,SVH027999,2024-11-08,Orthopaedics,Dr. Farhan Qureshi,"Pain L knee, difficulty squatting x 2 months. Medial joint line tenderness. Early OA. IA injection discussed, review 3 wks.",
+V042307,SVH028667,2024-11-08,Cardiology,Dr. Sunil Deshpande,"c/o palpitations on and off x 1 month. ECG: sinus tachycardia, BP 146/90. Holter if recurrent.",
+V042308,SVH027348,2024-11-09,General Medicine,Dr. Prakash Shenoy,type 2 diabetes since 2012; FBS 219 PPBS 295; no fresh complaints; review 6 wks,2024-12-24
+V042309,SVH026193,2024-11-09,Orthopaedics,Dr. Farhan Qureshi,"Pain L knee, difficulty squatting x 6 months. Medial joint line tenderness. OA knee. Wt reduction, physio x 10 days.",
+V042311,SVH025030,2024-11-10,Diabetology,Dr. Meghana Kamath,"known diabetic x 2 yrs, HbA1c 10.0, sugars running high, walking 30 min daily, refer ophthal for fundus",
+V042312,SVH027925,2024-11-12,Diabetology,Dr. Srikanth Rao,Known diabetic. Sugars not under control. Foot exam NAD. Urine microalbumin adv. Review 2 months.,
+V042313,SVH028687,2024-11-13,General Medicine,Dr. Anitha Hegde,"c/o generalised weakness x 6 wks. Hb 9.2, pallor ++. Oral iron x 3 months, deworming",
+V042315,SVH028326,2024-11-15,OBG,Dr. Kavya Menon,"ANC 26 wks. Gestational diabetes, OGTT abnormal. Started on insulin, 6 U before meals. SMBG 4 point",
+V042316,SVH026167,2024-11-16,General Medicine,Dr. Anitha Hegde,"c/o epigastric pain, bloating x 6 months. No guarding, bowel sounds +. Acid peptic disease. Small frequent meals, review SOS",
+V042318,SVH028068,2024-11-17,OBG,Dr. Kavya Menon,GDM on diet control. Sugars acceptable on chart. Growth scan adv,
+V042320,SVH026193,2024-11-17,Orthopaedics,Dr. Farhan Qureshi,Came with reports. All WNL. Reassured.,
+V042323,SVH028721,2024-11-17,General Medicine,Dr. Anitha Hegde,"Asthma f/u, using inhaler regularly. Cont same, avoid dust, review 3 months",2025-02-15
+V042324,SVH028753,2024-11-20,General Medicine,Dr. Anitha Hegde,T2DM x 1 yrs. Home GRBS 103-138. Wt 91 kg. Review 3 months with HbA1c,
+V042325,SVH028778,2024-11-21,General Medicine,Dr. Anitha Hegde,"Burning sensation in chest after food x 2/52. P/A soft, mild epigastric tenderness. Acid peptic disease. UGI scopy if persists",
+V042327,SVH026167,2024-11-23,General Medicine,Dr. Anitha Hegde,f/u. No fresh complaints. Review after 3 months,2025-02-23
+V042328,SVH028812,2024-11-24,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042331,SVH028825,2024-11-24,Emergency,Dr. Naveen Poojary,"sudden onset abdominal pain x 3 hrs. vitals stable, RBS 108. acute gastritis. IV PPI, observed 2 hrs, review in OPD",
+V042332,SVH028864,2024-11-25,General Medicine,Dr. Anitha Hegde,"c/o epigastric pain, bloating x 2 months. UGI scopy if persists",
+V042333,SVH026057,2024-11-25,Ophthalmology,Dr. Rekha Pillai,"Itching, redness both eyes x 2 wks; Papillae +; Cold compress, avoid rubbing",
+V042336,SVH028258,2024-11-27,Paediatrics,Dr. Joseph Kurian,"f/u, HbA1c 8.4, Pre-meal sugars 140-190, Injection sites normal, Cont same insulin doses",2025-02-25
+V042337,SVH027510,2024-11-27,Diabetology,Dr. Srikanth Rao,Routine f/u. FBS 194. Wt 63 kg. Cont same Rx.,2025-02-22
+V042340,SVH028104,2024-11-28,General Medicine,Dr. Prakash Shenoy,"c/o wt gain, tiredness, on thyroxine 50 mcg; incr thyroxine to 75 mcg, rpt TSH 6 wks",
+V042341,SVH028871,2024-11-30,Dermatology,Dr. Nandini Iyengar,"Itchy lesions hands after using detergent, 1 month. Lichenified plaques. Topical steroid x 1 wk, emollients",
+V042344,SVH028864,2024-12-03,General Medicine,Dr. Anitha Hegde,"IGT. Adv wt reduction, brisk walk 30 min. Rpt HbA1c 6 months",
+V042345,SVH027832,2024-12-03,General Medicine,Dr. Anitha Hegde,Came for f/u. Home GRBS 131-161. Missed meds x 2 wks. Refer ophthal for fundus. Review 2 months,2025-02-02
+V042346,SVH025331,2024-12-03,Ophthalmology,Dr. Rekha Pillai,"Foreign body sensation R eye since yesterday; Corneal FB removed under topical; Antibiotic drops, review tomorrow",
+V042349,SVH027966,2024-12-05,OBG,Dr. Kavya Menon,PNC 6 wks. Metformin stopped at delivery. Adv OGTT - not done,
+V042350,SVH026593,2024-12-05,Cardiology,Dr. Sunil Deshpande,"Atypical chest pain x 2 days. ECG, Echo normal. Reassured, review SOS.",
+V042351,SVH028876,2024-12-06,OBG,Dr. Kavya Menon,"Oligomenorrhoea x 1 yr, hirsutism +. PCOD. HbA1c 5.4, TSH normal. Metformin 500 mg BD, lifestyle modification",
+V042354,SVH024860,2024-12-06,Diabetology,Dr. Srikanth Rao,f/u visit. HbA1c 7.8. Refer ophthal for fundus.,2025-02-06
+V042356,SVH024714,2024-12-06,ENT,Dr. Vikram Gowda,"hoarseness of voice x 3 wks, IDL: vocal nodules, voice rest, steam",
+V042357,SVH027863,2024-12-07,Diabetology,Dr. Srikanth Rao,Known diabetic x 5 yrs. No fresh complaints. Add 2nd OHA. Review after 3 months.,
+V042358,SVH028894,2024-12-07,General Medicine,Dr. Prakash Shenoy,"known hypertensive on regular Rx, BP check; BP 128/80, pulse 76; cont same",2025-01-04
+V042361,SVH025030,2024-12-08,General Medicine,Dr. Prakash Shenoy,"hypothyroid on thyroxine, f/u; TSH 3.2; cont same dose",
+V042362,SVH028326,2024-12-13,OBG,Dr. Kavya Menon,"GDM on insulin. FBS 92, PP 128. Growth scan: AGA. Cont same dose",
+V042363,SVH028910,2024-12-15,Diabetology,Dr. Meghana Kamath,"diabetes mellitus, FBS 125, PPBS 153, no hypo episodes, cont same, review after 3 months",2025-03-12
+V042364,SVH026927,2024-12-16,Diabetology,Dr. Meghana Kamath,"T2DM (11 yrs), sugars not under control, add 2nd OHA, review 2 months",
+V042366,SVH025811,2024-12-17,General Medicine,Dr. Anitha Hegde,k/c/o DM x 8 yrs. FBS 130. Review 3 months with HbA1c,2025-03-19
+V042368,SVH027355,2024-12-21,General Medicine,Dr. Anitha Hegde,"Br asthma, occasional wheeze. Cont inhaler, technique checked",
+V042371,SVH027690,2024-12-21,Dermatology,Dr. Nandini Iyengar,"Red itchy patches neck x 3 months. Lichenified plaques. Topical steroid x 1 wk, emollients",
+V042372,SVH027405,2024-12-22,Diabetology,Dr. Meghana Kamath,"T2DM, FBS 132, irregular with diet, review after 3 months",2025-03-24
+V042373,SVH025378,2024-12-23,Dermatology,Dr. Nandini Iyengar,"Itching all over, worse at night x 3 days. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042374,SVH028068,2024-12-24,OBG,Dr. Kavya Menon,"PNC 2 wks, FTND. Baby 3.1 kg, breastfeeding. Sugars normal post delivery. Adv OGTT at 6 wks",
+V042375,SVH028194,2024-12-25,Dermatology,Dr. Nandini Iyengar,"Itching all over, worse at night x 3 days. Burrows +, excoriated papules. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042376,SVH028938,2024-12-26,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Permethrin overnight, rpt after 1 wk, treat all contacts",2025-02-06
+V042377,SVH025790,2024-12-31,General Medicine,Dr. Prakash Shenoy,routine f/u; sugars not under control; review 1 month,
+V042378,SVH025698,2024-12-31,Diabetology,Dr. Meghana Kamath,"diabetic since 2012, FBS 144 PPBS 200, review 3 months with HbA1c",
+V042379,SVH027355,2024-12-31,General Medicine,Dr. Anitha Hegde,f/u visit. Improving. Cont same x 1 more wk,
+V042380,SVH028557,2025-01-08,Cardiology,Dr. Sunil Deshpande,"Atypical chest pain x 1 wk. Denies diabetes, smoking. ECG: NSR. TMT negative, reassured.",
+V042382,SVH028965,2025-01-09,General Medicine,Dr. Anitha Hegde,"Vomiting, loose motions since yesterday. Mild dehydration, BP 100/70. Acute gastroenteritis. IV fluids 1 pint given in OPD, review tomorrow",2025-01-23
+V042384,SVH027902,2025-01-11,General Medicine,Dr. Anitha Hegde,DM2 since 2018. FBS 124. Review after 3 months,
+V042385,SVH028972,2025-01-11,General Medicine,Dr. Anitha Hegde,"Diabetic since 2023. HbA1c 9.5. FBS 191, PPBS 285. c/o tiredness. Cont same",2025-04-08
+V042386,SVH029034,2025-01-13,Cardiology,Dr. Sunil Deshpande,"Atypical chest pain x 3 days. ECG, Echo normal. Non cardiac chest pain. Reassured, review SOS.",
+V042387,SVH028812,2025-01-13,Dermatology,Dr. Nandini Iyengar,"Red itchy patches neck x 1/12. Avoid irritants, antihistamine HS",
+V042388,SVH029007,2025-01-14,General Medicine,Dr. Anitha Hegde,Diabetic - 2 yrs. HbA1c 7.2. FBS 123 PPBS 227. Review 6 wks,2025-02-28
+V042389,SVH029061,2025-01-16,General Medicine,Dr. Anitha Hegde,k/c/o DM. HbA1c 8.5. F 157 / PP 258. Wt 57 kg. Dose stepped up,2025-04-19
+V042390,SVH028812,2025-01-16,Dermatology,Dr. Nandini Iyengar,Review. Reports NAD. Cont Rx,
+V042391,SVH024817,2025-01-18,General Medicine,Dr. Prakash Shenoy,"increased frequency, dysuria x 2 days; afebrile, renal angle non tender; ?UTI - urine R/E, C/S sent; plenty of oral fluids, antibiotics x 5 days",2025-02-17
+V042392,SVH025191,2025-01-20,OBG,Dr. Kavya Menon,PCOS review. Tolerating metformin. Cont,
+V042394,SVH026769,2025-01-20,Dental,Dr. Harini Balan,"bleeding gums x 1 month. generalised gingivitis. scaling done, OHI given",
+V042396,SVH029075,2025-01-21,Dermatology,Dr. Nandini Iyengar,Urticaria on and off x 2/52. Chronic urticaria. Antihistamine daily x 4 wks,2025-04-21
+V042399,SVH029084,2025-01-23,Diabetology,Dr. Srikanth Rao,NIDDM (14 yrs). Sugars not under control. Dose stepped up. Review after 3 months.,2025-04-25
+V042400,SVH028326,2025-01-28,OBG,Dr. Kavya Menon,"Post LSCS day 10, wound healthy. Insulin stopped after delivery. Review 6 wks",
+V042401,SVH024817,2025-01-28,General Medicine,Dr. Prakash Shenoy,came with reports; all WNL; reassured,
+V042402,SVH025855,2025-01-29,Diabetology,Dr. Srikanth Rao,Type 2 diabetes - 8 yrs. r/v 3/12.,2025-04-29
+V042403,SVH029107,2025-01-29,General Medicine,Dr. Prakash Shenoy,f/u; FBS 186; cont same meds; review 2 months,2025-03-30
+V042404,SVH029145,2025-01-29,Cardiology,Dr. Sunil Deshpande,"IHD f/u, effort tolerance good. ECG: old q waves. Review 3 months.",
+V042405,SVH029154,2025-01-30,General Medicine,Dr. Anitha Hegde,"Easy fatiguability x 3 months. Pallor +, no icterus. Iron deficiency anaemia. Oral iron x 3 months, deworming",
+V042406,SVH026086,2025-01-31,General Medicine,Dr. Prakash Shenoy,type 2 diabetes x 6 yrs; sugars not under control; irregular with diet; cont same; review after 3 months,
+V042407,SVH029181,2025-01-31,Diabetology,Dr. Srikanth Rao,Type 2 DM. F 128 / PP 198. Review after 3 months.,2025-04-29
+V042408,SVH027094,2025-02-01,Diabetology,Dr. Srikanth Rao,k/c/o DM - 9 yrs. F 137 / PP 191. Pedal pulses felt. Rpt FBS/PPBS next visit.,2025-05-04
+V042409,SVH028218,2025-02-01,Diabetology,Dr. Srikanth Rao,DM2 (8 yrs). F 228 / PP 341. Incr OHA dose.,
+V042411,SVH029154,2025-02-02,General Medicine,Dr. Anitha Hegde,f/u visit. Improving. Cont same x 1 more wk,
+V042413,SVH026960,2025-02-05,Diabetology,Dr. Srikanth Rao,f/u visit. FBS 169. Refer ophthal for fundus.,2025-05-04
+V042414,SVH027003,2025-02-05,General Medicine,Dr. Prakash Shenoy,type 2 diabetes since 2013; sugars not under control; review 6 wks,
+V042416,SVH025668,2025-02-06,General Medicine,Dr. Prakash Shenoy,DM2; FBS 177 PPBS 237; incr OHA dose; review 1 month,
+V042417,SVH029204,2025-02-07,General Medicine,Dr. Prakash Shenoy,DM2; FBS 160 PPBS 242; pedal pulses felt; cont same,
+V042419,SVH024742,2025-02-09,ENT,Dr. Vikram Gowda,"ringing sound in ears x 2 wks, PTA: mild SNHL b/l, reassured, review with PTA",
+V042420,SVH029212,2025-02-09,Dermatology,Dr. Nandini Iyengar,"Red itchy patches neck x 1 month. Avoid irritants, antihistamine HS",
+V042422,SVH029235,2025-02-10,General Medicine,Dr. Prakash Shenoy,"known diabetic since 2020; F 211 / PP 293; irregular with diet; insulin discussed, pt not willing; review 6 wks",2025-03-21
+V042423,SVH025360,2025-02-10,Orthopaedics,Dr. Farhan Qureshi,"RTA 2 days back, pain R shoulder. Arm sling, analgesics, review 1 wk.",
+V042425,SVH028721,2025-02-12,ENT,Dr. Vikram Gowda,"recurrent cold, watering of nose, antihistamine HS, avoid dust",
+V042427,SVH029268,2025-02-12,ENT,Dr. Vikram Gowda,"hoarseness of voice x 3 months, IDL: vocal nodules, voice rest, steam",2025-02-19
+V042428,SVH024742,2025-02-14,ENT,Dr. Vikram Gowda,"came with reports, all WNL, reassured",
+V042431,SVH029212,2025-02-14,Dermatology,Dr. Nandini Iyengar,f/u. Symptomatically better. Complete the course,
+V042433,SVH024714,2025-02-20,Dental,Dr. Harini Balan,"food lodgement, pain on chewing x 2 wks. deep caries 46. extraction under LA done",
+V042435,SVH028721,2025-02-20,ENT,Dr. Vikram Gowda,"no relief with previous Rx, medication changed, review 1 wk",
+V042436,SVH024860,2025-02-21,Orthopaedics,Dr. Farhan Qureshi,"Pain R knee, difficulty squatting x 2 wks. Medial joint line tenderness. OA knee. Wt reduction, physio x 10 days.",2025-03-21
+V042438,SVH025963,2025-02-23,Orthopaedics,Dr. Farhan Qureshi,"c/o back pain after lifting weight, 3 days. X-ray LS spine NAD. Mechanical LBA. Back strengthening ex, avoid forward bending.",
+V042441,SVH025339,2025-02-25,General Medicine,Dr. Anitha Hegde,Follow up visit. Sugars acceptable. Cont same Rx. r/v 3/12,
+V042443,SVH029350,2025-02-28,General Medicine,Dr. Prakash Shenoy,c/o burning micturition x 6 days; review with urine report,
+V042444,SVH025963,2025-03-01,Orthopaedics,Dr. Farhan Qureshi,f/u visit. Improving. Cont same x 1 more wk.,
+V042445,SVH029322,2025-03-02,Diabetology,Dr. Meghana Kamath,"f/u, HbA1c 8.1, review 3 months with HbA1c",
+V042446,SVH029373,2025-03-02,General Medicine,Dr. Prakash Shenoy,"c/o generalised weakness x 6 months; oral iron x 3 months, deworming",
+V042447,SVH029364,2025-03-03,Diabetology,Dr. Srikanth Rao,"Type 2 diabetes. HbA1c 8.1. FBS 149, PPBS 247. Review 2 months.",2025-04-30
+V042448,SVH029350,2025-03-03,General Medicine,Dr. Prakash Shenoy,feeling better; no fresh complaints; review SOS,
+V042449,SVH028452,2025-03-04,Diabetology,Dr. Srikanth Rao,f/u. FBS 126 PPBS 195. No fresh complaints. Cont same meds. r/v 3/12.,
+V042452,SVH027999,2025-03-05,Diabetology,Dr. Srikanth Rao,f/u visit. F 127 / PP 196. Walking 30 min daily. Review after 3 months.,2025-06-02
+V042453,SVH029411,2025-03-05,Orthopaedics,Dr. Farhan Qureshi,"Fall at home, pain R wrist. X-ray: undisplaced # distal radius. Below elbow cast applied, review 2 wks.",2025-03-19
+V042455,SVH029481,2025-03-07,Paediatrics,Dr. Joseph Kurian,"Loose stools 6 times since morning, Review tomorrow",
+V042458,SVH029446,2025-03-09,General Medicine,Dr. Anitha Hegde,"Came with reports. HbA1c 6.5, FBS 112. Lifestyle modification adv. No medication now, rpt 3 months",
+V042461,SVH025473,2025-03-09,General Medicine,Dr. Anitha Hegde,"c/o increased thirst, tiredness x 1 month. Adv FBS, HbA1c. Review with reports",
+V042463,SVH029490,2025-03-09,Diabetology,Dr. Srikanth Rao,Type 2 DM. FBS 108 PPBS 172. Review 3 months with HbA1c.,
+V042464,SVH028965,2025-03-10,OBG,Dr. Kavya Menon,"PNC visit, LSCS wound check. BP 116/74, breast NAD. Cu-T inserted",
+V042465,SVH026555,2025-03-11,Paediatrics,Dr. Joseph Kurian,"Vomiting x 1 day, not tolerating feeds, Mild dehydration, active, ORS, zinc x 14 days",2025-04-10
+V042466,SVH029497,2025-03-13,ENT,Dr. Vikram Gowda,"c/o nasal block, headache x 3 days, post nasal drip +, acute sinusitis, CT PNS if recurrent",
+V042469,SVH025730,2025-03-14,General Medicine,Dr. Anitha Hegde,"c/o tiredness, breathless on climbing stairs x 2 wks. Pallor +, no icterus. Oral iron x 3 months, deworming",
+V042470,SVH028346,2025-03-15,Cardiology,Dr. Sunil Deshpande,"Post PTCA f/u, asymptomatic. BP 124/78, pulse 68. Lipid profile rpt adv.",
+V042471,SVH026131,2025-03-16,General Medicine,Dr. Prakash Shenoy,"wt 84 kg, BMI 30; family history of diabetes (both parents); RBS 104; adv diet, exercise, wt reduction",
+V042473,SVH029513,2025-03-16,Cardiology,Dr. Sunil Deshpande,"c/o palpitations on and off x 3 months. ECG: sinus tachycardia, BP 146/90. Holter if recurrent.",
+V042474,SVH027453,2025-03-19,Dermatology,Dr. Nandini Iyengar,Urticaria on and off x 2/52. Dermographism +. Antihistamine daily x 4 wks,
+V042476,SVH025512,2025-03-20,Diabetology,Dr. Srikanth Rao,Routine f/u. HbA1c 7.7. Add 2nd OHA. Review after 3 months.,
+V042477,SVH029528,2025-03-20,Diabetology,Dr. Srikanth Rao,Diabetes mellitus - 4 yrs. HbA1c 8.2. Sugars not under control. Cont same meds. Review 1 month.,2025-04-16
+V042478,SVH025339,2025-03-21,General Medicine,Dr. Anitha Hegde,Attender came for records. Informed pt expired at home last month. File closed,
+V042481,SVH029145,2025-03-24,General Medicine,Dr. Prakash Shenoy,"c/o generalised weakness x 3 months; vitals stable, pallor mild; anaemia under evaluation; peripheral smear, B12 sent",
+V042483,SVH027348,2025-03-25,Emergency,Dr. Naveen Poojary,"cut injury R hand while cooking. CLW 3 cm, no tendon injury. suturing done under LA, TT given",
+V042484,SVH026535,2025-03-25,General Medicine,Dr. Prakash Shenoy,"T2DM - 5 yrs; FBS 210, PPBS 324; incr OHA dose",2025-05-27
+V042485,SVH027207,2025-03-27,Orthopaedics,Dr. Farhan Qureshi,"Fall at home, pain R wrist. X-ray: undisplaced # distal radius. # distal radius. Below elbow cast applied, review 2 wks.",
+V042486,SVH029560,2015-03-28,Paediatrics,Dr. Joseph Kurian,"Fever, cold x 1 wk, Temp 100.8 F, ears NAD, Acute pharyngitis, Tepid sponging, review 2 days",
+V042487,SVH029490,2025-03-29,Ophthalmology,Dr. Rekha Pillai,"Redness, watering R eye x 4 days; Conjunctival congestion +, cornea clear; Acute conjunctivitis; Antibiotic drops x 5 days, hand hygiene",
+V042488,SVH027113,2025-03-29,Diabetology,Dr. Srikanth Rao,"Follow up visit. F 216 / PP 291. Pedal pulses felt. Insulin discussed, pt not willing. Review 2 months.",2025-05-28
+V042490,SVH027782,2025-04-02,Diabetology,Dr. Srikanth Rao,Diabetic (3 yrs). F 132 / PP 207. Cont same Rx.,
+V042491,SVH025331,2025-04-03,General Medicine,Dr. Anitha Hegde,Follow up visit. Home GRBS 102-162. Missed meds x 2 wks. Cont same Rx,2025-07-30
+V042492,SVH026086,2025-04-04,General Medicine,Dr. Prakash Shenoy,"adm with sepsis, DKA; shifted to ICU; pt expired on 4/4/2025; death summary given to attenders",
+V042493,SVH026350,2025-04-04,General Medicine,Dr. Prakash Shenoy,"c/o epigastric pain, bloating x 6 months; no guarding, bowel sounds +; UGI scopy if persists",
+V042494,SVH028189,2025-04-05,General Medicine,Dr. Prakash Shenoy,came for f/u; FBS 183; fundus check due; review 6 wks,2025-05-18
+V042496,SVH026960,2025-04-06,ENT,Dr. Vikram Gowda,"ringing sound in ears x 1/12, tinnitus, reassured, review with PTA",
+V042498,SVH026634,2025-04-06,General Medicine,Dr. Prakash Shenoy,"c/o generalised weakness x 2/52; vitals stable, pallor mild; ?B12 deficiency; review 1 month",
+V042501,SVH028876,2025-04-08,OBG,Dr. Kavya Menon,f/u PCOD. Wt reduced 3 kg. Cont same,
+V042503,SVH027405,2025-04-09,General Medicine,Dr. Prakash Shenoy,"known hypertensive on regular Rx, BP check; BP 150/94, pedal edema nil; RFT, lipids adv",
+V042504,SVH029597,2025-04-12,General Medicine,Dr. Prakash Shenoy,"c/o recurrent boils x 2 months; adv FBS, HbA1c; antibiotics x 5 days",
+V042506,SVH027261,2025-04-12,Diabetology,Dr. Srikanth Rao,T2DM (14 yrs). HbA1c 7.4. F 135 / PP 218. c/o tiredness. Rpt FBS/PPBS next visit. Review after 3 months.,
+V042507,SVH025442,2025-04-15,General Medicine,Dr. Anitha Hegde,"Came with reports. HbA1c 6.6, FBS 112. Lifestyle modification adv. No medication now, rpt 3 months",
+V042508,SVH024950,2025-04-15,General Medicine,Dr. Anitha Hegde,"Asthma f/u, using inhaler regularly. Cont same, avoid dust, review 3 months",
+V042509,SVH029610,2025-04-16,General Medicine,Dr. Prakash Shenoy,T2DM since 2018; FBS 147; irregular with diet; review 2 months,2025-06-14
+V042510,SVH029625,2025-04-17,Diabetology,Dr. Srikanth Rao,Type 2 diabetes since 2016. Sugars acceptable. c/o tingling both feet. Rpt FBS/PPBS next visit. Review 2 months.,
+V042513,SVH028271,2025-04-17,General Medicine,Dr. Prakash Shenoy,"diabetic; FBS 225, PPBS 371; missed meds x 2 wks; insulin discussed, pt not willing",2025-08-16
+V042514,SVH028258,2025-04-19,Paediatrics,Dr. Joseph Kurian,"T1DM, on basal bolus, HbA1c 8.0, Parents giving injections regularly, Missed afternoon doses at school, Cont same insulin doses",2025-07-18
+V042516,SVH026237,2025-04-21,General Medicine,Dr. Anitha Hegde,T2DM. Home GRBS 115-148. c/o tingling both feet. Cont same,
+V042517,SVH029627,2025-04-22,OBG,Dr. Kavya Menon,"c/o painful periods x 5 cycles. Uterus normal size, USG NAD. Analgesic during periods",2025-06-21
+V042518,SVH024560,2025-04-23,General Medicine,Dr. Anitha Hegde,"c/o wt gain, tiredness, on thyroxine 50 mcg. TSH 8.6. Incr thyroxine to 75 mcg, rpt TSH 6 wks",
+V042519,SVH029181,2025-04-23,Dental,Dr. Harini Balan,"bad breath, deposits on teeth. scaling adv, appointment given",
+V042520,SVH024560,2025-04-26,General Medicine,Dr. Anitha Hegde,Came with reports. All WNL. Reassured,
+V042521,SVH027823,2025-04-29,ENT,Dr. Vikram Gowda,"hard of hearing R ear x 2 months, TM intact, Rinne +ve b/l, audiometry adv",
+V042524,SVH026153,2025-04-30,General Medicine,Dr. Anitha Hegde,f/u. Sugars running high. Fundus check due. Review after 3 months,2025-07-28
+V042525,SVH029638,2025-05-01,General Medicine,Dr. Anitha Hegde,"Reports reviewed. Sugars borderline. Adv diet control, wt reduction. Rpt HbA1c after 3 months",
+V042527,SVH026737,2025-05-01,Paediatrics,Dr. Joseph Kurian,"Fever, running nose, cough x 2 days, Temp 100.8 F, ears NAD, Tepid sponging, review 2 days",
+V042529,SVH029560,2025-05-05,ENT,Dr. Vikram Gowda,"ear block after bath x 5/7, wax impacted b/l, wax softener x 5 days then syringing",
+V042530,SVH029659,2025-05-06,General Medicine,Dr. Prakash Shenoy,"came with reports; sugars borderline high; adv diet, rpt 6 months",
+V042533,SVH024573,2025-05-09,Dental,Dr. Harini Balan,"c/o toothache lower R x 4 days. deep caries 46. RCT 1st sitting done, review 3 days",
+V042534,SVH029693,2025-05-10,OBG,Dr. Kavya Menon,"k/c/o PCOS, anxious to conceive. USG: polycystic ovaries, AFC 22 each. Cont metformin, folic acid, ovulation induction next cycle",
+V042536,SVH026389,2025-05-10,General Medicine,Dr. Anitha Hegde,"Came for general check up. Adv regular exercise, review yearly",
+V042537,SVH028346,2025-05-11,Diabetology,Dr. Srikanth Rao,Review. FBS 105. No hypo episodes. r/v 6/12.,
+V042538,SVH026817,2025-05-14,General Medicine,Dr. Anitha Hegde,"Review. HbA1c 8.5. FBS 179, PPBS 255. c/o nocturia. Cont same Rx. Review after 3 months",2025-08-10
+V042539,SVH025870,2025-05-15,Paediatrics,Dr. Joseph Kurian,"Juvenile diabetes since age 4, No DKA episodes, Missed afternoon doses at school, Night dose incr by 2 U",2025-08-13
+V042540,SVH027832,2025-05-17,General Medicine,Dr. Anitha Hegde,"Routine f/u. FBS 141, PPBS 217. c/o burning soles. Incr OHA dose. r/v 3/12",2025-08-15
+V042541,SVH029714,2025-05-17,Ophthalmology,Dr. Rekha Pillai,"Foreign body sensation R eye since yesterday; Corneal FB; Antibiotic drops, review tomorrow",
+V042542,SVH026167,2025-05-19,General Medicine,Dr. Anitha Hegde,Type 2 diabetes x 12 yrs. Sugars running high. Pedal pulses felt. Review 6 wks,
+V042543,SVH029714,2025-05-20,Ophthalmology,Dr. Rekha Pillai,Review; Reports NAD; Cont Rx,
+V042544,SVH029751,2025-05-22,General Medicine,Dr. Anitha Hegde,"Body pains, low mood x 1 month. Vit D 60K weekly x 8 wks",
+V042545,SVH025280,2025-05-24,Dental,Dr. Harini Balan,"bad breath, deposits on teeth. scaling adv, appointment given",
+V042548,SVH029061,2025-05-25,General Medicine,Dr. Anitha Hegde,Came for f/u. HbA1c 8.3. FBS 163. c/o nocturia. Dose stepped up,
+V042549,SVH029759,2025-05-26,General Medicine,Dr. Prakash Shenoy,"c/o joint pains, both hands x 6 months; no synovitis, morning stiffness 20 min; analgesics, review with reports",
+V042550,SVH025280,2025-05-27,General Medicine,Dr. Anitha Hegde,"k/c/o DM - 5 yrs. HbA1c 7.8. FBS 140, PPBS 222. Dose stepped up",2025-08-26
+V042551,SVH028444,2025-05-29,Orthopaedics,Dr. Farhan Qureshi,"Slipped in bathroom, pain L ankle. Tenderness over lat malleolus, X-ray NAD. Crepe bandage, ice, limb elevation.",
+V042554,SVH029759,2025-05-30,General Medicine,Dr. Prakash Shenoy,f/u visit; improving; cont same x 1 more wk,
+V042555,SVH028319,2025-05-31,General Medicine,Dr. Prakash Shenoy,T2DM x 9 yrs; HbA1c 7.0; FBS 134; review after 3 months,2025-08-28
+V042556,SVH029287,2025-05-31,Paediatrics,Dr. Joseph Kurian,"Loose stools, vomiting x 1 wk, Hydration fair, abdomen soft, Cont feeds, danger signs explained",
+V042557,SVH027405,2025-06-02,Diabetology,Dr. Meghana Kamath,"T2DM, FBS 144, PPBS 214, no fresh complaints, urine microalbumin adv",
+V042559,SVH028871,2025-06-02,Orthopaedics,Dr. Farhan Qureshi,"Pain R knee, difficulty squatting x 2 wks. X-ray: OA changes gr II. Wt reduction, physio x 10 days.",
+V042560,SVH027355,2025-06-02,General Medicine,Dr. Anitha Hegde,"Came for f/u. HbA1c 8.1. FBS 150, PPBS 233. Cont same Rx",2025-08-30
+V042561,SVH026237,2025-06-04,General Medicine,Dr. Anitha Hegde,"c/o generalised weakness x 2/52. Oral iron x 3 months, deworming",
+V042562,SVH026237,2025-06-09,General Medicine,Dr. Anitha Hegde,Review. Reports NAD. Cont Rx,
+V042565,SVH029107,2025-06-11,General Medicine,Dr. Prakash Shenoy,f/u visit; FBS 180 PPBS 262; adv diet + daily walk,2025-10-12
+V042568,SVH025948,2025-06-13,General Medicine,Dr. Prakash Shenoy,type 2 DM; HbA1c 8.3; home GRBS 152-208; pedal pulses felt; cont same Rx; review 2 months,
+V042570,SVH029789,2025-06-15,General Medicine,Dr. Anitha Hegde,"Dry cough x 6 months, worse at night. Chest clear, SpO2 98% RA. Antihistamine HS, CXR if not better in 1 wk",
+V042571,SVH029767,2025-06-16,Diabetology,Dr. Meghana Kamath,"known diabetic, HbA1c 8.5, home GRBS 158-202, wt 60 kg, refer ophthal for fundus",
+V042572,SVH029789,2025-06-19,General Medicine,Dr. Anitha Hegde,f/u. Symptomatically better. Complete the course,
+V042573,SVH026702,2025-06-20,Diabetology,Dr. Meghana Kamath,"type 2 DM, F 135 / PP 216, irregular with diet, cont same",2025-08-21
+V042574,SVH025811,2025-06-23,Dermatology,Dr. Nandini Iyengar,"Dry scaly patches elbows, knees x 6 wks. Well defined scaly plaques. Emollients, topical steroid",
+V042575,SVH029034,2025-06-25,General Medicine,Dr. Prakash Shenoy,"fever on and off x 2 days, weakness; CBC, MP sent, review with reports",
+V042576,SVH026960,2025-06-26,ENT,Dr. Vikram Gowda,"recurrent cold, watering of nose, allergic rhinitis, CT PNS if recurrent",2025-08-25
+V042577,SVH028561,2025-06-27,Dental,Dr. Harini Balan,"pain upper R back tooth x 5 days. tender on percussion 36. RCT 1st sitting done, review 3 days",
+V042579,SVH026960,2025-06-29,ENT,Dr. Vikram Gowda,"f/u visit, improving, cont same x 1 more wk",
+V042580,SVH025378,2025-06-29,General Medicine,Dr. Anitha Hegde,"Mother diabetic. Pt wants sugar check. FBS 92, HbA1c 5.3 - normal. Reassured, rpt yearly",
+V042581,SVH027902,2025-07-01,Diabetology,Dr. Meghana Kamath,"DM2 x 7 yrs, HbA1c 6.5, F 120 / PP 157, fundus check due, urine microalbumin adv",
+V042583,SVH029803,2025-07-01,General Medicine,Dr. Anitha Hegde,"High grade fever x 1 wk, headache, myalgia. Temp 99.8 F, hydration fair. Adv rest, r/v 3 days if fever persists",
+V042584,SVH029322,2025-07-02,Diabetology,Dr. Meghana Kamath,"f/u, FBS 155, PPBS 245, add 2nd OHA",
+V042586,SVH025030,2025-07-03,Diabetology,Dr. Meghana Kamath,"known diabetic, FBS 219 PPBS 291, foot exam NAD, r/v 3/12",2025-10-01
+V042587,SVH029826,2025-07-03,Diabetology,Dr. Meghana Kamath,"known diabetic, F 147 / PP 183, compliant with meds, cont same Rx, review 6 wks",
+V042588,SVH029034,2025-07-04,General Medicine,Dr. Prakash Shenoy,f/u; symptomatically better; complete the course,
+V042589,SVH028463,2025-07-06,General Medicine,Dr. Prakash Shenoy,type 2 diabetes x 2 yrs; home GRBS 157-218; cont same meds,
+V042591,SVH026798,2025-07-08,General Medicine,Dr. Anitha Hegde,"c/o tiredness x 1 month, wt loss 3 kg. Adv CBC, TSH, HbA1c. Review with reports",
+V042593,SVH029830,2025-07-09,General Medicine,Dr. Anitha Hegde,"Health check package. BP 134/84, BMI 28. Reports awaited",
+V042596,SVH025811,2025-07-09,General Medicine,Dr. Anitha Hegde,k/c/o DM - 9 yrs. Urine microalbumin adv. Review 3 months with HbA1c,2025-10-04
+V042599,SVH026555,2025-07-09,Paediatrics,Dr. Joseph Kurian,"Noisy breathing, cough at night x 3/7, Chest: b/l wheeze, no retractions, Hyper-reactive airway disease, Nebulisation given, improved",
+V042602,SVH025751,2025-07-09,General Medicine,Dr. Anitha Hegde,"c/o burning micturition x 1 wk. ?UTI - urine R/E, C/S sent. Review with urine report",
+V042604,SVH025698,2025-07-10,General Medicine,Dr. Anitha Hegde,"Vomiting, loose motions since yesterday. Mild dehydration, BP 100/70. IV fluids 1 pint given in OPD, review tomorrow",2025-08-21
+V042607,SVH027438,2025-07-11,ENT,Dr. Vikram Gowda,"c/o nasal block, headache x 3/7, DNS to R, turbinates hypertrophied, DNS with allergic rhinitis, CT PNS if recurrent",
+V042610,SVH027791,2025-07-12,Dermatology,Dr. Nandini Iyengar,"Itching all over, worse at night x 3 days. Burrows +, excoriated papules. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042611,SVH029838,2025-07-14,Paediatrics,Dr. Joseph Kurian,"Type 1 DM on insulin, HbA1c 10.2, Injection sites normal, Pre-meal sugars 140-190, Cont same insulin doses",2025-10-12
+V042614,SVH029840,2025-07-16,General Medicine,Dr. Anitha Hegde,"Pain and swelling R great toe x 3 days. MTP joint tender, erythema +. Low purine diet, plenty of water",
+V042616,SVH027348,2025-07-17,General Medicine,Dr. Prakash Shenoy,"follow up visit; FBS 232, PPBS 346; review 6 wks",
+V042617,SVH029767,2025-07-17,Orthopaedics,Dr. Farhan Qureshi,"Fall at home, pain L wrist. X-ray: undisplaced # distal radius. # distal radius. Below elbow cast applied, review 2 wks.",
+V042618,SVH024641,2025-07-17,General Medicine,Dr. Prakash Shenoy,"master health check, no complaints; reports reviewed - WNL",
+V042619,SVH029873,2025-07-19,General Medicine,Dr. Prakash Shenoy,"c/o burning feet x 3 wks; sugars high on report; adv diet, rpt after 1 month",
+V042620,SVH026702,2025-07-19,Dental,Dr. Harini Balan,"food lodgement, pain on chewing x 6 months. pulpitis 26. RCT adv",
+V042621,SVH029881,2025-07-19,General Medicine,Dr. Anitha Hegde,"c/o joint pains, both hands x 2/52. No synovitis, morning stiffness 20 min. ?early RA, RA factor sent. Analgesics, review with reports",
+V042622,SVH025751,2025-07-19,General Medicine,Dr. Anitha Hegde,Review. Reports NAD. Cont Rx,
+V042625,SVH026960,2025-07-23,Diabetology,Dr. Srikanth Rao,"Known diabetic - 9 yrs. FBS 148, PPBS 198. Urine microalbumin adv.",2025-10-21
+V042627,SVH029767,2025-07-23,Orthopaedics,Dr. Farhan Qureshi,Review. Reports NAD. Cont Rx.,
+V042628,SVH028972,2025-07-23,General Medicine,Dr. Anitha Hegde,f/u. Home GRBS 174-222. Pedal pulses felt. Review 3 months with HbA1c,2025-10-18
+V042629,SVH027791,2025-07-23,General Medicine,Dr. Anitha Hegde,"High grade fever x 3 days, headache, myalgia. Febrile, vitals stable. Viral pyrexia. Symptomatic Rx, review SOS",
+V042630,SVH027034,2025-07-24,General Medicine,Dr. Anitha Hegde,"k/c/o asthma, breathlessness at night x 3 days. RS: b/l wheeze +. Nebulisation given, short course steroids",
+V042633,SVH029918,2025-07-25,Diabetology,Dr. Srikanth Rao,Known diabetic (14 yrs). FBS 127 PPBS 188. Rpt FBS/PPBS next visit.,
+V042636,SVH025313,2025-07-26,General Medicine,Dr. Anitha Hegde,Review. F 143 / PP 220. Walking 30 min daily. Review 2 months,
+V042637,SVH027018,2025-07-28,ENT,Dr. Vikram Gowda,"recurrent cold, watering of nose, allergic rhinitis, nasal spray x 4 wks, steam inhalation",
+V042640,SVH029597,2025-07-29,General Medicine,Dr. Prakash Shenoy,boils healed; reports to be collected; review SOS,
+V042641,SVH028910,2025-07-29,Diabetology,Dr. Meghana Kamath,"f/u, FBS 128 PPBS 169, missed meds x 2 wks, cont same meds, r/v 6/12",2026-01-26
+V042644,SVH029826,2025-07-29,Ophthalmology,Dr. Rekha Pillai,Difficulty reading small print x 2 wks; Refractive error; Review 1 yr,
+V042645,SVH029803,2025-07-29,Emergency,Dr. Naveen Poojary,"cut injury L hand while cooking. CLW 3 cm, no tendon injury. suturing done under LA, TT given",
+V042647,SVH027094,2025-07-31,Diabetology,Dr. Srikanth Rao,Review. F 124 / PP 189. c/o burning soles. Urine microalbumin adv.,
+V042648,SVH028218,2025-08-01,General Medicine,Dr. Anitha Hegde,Came for f/u. Home GRBS 198-261. Dose stepped up. Review 3 months with HbA1c,
+V042649,SVH027510,2025-08-01,General Medicine,Dr. Anitha Hegde,Diabetes mellitus (9 yrs). Sugars not under control. Cont same. Review after 3 months,2025-10-31
+V042651,SVH026465,2025-08-02,General Medicine,Dr. Anitha Hegde,f/u visit. F 149 / PP 258. Dose stepped up,
+V042654,SVH025528,2025-08-02,General Medicine,Dr. Anitha Hegde,"Br asthma, occasional wheeze. RS: occasional rhonchi. Cont inhaler, technique checked",
+V042656,SVH028753,2025-08-03,General Medicine,Dr. Anitha Hegde,"c/o loose stools, crampy abdominal pain x 3 days. ORS, probiotics, light diet",
+V042659,SVH025698,2025-08-03,Diabetology,Dr. Meghana Kamath,"diabetic x 13 yrs, sugars under control, cont same",2025-11-02
+V042660,SVH026507,2025-08-04,Diabetology,Dr. Srikanth Rao,"Type II diabetes (3 yrs). HbA1c 11.2. FBS 248, PPBS 373. c/o burning soles. Insulin discussed, pt not willing. r/v 3/12.",2025-11-04
+V042663,SVH027060,2025-08-04,Emergency,Dr. Naveen Poojary,"breathlessness, wheeze since night. SpO2 93% RA, b/l wheeze. acute exacerbation asthma. nebulisation x 3, improved, discharged",
+V042664,SVH029950,2025-08-06,General Medicine,Dr. Anitha Hegde,Diabetes mellitus. Sugars not under control. Compliant with meds. Review after 3 months,2025-11-01
+V042665,SVH027082,2025-08-08,Diabetology,Dr. Srikanth Rao,Type 2 diabetes. F 173 / PP 282. Adv diet + daily walk.,
+V042667,SVH026542,2025-08-09,General Medicine,Dr. Anitha Hegde,"c/o fever x 6 days, body ache. Adv rest, r/v 3 days if fever persists",
+V042668,SVH026193,2025-08-10,Dermatology,Dr. Nandini Iyengar,Urticaria on and off x 2 wks. Dermographism +. Antihistamine daily x 4 wks,2025-09-07
+V042669,SVH028258,2025-08-12,Paediatrics,Dr. Joseph Kurian,"f/u, HbA1c 8.7, No DKA episodes, Parents giving injections regularly, Cont same insulin doses",
+V042670,SVH028537,2025-08-12,Ophthalmology,Dr. Rekha Pillai,"Redness, watering L eye x 3 days; Conjunctival congestion +, cornea clear; Acute conjunctivitis; Antibiotic drops x 5 days, hand hygiene",
+V042671,SVH025926,2025-08-13,General Medicine,Dr. Prakash Shenoy,wt 88 kg; pre-diabetic range sugars; diet counselling done; review 6 months,
+V042672,SVH029789,2025-08-15,General Medicine,Dr. Anitha Hegde,"c/o cough with expectoration x 5/7. RS: b/l scattered rhonchi. Antibiotics x 5 days, steam inhalation",
+V042673,SVH029984,2025-08-16,Dermatology,Dr. Nandini Iyengar,"Dry scaly patches elbows, knees x 3 wks. Well defined scaly plaques. Emollients, topical steroid",
+V042676,SVH026131,2025-08-18,Orthopaedics,Dr. Farhan Qureshi,LBA radiating to R leg x 6 months. SLR 60 deg on R. MRI if no relief in 2 wks.,2025-11-16
+V042677,SVH029204,2025-08-18,General Medicine,Dr. Prakash Shenoy,review; HbA1c 7.6; home GRBS 136-188; cont same,
+V042679,SVH029950,2025-08-18,General Medicine,Dr. Anitha Hegde,"c/o lower abdominal pain, burning urine x 3/7. Afebrile, renal angle non tender. Review with urine report",
+V042680,SVH030006,2025-08-19,General Medicine,Dr. Prakash Shenoy,diabetes mellitus - newly diagnosed; HbA1c 10.2; F 215 / PP 305; c/o tingling both feet; start metformin 500 mg BD; diet + exercise counselling done,
+V042683,SVH028537,2025-08-19,Ophthalmology,Dr. Rekha Pillai,No relief with previous Rx; Medication changed; Review 1 wk,
+V042684,SVH030047,2025-08-19,Dental,Dr. Harini Balan,c/o toothache lower R x 3/7. tender on percussion 36. extraction under LA done,
+V042685,SVH025790,2025-08-21,General Medicine,Dr. Prakash Shenoy,f/u; sugars not under control; c/o tingling both feet; urine microalbumin adv,2025-11-22
+V042686,SVH025934,2025-08-21,General Medicine,Dr. Anitha Hegde,Type 2 DM x 4 yrs. HbA1c 9.9. Home GRBS 189-256. Add 2nd OHA,2025-11-21
+V042687,SVH030076,2025-08-22,Cardiology,Dr. Sunil Deshpande,"Old IWMI, on regular Rx. Review 3 months.",
+V042688,SVH028414,2025-08-25,General Medicine,Dr. Anitha Hegde,f/u. Sugars not under control. Compliant with meds. Dose stepped up. Review 1 month,2025-09-26
+V042690,SVH029075,2025-08-25,Orthopaedics,Dr. Farhan Qureshi,"Stiff neck x 3 days, works on computer. X-ray C-spine: loss of lordosis. Cervical spondylosis. Ergonomic advice, soft collar x 1 wk.",
+V042691,SVH026193,2025-08-27,General Medicine,Dr. Prakash Shenoy,f/u visit; F 110 / PP 173; adv diet + daily walk; review 3 months with HbA1c,
+V042692,SVH024742,2025-08-28,General Medicine,Dr. Anitha Hegde,"c/o cough with expectoration x 6 days. RS: b/l scattered rhonchi. LRTI. Antibiotics x 5 days, steam inhalation",2025-09-11
+V042693,SVH029638,2025-08-30,General Medicine,Dr. Anitha Hegde,"f/u. Wt reduced 4 kg. Rpt report satisfactory. Cont diet, exercise",
+V042694,SVH028753,2025-09-01,General Medicine,Dr. Anitha Hegde,"f/u. HbA1c 7.0. FBS 140, PPBS 211. Fundus check due. Adv diet + daily walk",
+V042695,SVH026535,2025-09-01,General Medicine,Dr. Prakash Shenoy,T2DM; FBS 221; BP 143/86; review 1 month,2025-09-28
+V042698,SVH028452,2025-09-02,General Medicine,Dr. Prakash Shenoy,type 2 diabetes - 3 yrs; sugars under control; no fresh complaints; urine microalbumin adv; r/v 6/12,2026-02-26
+V042700,SVH025063,2025-09-03,Diabetology,Dr. Meghana Kamath,"T2DM, sugars not under control, irregular with diet, cont same Rx",
+V042701,SVH025442,2025-09-05,General Medicine,Dr. Anitha Hegde,Rpt HbA1c normal now. Cont lifestyle measures. Review yearly,
+V042703,SVH024860,2025-09-06,Diabetology,Dr. Srikanth Rao,Type 2 diabetes. Sugars not under control. BP 144/94. Review after 3 months.,
+V042706,SVH029446,2025-09-07,General Medicine,Dr. Anitha Hegde,"f/u. Wt reduced 4 kg. Rpt report satisfactory. Cont diet, exercise",
+V042709,SVH026927,2025-09-09,Diabetology,Dr. Meghana Kamath,"T2DM since 2013, F 136 / PP 217, no hypo episodes, review 2 months",
+V042710,SVH028667,2025-09-10,General Medicine,Dr. Anitha Hegde,"c/o fever x 5/7, body ache. Temp 101 F, throat congested. Viral fever. PCM 650 SOS, plenty of fluids",
+V042711,SVH026662,2025-09-10,Dermatology,Dr. Nandini Iyengar,Urticaria on and off x 1 month. Dermographism +. Chronic urticaria. Antihistamine daily x 4 wks,
+V042713,SVH025344,2025-09-12,OBG,Dr. Kavya Menon,"Came for contraception advice. Cont iron, calcium x 3 months",
+V042714,SVH025855,2025-09-13,Ophthalmology,Dr. Rekha Pillai,Routine eye check; Refraction done; Refractive error; Glasses prescribed,
+V042715,SVH030091,2025-09-14,General Medicine,Dr. Anitha Hegde,T2DM. FBS 133. Cont same meds. Review 3 months with HbA1c,2025-12-16
+V042716,SVH025620,2025-09-14,Cardiology,Dr. Sunil Deshpande,"Post PTCA f/u, asymptomatic. Review 3 months.",
+V042717,SVH027526,2025-09-15,General Medicine,Dr. Anitha Hegde,"c/o tiredness, breathless on climbing stairs x 1/12. Pallor +, no icterus. Anaemia under evaluation. Peripheral smear, B12 sent",
+V042719,SVH030098,2025-09-15,Paediatrics,Dr. Joseph Kurian,"Fever, cold x 1 wk, Temp 100.8 F, ears NAD, Acute pharyngitis, Syrup PCM SOS, nasal saline drops",
+V042720,SVH028452,2025-09-17,Dermatology,Dr. Nandini Iyengar,"Itchy circular patches trunk x 2 months. KOH +ve. Keep area dry, do not share towels, review 2 wks",
+V042721,SVH027113,2025-09-20,Diabetology,Dr. Srikanth Rao,f/u. Home GRBS 184-229. Wt 75 kg. Cont same meds. Review 3 months with HbA1c.,2025-12-17
+V042722,SVH025344,2025-09-20,OBG,Dr. Kavya Menon,Came with reports. All WNL. Reassured,
+V042723,SVH029235,2025-09-22,General Medicine,Dr. Prakash Shenoy,review; sugars running high; c/o burning soles; review after 3 months,
+V042725,SVH029235,2025-09-22,General Medicine,Dr. Prakash Shenoy,"pain and swelling R great toe x 2 days; MTP joint tender, erythema +; low purine diet, plenty of water",2025-10-06
+V042726,SVH025855,2025-09-24,Diabetology,Dr. Srikanth Rao,"f/u visit. HbA1c 7.9. FBS 143, PPBS 226. Compliant with meds. Incr OHA dose. Review after 3 months.",2025-12-23
+V042727,SVH024860,2025-09-24,Diabetology,Dr. Srikanth Rao,"Relocated to Hyderabad. Transfer of care letter issued. To f/u with local physician, records handed over.",
+V042729,SVH030117,2025-09-26,Paediatrics,Dr. Joseph Kurian,"Father diabetic (on insulin), Parents worried, child passing urine often, Urine sugar nil, RBS 88, Reassured",
+V042730,SVH025079,2025-09-29,Cardiology,Dr. Sunil Deshpande,"c/o palpitations on and off x 3 months. ECG: sinus tachycardia, BP 146/90. Palpitations - TSH sent. Holter if recurrent.",2025-11-28
+V042733,SVH028721,2025-10-01,General Medicine,Dr. Anitha Hegde,"Came for general check up. Wt 68 kg, BP 120/78. Lipids borderline, diet advice",2025-10-29
+V042734,SVH026555,2025-10-01,Emergency,Dr. Naveen Poojary,"severe L loin pain since morning, vomiting. P/A: renal angle tenderness L. ureteric colic. inj analgesic given, USG KUB adv",
+V042735,SVH028152,2025-10-02,Emergency,Dr. Naveen Poojary,"severe L loin pain since morning, vomiting. P/A: renal angle tenderness L. inj analgesic given, USG KUB adv",
+V042736,SVH030138,2025-10-02,General Medicine,Dr. Prakash Shenoy,diabetic since 2017; HbA1c 10.2; walking 30 min daily; review 3 months with HbA1c,
+V042738,SVH027003,2025-10-05,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Burrows +, excoriated papules. Scabies. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042740,SVH029840,2025-10-06,Emergency,Dr. Naveen Poojary,"severe R loin pain since morning, vomiting. ureteric colic. inj analgesic given, USG KUB adv",
+V042741,SVH026328,2025-10-08,Ophthalmology,Dr. Rekha Pillai,"Pre-op assessment for cataract sx RE; Non-diabetic, non-hypertensive; ECG WNL; Fit for surgery under LA",
+V042742,SVH029918,2025-10-08,General Medicine,Dr. Anitha Hegde,"k/c/o asthma, breathlessness at night x 2 days. RS: b/l wheeze +. Nebulisation given, short course steroids",
+V042743,SVH025698,2025-10-10,Emergency,Dr. Naveen Poojary,"brought with chest pain, sweating x 2 hrs. ECG: ant wall STEMI. sudden collapse, CPR x 30 min, could not be revived. declared expired 5:40 am",
+V042744,SVH029061,2025-10-10,General Medicine,Dr. Anitha Hegde,k/c/o DM. HbA1c 8.6. Irregular with diet. Review 3 months with HbA1c,
+V042745,SVH026034,2025-10-10,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Burrows +, excoriated papules. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042748,SVH029918,2025-10-13,General Medicine,Dr. Anitha Hegde,f/u. Symptomatically better. Complete the course,
+V042749,SVH027161,2025-10-13,ENT,Dr. Vikram Gowda,"giddiness on turning head x 6 days, Dix-Hallpike +ve L, epley manoeuvre done, review 1 wk",
+V042750,SVH030161,2025-10-14,General Medicine,Dr. Prakash Shenoy,diabetic x 10 yrs; F 198 / PP 308; urine microalbumin adv; review 1 month,2025-11-12
+V042752,SVH029364,2025-10-16,General Medicine,Dr. Anitha Hegde,f/u visit. HbA1c 8.1. c/o tingling both feet. Dose stepped up,
+V042753,SVH029625,2025-10-16,Diabetology,Dr. Srikanth Rao,Routine f/u. FBS 142 PPBS 210. No hypo episodes. Rpt FBS/PPBS next visit.,2025-11-14
+V042754,SVH029560,2025-10-17,Dental,Dr. Harini Balan,"c/o toothache lower R x 2 days. pulpitis 26. RCT 1st sitting done, review 3 days",2025-10-31
+V042756,SVH030189,2025-10-18,General Medicine,Dr. Anitha Hegde,"Hypothyroid on thyroxine, f/u. Cont same dose",
+V042759,SVH026389,2025-10-18,General Medicine,Dr. Anitha Hegde,"Master health check, no complaints. Vitals normal, systemic exam NAD. Reports reviewed - WNL",2025-11-08
+V042760,SVH025595,2025-10-18,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Burrows +, excoriated papules. Scabies. Permethrin overnight, rpt after 1 wk, treat all contacts",2025-11-15
+V042761,SVH028938,2025-10-20,General Medicine,Dr. Prakash Shenoy,"c/o cough with expectoration x 3/7; RS: b/l scattered rhonchi; LRTI; antibiotics x 5 days, steam inhalation",
+V042762,SVH026237,2025-10-25,General Medicine,Dr. Anitha Hegde,"T2DM. FBS 112, PPBS 195. Cont same meds. r/v 3/12",
+V042765,SVH027405,2025-10-26,Diabetology,Dr. Meghana Kamath,"T2DM since 2021, sugars running high, c/o tiredness, review 2 months",2025-12-26
+V042766,SVH030189,2025-10-27,General Medicine,Dr. Anitha Hegde,No relief with previous Rx. Medication changed. Review 1 wk,
+V042767,SVH029627,2025-10-29,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Scabies. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V042768,SVH025512,2025-10-30,General Medicine,Dr. Prakash Shenoy,type 2 diabetes; home GRBS 153-194; no fresh complaints; cont same meds; review after 3 months,2026-01-26
+V042769,SVH029084,2025-10-31,Diabetology,Dr. Srikanth Rao,NIDDM (14 yrs). Sugars not under control. Fundus check due. Cont same Rx. Review 6 wks.,
+V042770,SVH028965,2025-11-01,Dermatology,Dr. Nandini Iyengar,"Itchy lesions hands after using detergent, 2/52. Contact dermatitis. Topical steroid x 1 wk, emollients",
+V042772,SVH030047,2025-11-01,Paediatrics,Dr. Joseph Kurian,"Fever, cold x 3 days, Viral URI, Tepid sponging, review 2 days",
+V042773,SVH025828,2025-11-02,General Medicine,Dr. Anitha Hegde,"c/o tiredness x 2 wks. F/h: father diabetic on insulin, mother HTN. BP 122/78. CBC, TSH sent",
+V042774,SVH026702,2025-11-04,Diabetology,Dr. Meghana Kamath,"f/u, FBS 118, PPBS 173, BP 144/89, rpt FBS/PPBS next visit",
+V042777,SVH030191,2025-11-06,General Medicine,Dr. Anitha Hegde,Type 2 diabetes. Home GRBS 110-151. Cont same Rx,2026-02-01
+V042778,SVH030226,2025-11-06,Diabetology,Dr. Meghana Kamath,"type II diabetes, HbA1c 7.6, sugars not under control, walking 30 min daily, review 6 wks",
+V042779,SVH029693,2025-11-07,OBG,Dr. Kavya Menon,"PCOS, cycles 45-60 days. Cont metformin 500 mg BD. Review 3 months",
+V042781,SVH030191,2025-11-08,Dental,Dr. Harini Balan,"bad breath, deposits on teeth. calculus ++. scaling adv, appointment given",2025-11-29
+V042784,SVH030236,2025-11-09,General Medicine,Dr. Prakash Shenoy,diabetes mellitus since 2020; FBS 139 PPBS 203; c/o nocturia; review 3 months with HbA1c,2026-02-10
+V042785,SVH030269,2025-11-09,General Medicine,Dr. Prakash Shenoy,"increased frequency, dysuria x 2 days; afebrile, renal angle non tender; UTI; plenty of oral fluids, antibiotics x 5 days",
+V042788,SVH029950,2025-11-12,Dermatology,Dr. Nandini Iyengar,"Itchy circular patches trunk x 1 month. KOH +ve. Keep area dry, do not share towels, review 2 wks",
+V042791,SVH025668,2025-11-13,General Medicine,Dr. Prakash Shenoy,DM2; HbA1c 8.0; sugars running high; c/o burning soles; cont same meds,
+V042792,SVH030293,2025-11-14,General Medicine,Dr. Anitha Hegde,"c/o tiredness, breathless on climbing stairs x 3 wks. Pallor +, no icterus. Iron deficiency anaemia. Review 1 month",
+V042795,SVH026512,2025-11-14,ENT,Dr. Vikram Gowda,"c/o nasal block, headache x 3/7, DNS to R, turbinates hypertrophied, DNS with allergic rhinitis, nasal spray x 4 wks, steam inhalation",
+V042797,SVH027003,2025-11-17,General Medicine,Dr. Prakash Shenoy,"came for f/u; FBS 194, PPBS 273; cont same Rx; review 2 months",
+V042798,SVH030309,2025-11-17,General Medicine,Dr. Anitha Hegde,k/c/o DM (12 yrs). Sugars running high. Rpt FBS/PPBS next visit,2025-12-19
+V042800,SVH030269,2025-11-19,General Medicine,Dr. Prakash Shenoy,review; reports NAD; cont Rx,
+V042803,SVH027596,2025-11-20,General Medicine,Dr. Anitha Hegde,"c/o polyuria, tiredness x 3 wks. Adv HbA1c, urine R/E. Review with reports",
+V042804,SVH025528,2025-11-21,General Medicine,Dr. Anitha Hegde,"c/o fever x 1 wk, body ache. Viral fever. Symptomatic Rx, review SOS",
+V042807,SVH030325,2025-11-21,Orthopaedics,Dr. Farhan Qureshi,"c/o R knee pain x 1/12, worse on climbing stairs. Early OA. Wt reduction, physio x 10 days.",
+V042809,SVH029838,2025-11-22,Paediatrics,Dr. Joseph Kurian,"f/u, Missed afternoon doses at school, Parents giving injections regularly, Review 3 months",
+V042810,SVH027261,2025-11-23,General Medicine,Dr. Anitha Hegde,Routine f/u. Sugars acceptable. Missed meds x 2 wks. Review 1 month,2025-12-20
+V042811,SVH030236,2025-11-23,General Medicine,Dr. Prakash Shenoy,"pain and swelling L great toe x 3 days; acute gout; low purine diet, plenty of water",2025-12-14
+V042812,SVH026153,2025-11-26,General Medicine,Dr. Anitha Hegde,Follow up visit. Sugars running high. Refer ophthal for fundus. Review 6 wks,
+V042813,SVH030327,2025-11-27,Diabetology,Dr. Meghana Kamath,"k/c/o DM, FBS 117, cont same Rx",2025-12-25
+V042816,SVH030347,2025-11-27,Diabetology,Dr. Srikanth Rao,Type 2 diabetes. Home GRBS 119-167. Cont same meds.,
+V042819,SVH029610,2025-11-27,Diabetology,Dr. Srikanth Rao,T2DM (7 yrs). HbA1c 7.5. FBS 148 PPBS 217. Walking 30 min daily. Review 2 months.,
+V042820,SVH026669,2025-11-27,General Medicine,Dr. Anitha Hegde,"c/o wt gain, tiredness, on thyroxine 50 mcg. TSH 8.6. Incr thyroxine to 75 mcg, rpt TSH 6 wks",
+V042821,SVH025881,2025-11-28,General Medicine,Dr. Anitha Hegde,T2DM. HbA1c 7.4. Home GRBS 132-180. Wt 65 kg. Adv diet + daily walk,2026-02-25
+V042824,SVH027000,2025-11-29,Orthopaedics,Dr. Farhan Qureshi,"c/o back pain after lifting weight, 2 days. Lumbar spondylosis. MRI if no relief in 2 wks.",
+V042825,SVH026798,2025-11-30,General Medicine,Dr. Anitha Hegde,"Came with reports. Adv diet control, rpt after 3 months",
+V042827,SVH028271,2025-12-02,General Medicine,Dr. Prakash Shenoy,"diabetic; sugars running high; insulin discussed, pt not willing; review 1 month",2026-01-01
+V042828,SVH025512,2025-12-03,General Medicine,Dr. Prakash Shenoy,came for transfer summary; will continue f/u near native place; transferred care to another hospital,
+V042830,SVH029490,2025-12-04,General Medicine,Dr. Anitha Hegde,f/u. HbA1c 6.2. r/v 6/12,2026-05-30
+V042833,SVH028292,2025-12-04,OBG,Dr. Kavya Menon,"Heavy periods x 3 cycles. Fibroid uterus. Tranexamic acid during periods, options discussed",
+V042834,SVH029411,2025-12-05,Emergency,Dr. Naveen Poojary,"sudden onset abdominal pain x 3 hrs. vitals stable, RBS 108. acute gastritis. IV PPI, observed 2 hrs, review in OPD",
+V042835,SVH030371,2025-12-06,Paediatrics,Dr. Joseph Kurian,"Recurrent wheeze, 3rd episode, RR 32, SpO2 97%, Nebulisation given, improved",
+V042836,SVH030381,2025-12-07,General Medicine,Dr. Anitha Hegde,"HTN f/u, no complaints. BP 128/80, pulse 76. Cont same",
+V042838,SVH030403,2025-12-07,Cardiology,Dr. Sunil Deshpande,"c/o chest discomfort on exertion x 2 wks. ECG: NSR, no ST-T changes. ?stable angina. TMT next visit.",
+V042841,SVH030442,2025-12-07,General Medicine,Dr. Anitha Hegde,"Asthma f/u, using inhaler regularly. Chest clear today, PEFR 320. Cont same, avoid dust, review 3 months",
+V042842,SVH028258,2025-12-09,Paediatrics,Dr. Joseph Kurian,"T1DM, on basal bolus, HbA1c 10.1, Wt 28 kg, No DKA episodes, Cont same insulin doses",2026-03-09
+V042845,SVH030462,2025-12-10,Diabetology,Dr. Srikanth Rao,New case of diabetes mellitus. FBS 205 PPBS 291. BP 140/79. Start metformin 500 mg BD. Diet + exercise counselling done.,
+V042846,SVH027221,2025-12-11,General Medicine,Dr. Anitha Hegde,Executive health check. BP 136/84. Reports awaited. Review with reports,
+V042847,SVH028778,2025-12-12,General Medicine,Dr. Anitha Hegde,"c/o lower abdominal pain, burning urine x 5/7. Afebrile, renal angle non tender. Plenty of oral fluids, antibiotics x 5 days",2026-01-23
+V042850,SVH030371,2025-12-12,Paediatrics,Dr. Joseph Kurian,"Review, Reports NAD, Cont Rx",
+V042851,SVH030442,2025-12-12,General Medicine,Dr. Anitha Hegde,f/u visit. Improving. Cont same x 1 more wk,
+V042852,SVH029528,2025-12-13,Diabetology,Dr. Srikanth Rao,Diabetes mellitus since 2021. HbA1c 8.3. F 161 / PP 246. Cont same meds. Review 2 months.,2026-02-08
+V042853,SVH025870,2025-12-16,Paediatrics,Dr. Joseph Kurian,"Juvenile diabetes on insulin, Parents giving injections regularly, Hypo x 2 last month, Review 3 months",2026-03-16
+V042854,SVH029204,2025-12-17,Emergency,Dr. Naveen Poojary,"breathlessness, wheeze since night. SpO2 93% RA, b/l wheeze. nebulisation x 3, improved, discharged",
+V042857,SVH030464,2025-12-17,Dental,Dr. Harini Balan,"bad breath, deposits on teeth. calculus ++. scaling adv, appointment given",
+V042858,SVH030471,2025-12-18,ENT,Dr. Vikram Gowda,"throat pain, difficulty swallowing x 2 days, tonsils enlarged gr II, congested, antibiotics x 5 days, warm saline gargles",
+V042859,SVH026013,2025-12-19,Ophthalmology,Dr. Rekha Pillai,"Gradual diminution of vision both eyes; Adv cataract surgery, pre-op workup",
+V042862,SVH029627,2025-12-20,General Medicine,Dr. Prakash Shenoy,came for general check up; no complaints; all reports normal; adv regular exercise,
+V042863,SVH029204,2025-12-23,Emergency,Dr. Naveen Poojary,f/u. symptomatically better. complete the course,
+V042865,SVH030483,2025-12-23,General Medicine,Dr. Anitha Hegde,"c/o tiredness, breathless on climbing stairs x 2/52. ?B12 deficiency. Review 1 month",
+V042867,SVH024742,2025-12-24,General Medicine,Dr. Anitha Hegde,Prediabetes - HbA1c 6.2. Adv lifestyle modification. Rpt 6 months,
+V042868,SVH030309,2025-12-24,General Medicine,Dr. Anitha Hegde,"Vomiting, loose motions since yesterday. Acute gastroenteritis. IV fluids 1 pint given in OPD, review tomorrow",2026-01-14
+V042871,SVH029830,2025-12-25,General Medicine,Dr. Anitha Hegde,"c/o burning feet x 2 months. Adv B12, rpt sugars. Review with reports",
+V042874,SVH030487,2025-12-25,Diabetology,Dr. Srikanth Rao,Type 2 DM x 8 yrs. FBS 119. Review after 3 months.,2026-03-24
+V042875,SVH030371,2025-12-25,Paediatrics,Dr. Joseph Kurian,"Vomiting x 1 day, not tolerating feeds, Cont feeds, danger signs explained",
+V042877,SVH024560,2025-12-26,General Medicine,Dr. Anitha Hegde,Impaired fasting glucose. No medication needed now. Rpt yearly,
+V042878,SVH030471,2025-12-27,ENT,Dr. Vikram Gowda,"review, reports NAD, cont Rx",
+V042879,SVH030489,2025-12-27,Orthopaedics,Dr. Farhan Qureshi,"Heel pain x 1/12, worse in morning. Tenderness medial calcaneal tubercle. MCR footwear, stretching ex.",2026-02-25
+V042880,SVH024601,2025-12-27,General Medicine,Dr. Anitha Hegde,"One sided throbbing headache x 2/52, nausea +. No focal deficit, fundus normal. Migraine without aura. Headache diary, review 2 wks",
+V042883,SVH027902,2025-12-28,General Medicine,Dr. Anitha Hegde,"f/u. FBS 106, PPBS 162. Adv diet + daily walk",2026-10-09
+V042884,SVH027782,2025-12-28,Diabetology,Dr. Srikanth Rao,"f/u visit. FBS 125, PPBS 178. Cont same. r/v 6/12.",2026-10-07
+V042887,SVH026013,2025-12-28,Ophthalmology,Dr. Rekha Pillai,f/u visit; Improving; Cont same x 1 more wk,
+V042888,SVH028189,2026-01-01,Diabetology,Dr. Meghana Kamath,"f/u, HbA1c 10.3, FBS 218 PPBS 306, fundus check due, incr OHA dose, review 2 months",
+V042891,SVH029181,2026-01-02,Diabetology,Dr. Srikanth Rao,Follow up visit. HbA1c 6.5. Home GRBS 111-147. Review after 3 months.,2026-04-03
+V042894,SVH029767,2026-01-05,General Medicine,Dr. Anitha Hegde,"c/o lower abdominal pain, burning urine x 3 days. Afebrile, renal angle non tender. Plenty of oral fluids, antibiotics x 5 days",
+V042895,SVH028104,2026-01-06,ENT,Dr. Vikram Gowda,"c/o nasal block, headache x 5 days, DNS with allergic rhinitis, CT PNS if recurrent",
+V042896,SVH025280,2026-01-07,Diabetology,Dr. Srikanth Rao,Review. FBS 162 PPBS 243. Fundus check due. Review 6 wks.,2026-02-21
+V042899,SVH030471,2026-01-14,General Medicine,Dr. Prakash Shenoy,pre-employment medical; no h/o diabetes/HTN/TB/epilepsy; vitals normal; fit to join,
+V042900,SVH025948,2026-01-14,General Medicine,Dr. Prakash Shenoy,routine f/u; sugars running high; dose stepped up,
+V042901,SVH029767,2026-01-15,General Medicine,Dr. Anitha Hegde,Review. Reports NAD. Cont Rx,
+V042902,SVH026854,2026-01-15,Dermatology,Dr. Nandini Iyengar,"Itchy circular patches trunk x 2 months. KOH +ve. Tinea corporis. Keep area dry, do not share towels, review 2 wks",
+V042905,SVH029007,2026-01-17,Ophthalmology,Dr. Rekha Pillai,"Foreign body sensation L eye since yesterday; Antibiotic drops, review tomorrow",
+V042907,SVH028687,2026-01-18,General Medicine,Dr. Anitha Hegde,"c/o joint pains, both hands x 2 months. No synovitis, morning stiffness 20 min. Analgesics, review with reports",2026-02-15
+V042908,SVH030371,2026-01-20,Paediatrics,Dr. Joseph Kurian,"Vomiting x 1 day, not tolerating feeds, AGE, ORS, zinc x 14 days",
+V042909,SVH024989,2026-01-20,Dental,Dr. Harini Balan,"pain upper L back tooth x 6 days. RCT 1st sitting done, review 3 days",
+V042910,SVH026854,2026-01-20,Dermatology,Dr. Nandini Iyengar,Review. Reports NAD. Cont Rx,
+V042913,SVH026093,2026-01-22,Dermatology,Dr. Nandini Iyengar,"Itchy lesions hands after using detergent, 2 wks. Lichenified plaques. Topical steroid x 1 wk, emollients",
+V042914,SVH028346,2026-01-23,Ophthalmology,Dr. Rekha Pillai,"Foreign body sensation R eye since yesterday; Corneal FB removed under topical; Corneal FB; Antibiotic drops, review tomorrow",2026-01-30
+V042917,SVH030327,2026-01-24,Emergency,Dr. Naveen Poojary,"fall from bike, abrasions R leg. dressing done, review after 2 days",
+V042918,SVH025668,2026-01-24,Emergency,Dr. Naveen Poojary,"dog bite R leg, 1 hr back. cat III bite, wound washed. ARV day 0 given, schedule explained",
+V042919,SVH029007,2026-01-26,General Medicine,Dr. Anitha Hegde,Routine f/u. Dose stepped up. Review after 3 months,
+V042922,SVH029826,2026-01-27,Diabetology,Dr. Meghana Kamath,"came for f/u, FBS 126, pedal pulses felt, cont same meds",
+V042923,SVH028972,2026-01-30,General Medicine,Dr. Anitha Hegde,f/u visit. HbA1c 9.2. FBS 186 PPBS 283. c/o nocturia. Review 2 months,
+V042926,SVH030371,2026-01-30,Paediatrics,Dr. Joseph Kurian,"Review, Reports NAD, Cont Rx",
+V042929,SVH025407,2026-02-01,Orthopaedics,Dr. Farhan Qureshi,"L knee pain x 2 months. No h/o diabetes. X-ray: OA gr II. IA steroid inj given, review 3 wks.",
+V042930,SVH028218,2026-02-01,Diabetology,Dr. Srikanth Rao,"f/u visit. FBS 220, PPBS 353. Review 6 wks.",2026-03-18
+V042933,SVH027355,2026-02-02,General Medicine,Dr. Anitha Hegde,Review. FBS 144. Refer ophthal for fundus,
+V042934,SVH030514,2026-02-02,Cardiology,Dr. Sunil Deshpande,"c/o chest discomfort on exertion x 2 wks. ECG: NSR, no ST-T changes. TMT next visit.",2026-03-02
+V042935,SVH025934,2026-02-03,Orthopaedics,Dr. Farhan Qureshi,"R shoulder pain, unable to lift arm x 3 months. Restricted abduction, ext rotation. Physio, pendulum exercises.",2026-03-05
+V042938,SVH030514,2026-02-06,Cardiology,Dr. Sunil Deshpande,f/u. Symptomatically better. Complete the course.,
+V042939,SVH029268,2026-02-06,Orthopaedics,Dr. Farhan Qureshi,"RTA 2 days back, pain R shoulder. Swelling +, X-ray: no #. Soft tissue injury. Arm sling, analgesics, review 1 wk.",
+V042942,SVH029528,2026-02-07,Dermatology,Dr. Nandini Iyengar,"White patches over back x 6 wks. Pityriasis versicolor. Antifungal lotion, review 4 wks",2026-04-08
+V042943,SVH025855,2026-02-08,General Medicine,Dr. Anitha Hegde,"HTN f/u, no complaints. Incr telmisartan to 80 mg",
+V042944,SVH028096,2026-02-08,General Medicine,Dr. Anitha Hegde,"Asthma f/u, using inhaler regularly. Chest clear today, PEFR 320. Cont same, avoid dust, review 3 months",
+V042945,SVH026328,2026-02-09,General Medicine,Dr. Anitha Hegde,"Master health check, no complaints. Wt 68 kg, BP 120/78. Reports reviewed - WNL",
+V042947,SVH025934,2026-02-09,Orthopaedics,Dr. Farhan Qureshi,Feeling better. No fresh complaints. Review SOS.,
+V042949,SVH025344,2026-02-09,OBG,Dr. Kavya Menon,"c/o white discharge x 2/52. P/S: thin discharge +, cervix healthy. Pap smear taken, review with report",
+V042950,SVH028346,2026-02-10,Diabetology,Dr. Srikanth Rao,"Review. FBS 104. BP 131/82. Adv diet + daily walk. r/v 3/12. Pt relocating to Pune with son. Transferred care to another hospital, summary and reports given.",
+V042951,SVH026507,2026-02-10,General Medicine,Dr. Prakash Shenoy,came for f/u; sugars running high; adv diet + daily walk; r/v 3/12,2026-05-08
+V042953,SVH027094,2026-02-11,Diabetology,Dr. Srikanth Rao,k/c/o DM. FBS 110 PPBS 172. Review 3 months with HbA1c.,2026-10-15
+V042954,SVH030161,2026-02-12,Dermatology,Dr. Nandini Iyengar,Pigmentation cheeks x 3 months. Symmetric macular pigmentation. Melasma. Strict sun protection,
+V042956,SVH029528,2026-02-12,Dermatology,Dr. Nandini Iyengar,Review. Reports NAD. Cont Rx,
+V042959,SVH025454,2026-02-12,Orthopaedics,Dr. Farhan Qureshi,"Fall at home, pain L wrist. X-ray: undisplaced # distal radius. # distal radius. Below elbow cast applied, review 2 wks.",2026-05-13
+V042962,SVH028812,2026-02-13,General Medicine,Dr. Anitha Hegde,"k/c/o asthma, breathlessness at night x 6 days. RS: b/l wheeze +. Nebulisation given, short course steroids",
+V042963,SVH029350,2026-02-15,General Medicine,Dr. Prakash Shenoy,"c/o wt gain, tiredness, on thyroxine 50 mcg; TSH 8.6; incr thyroxine to 75 mcg, rpt TSH 6 wks",
+V042964,SVH029204,2026-02-16,Diabetology,Dr. Meghana Kamath,"f/u, sugars running high, foot exam NAD, r/v 3/12",
+V042965,SVH025344,2026-02-16,OBG,Dr. Kavya Menon,Came with reports. All WNL. Reassured,
+V042966,SVH029268,2026-02-16,Orthopaedics,Dr. Farhan Qureshi,Low back ache x 2 months. MRI if no relief in 2 wks.,
+V042967,SVH028864,2026-02-17,Dental,Dr. Harini Balan,pain upper L back tooth x 1 wk. pulpitis 26. extraction under LA done,
+V042969,SVH030514,2026-02-23,General Medicine,Dr. Prakash Shenoy,"HTN f/u, no complaints; BP 138/86; cont same",
+V042970,SVH026057,2026-02-23,Orthopaedics,Dr. Farhan Qureshi,"Pain R elbow x 6 wks. Tenderness over lat epicondyle. Tennis elbow. Rest, local steroid inj if no relief.",
+V042973,SVH027113,2026-02-25,ENT,Dr. Vikram Gowda,"ear block after bath x 5/7, wax impacted b/l, impacted wax, wax softener x 5 days then syringing",
+V042975,SVH029984,2026-02-25,Ophthalmology,Dr. Rekha Pillai,"Itching, redness both eyes x 2 wks; Papillae +; Cold compress, avoid rubbing",
+V042976,SVH028117,2026-02-26,General Medicine,Dr. Anitha Hegde,"c/o fever x 2 days, body ache. No rash, no neck stiffness, chest clear. CBC, MP sent, review with reports",
+V042977,SVH028452,2026-03-03,Diabetology,Dr. Srikanth Rao,Review. FBS 137. Review after 3 months.,2026-05-31
+V042980,SVH028117,2026-03-07,General Medicine,Dr. Anitha Hegde,Came with reports. All WNL. Reassured,
+V042981,SVH025237,2026-03-07,ENT,Dr. Vikram Gowda,"hoarseness of voice x 2 wks, IDL: vocal nodules, voice rest, steam",2026-03-14
+V042982,SVH029061,2026-03-09,General Medicine,Dr. Anitha Hegde,k/c/o DM since 2013. Sugars running high. Review 3 months with HbA1c,2026-06-05
+V042983,SVH030550,2026-03-10,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Scabies. Permethrin overnight, rpt after 1 wk, treat all contacts",2026-03-17
+V042986,SVH028218,2026-03-11,General Medicine,Dr. Anitha Hegde,"Master health check, no complaints. BP 126/80, BMI 26. Lipids borderline, diet advice",2026-05-10
+V042987,SVH030161,2026-03-13,Dermatology,Dr. Nandini Iyengar,"Ring lesion groin x 3 wks, itchy. Tinea cruris. Topical + oral antifungal x 4 wks",
+V042990,SVH030487,2026-03-14,General Medicine,Dr. Prakash Shenoy,"cold, cough, throat pain x 2 days; throat congested, no LN; URTI; cough syrup, warm fluids",
+V042991,SVH027113,2026-03-15,Diabetology,Dr. Srikanth Rao,f/u. Sugars not under control. Refer ophthal for fundus.,2026-04-14
+V042993,SVH025376,2026-03-18,Dental,Dr. Harini Balan,"pain upper R back tooth x 4 days. pulpitis 26. RCT 1st sitting done, review 3 days",2026-04-01
+V042994,SVH029838,2026-03-21,Paediatrics,Dr. Joseph Kurian,"Type 1 DM, on basal bolus, SMBG 110-260, Parents giving injections regularly, Reduce night dose",2026-06-19
+V042997,SVH026702,2026-03-22,Diabetology,Dr. Meghana Kamath,"follow up visit, HbA1c 7.6, r/v 3/12",
+V042999,SVH027715,2026-03-23,Ophthalmology,Dr. Rekha Pillai,"c/o blurring of vision for near; VA 6/9 b/l, N10; Review 1 yr",
+V043001,SVH029287,2026-03-23,Paediatrics,Dr. Joseph Kurian,"Came for booster dose, Growth adequate, MMR 2nd dose given",
+V043002,SVH027438,2026-03-24,ENT,Dr. Vikram Gowda,"recurrent throat pain, 5 episodes this year, chronic pharyngitis, gargles, avoid cold drinks",2026-04-23
+V043003,SVH030514,2026-03-25,General Medicine,Dr. Prakash Shenoy,"one sided throbbing headache x 6 months, nausea +; no focal deficit, fundus normal; headache diary, review 2 wks",
+V043005,SVH030554,2026-03-26,OBG,Dr. Kavya Menon,"c/o irregular cycles x 8 months, wt gain. USG: b/l polycystic ovaries. PCOS. Start metformin 500 mg BD, OCP x 3 cycles",
+V043006,SVH030161,2026-03-29,General Medicine,Dr. Prakash Shenoy,f/u visit; FBS 192 PPBS 261; compliant with meds; review 1 month,
+V043007,SVH026899,2026-04-10,General Medicine,Dr. Anitha Hegde,"Known hypertensive on regular Rx, BP check. BP 138/86. Salt restriction, review 1 month",
+V043008,SVH029373,2026-04-13,General Medicine,Dr. Prakash Shenoy,"fever on and off x 6 days, weakness; temp 101 F, throat congested; symptomatic Rx, review SOS",
+V043009,SVH027690,2026-04-14,General Medicine,Dr. Prakash Shenoy,"c/o generalised weakness x 6 months; vitals stable, pallor mild; oral iron x 3 months, deworming",
+V043010,SVH029767,2026-04-16,General Medicine,Dr. Anitha Hegde,Review. FBS 172. Foot exam NAD. Adv diet + daily walk,
+V043011,SVH030561,2026-04-18,General Medicine,Dr. Anitha Hegde,"c/o wt gain, tiredness, on thyroxine 50 mcg. TSH 8.6. Incr thyroxine to 75 mcg, rpt TSH 6 wks",2026-05-02
+V043012,SVH028452,2026-04-20,Ophthalmology,Dr. Rekha Pillai,Difficulty reading small print x 3 wks; Refraction done; Glasses prescribed,
+V043014,SVH027690,2026-04-20,General Medicine,Dr. Prakash Shenoy,came with reports; all WNL; reassured,
+V043015,SVH029840,2026-04-20,ENT,Dr. Vikram Gowda,"giddiness on turning head x 2 days, Dix-Hallpike +ve L, BPPV, epley manoeuvre done, review 1 wk",
+V043016,SVH026843,2026-04-20,General Medicine,Dr. Anitha Hegde,"Fever with chills x 3 days. No rash, no neck stiffness, chest clear. Viral fever. PCM 650 SOS, plenty of fluids",2026-06-01
+V043019,SVH029235,2026-04-23,General Medicine,Dr. Prakash Shenoy,known diabetic (6 yrs); HbA1c 10.0; home GRBS 191-241; c/o burning soles; refer ophthal for fundus,2026-07-22
+V043022,SVH030561,2026-04-23,General Medicine,Dr. Anitha Hegde,Came with reports. All WNL. Reassured,
+V043025,SVH026843,2026-04-24,General Medicine,Dr. Anitha Hegde,Came with reports. All WNL. Reassured,
+V043026,SVH030347,2026-04-25,Diabetology,Dr. Srikanth Rao,Type 2 diabetes since 2019. HbA1c 7.0. Home GRBS 124-166. Missed meds x 2 wks. Review 2 months.,2026-06-26
+V043027,SVH029625,2026-04-28,Diabetology,Dr. Srikanth Rao,Type 2 diabetes. F 126 / PP 199. Cont same meds.,
+V043028,SVH028271,2026-04-28,OBG,Dr. Kavya Menon,"Heavy periods x 3 cycles. Tranexamic acid during periods, options discussed",
+V043029,SVH029034,2026-04-28,General Medicine,Dr. Prakash Shenoy,"hypothyroid on thyroxine, f/u; TSH 3.2; cont same dose",
+V043030,SVH024980,2026-04-30,General Medicine,Dr. Anitha Hegde,"k/c/o HTN x 3 yrs, came for f/u. Salt restriction, review 1 month",2026-05-21
+V043031,SVH030189,2026-05-04,Dental,Dr. Harini Balan,"bleeding gums x 2 wks. generalised gingivitis. scaling done, OHI given",
+V043032,SVH030581,2026-05-05,General Medicine,Dr. Anitha Hegde,"c/o lower abdominal pain, burning urine x 5/7. P/A soft, suprapubic tenderness +. UTI. Plenty of oral fluids, antibiotics x 5 days",
+V043033,SVH029751,2026-05-13,General Medicine,Dr. Anitha Hegde,"Master health check, no complaints. Reports reviewed - WNL",
+V043034,SVH029610,2026-05-15,Orthopaedics,Dr. Farhan Qureshi,"Pain L elbow x 1 month. Tenderness over lat epicondyle. Rest, local steroid inj if no relief.",
+V043036,SVH026057,2026-05-15,General Medicine,Dr. Anitha Hegde,"k/c/o asthma, breathlessness at night x 6 days. RS: b/l wheeze +. Nebulisation given, short course steroids",2026-05-29
+V043039,SVH030585,2026-05-19,ENT,Dr. Vikram Gowda,"c/o L ear pain x 2 days, antibiotics, review 1 wk",
+V043040,SVH030620,2026-05-19,Paediatrics,Dr. Joseph Kurian,"Fever, cold x 1 wk, Acute pharyngitis, Tepid sponging, review 2 days",
+V043041,SVH026336,2026-05-21,Orthopaedics,Dr. Farhan Qureshi,"Neck pain radiating to L arm x 2/52. ROM painful, no neuro deficit. Cervical spondylosis. Ergonomic advice, soft collar x 1 wk.",
+V043042,SVH030585,2026-05-22,ENT,Dr. Vikram Gowda,"feeling better, no fresh complaints, review SOS",
+V043043,SVH027741,2026-05-25,Emergency,Dr. Naveen Poojary,"sudden onset abdominal pain x 3 hrs. acute gastritis. IV PPI, observed 2 hrs, review in OPD",2026-06-08
+V043045,SVH025855,2026-05-27,General Medicine,Dr. Anitha Hegde,Review. HbA1c 9.8. Missed meds x 2 wks. Add 2nd OHA,2026-10-09
+V043046,SVH027003,2026-05-28,ENT,Dr. Vikram Gowda,"giddiness on turning head x 3/7, Dix-Hallpike +ve L, epley manoeuvre done, review 1 wk",2026-06-18
+V043048,SVH030654,2026-05-28,ENT,Dr. Vikram Gowda,"ear discharge L x 2 wks, central perforation L, discharge +, CSOM L, ear drops, keep ear dry",
+V043049,SVH026927,2026-06-01,Diabetology,Dr. Meghana Kamath,"follow up visit, sugars running high, fundus check due, incr OHA dose, review 3 months with HbA1c",2026-08-29
+V043051,SVH028292,2026-06-01,Orthopaedics,Dr. Farhan Qureshi,"RTA 2 days back, pain R shoulder. Swelling +, X-ray: no #. Arm sling, analgesics, review 1 wk.",
+V043052,SVH030654,2026-06-03,ENT,Dr. Vikram Gowda,"feeling better, no fresh complaints, review SOS",
+V043054,SVH029481,2026-06-07,Paediatrics,Dr. Joseph Kurian,"Fever, running nose, cough x 5 days, Acute pharyngitis, Plenty of fluids",
+V043057,SVH029287,2026-06-09,Paediatrics,Dr. Joseph Kurian,"c/o pain abdomen on and off x 6 wks, Worm infestation, Deworming given",2026-09-07
+V043058,SVH028292,2026-06-10,Orthopaedics,Dr. Farhan Qureshi,Review. Reports NAD. Cont Rx.,
+V043059,SVH027708,2026-06-11,Orthopaedics,Dr. Farhan Qureshi,"Heel pain x 3 wks, worse in morning. Tenderness medial calcaneal tubercle. MCR footwear, stretching ex.",
+V043060,SVH029528,2026-06-12,ENT,Dr. Vikram Gowda,"recurrent cold, watering of nose, post nasal drip +, CT PNS if recurrent",2026-06-26
+V043062,SVH027431,2026-06-16,ENT,Dr. Vikram Gowda,"recurrent cold, watering of nose, post nasal drip +, CT PNS if recurrent",
+V043063,SVH025125,2026-06-17,Orthopaedics,Dr. Farhan Qureshi,"c/o neck pain x 1/12. Cervical spondylosis. Neck isometric ex, hot fomentation.",
+V043064,SVH030661,2026-06-18,Dermatology,Dr. Nandini Iyengar,Pigmentation cheeks x 3 wks. Symmetric macular pigmentation. Strict sun protection,
+V043065,SVH028753,2026-06-19,General Medicine,Dr. Anitha Hegde,f/u visit. FBS 113 PPBS 181. Rpt FBS/PPBS next visit,
+V043066,SVH030672,2026-06-20,Paediatrics,Dr. Joseph Kurian,"Noisy breathing, cough at night x 3/7, RR 32, SpO2 97%, Hyper-reactive airway disease, MDI with spacer demonstrated",
+V043068,SVH028561,2026-06-22,General Medicine,Dr. Prakash Shenoy,"asthma f/u, using inhaler regularly; chest clear today, PEFR 320; cont same, avoid dust, review 3 months",
+V043071,SVH028871,2026-06-23,General Medicine,Dr. Anitha Hegde,Came for general check up. No complaints. All reports normal. Adv regular exercise,
+V043072,SVH029881,2026-06-26,Orthopaedics,Dr. Farhan Qureshi,"c/o neck pain x 3 wks. Neck isometric ex, hot fomentation.",2026-09-24
+V043075,SVH028778,2026-06-26,ENT,Dr. Vikram Gowda,"blocked nose, sneezing x 2 wks, post nasal drip +, CT PNS if recurrent",
+V043076,SVH028687,2026-06-26,General Medicine,Dr. Anitha Hegde,"Easy fatiguability x 2/52. Hb 9.2, pallor ++. Review 1 month",
+V043077,SVH025125,2026-06-27,Orthopaedics,Dr. Farhan Qureshi,No relief with previous Rx. Medication changed. Review 1 wk.,
+V043079,SVH028778,2026-06-29,ENT,Dr. Vikram Gowda,"feeling better, no fresh complaints, review SOS",
+V043081,SVH025096,2026-06-30,General Medicine,Dr. Anitha Hegde,"k/c/o asthma, breathlessness at night x 5/7. RS: b/l wheeze +. Nebulisation given, short course steroids",2026-07-28
+V043082,SVH029084,2026-07-03,Orthopaedics,Dr. Farhan Qureshi,"LBA radiating to R leg x 2/52. Analgesics, muscle relaxant x 5 days.",
+V043083,SVH030091,2026-07-06,Emergency,Dr. Naveen Poojary,"breathlessness, wheeze since night. nebulisation x 3, improved, discharged",
+V043084,SVH030711,2026-07-10,Dermatology,Dr. Nandini Iyengar,"Pimples face and back x 1 month. Oral antibiotic x 4 wks, review 6 wks",
+V043087,SVH027645,2026-07-10,Dental,Dr. Harini Balan,c/o toothache lower R x 4 days. tender on percussion 36. extraction under LA done,
+V043088,SVH030744,2026-07-10,OBG,Dr. Kavya Menon,"Heavy periods x 3 cycles. USG: fibroid 3 cm, ant wall. Fibroid uterus. Tranexamic acid during periods, options discussed",
+V043089,SVH026467,2026-07-10,Dental,Dr. Harini Balan,"c/o toothache lower R x 1 wk. RCT 1st sitting done, review 3 days",2026-08-09
+V043090,SVH024791,2026-07-11,General Medicine,Dr. Anitha Hegde,"k/c/o asthma, breathlessness at night x 4 days. Nebulisation given, short course steroids",2026-08-01
+V043091,SVH029084,2026-07-12,Orthopaedics,Dr. Farhan Qureshi,f/u visit. Improving. Cont same x 1 more wk.,
+V043093,SVH030091,2026-07-12,Emergency,Dr. Naveen Poojary,feeling better. no fresh complaints. review SOS,
+V043094,SVH030115,2026-07-14,Paediatrics,Dr. Joseph Kurian,"Poor appetite, not gaining wt x 2 wks, Pallor +, wt below 3rd centile, Iron syrup x 3 months, diet advice",
+V043095,SVH030191,2026-07-15,Diabetology,Dr. Srikanth Rao,"Type 2 diabetes - 15 yrs. FBS 130, PPBS 168. Rpt FBS/PPBS next visit.",
+V043098,SVH027526,2026-07-15,Orthopaedics,Dr. Farhan Qureshi,"Neck pain radiating to L arm x 6 months. X-ray C-spine: loss of lordosis. Neck isometric ex, hot fomentation.",
+V043101,SVH030711,2026-07-16,Dermatology,Dr. Nandini Iyengar,"c/o hair fall x 3 months. Ferritin, TSH adv",2026-08-15
+V043102,SVH026854,2026-07-17,Dental,Dr. Harini Balan,"bad breath, deposits on teeth. calculus ++. scaling adv, appointment given",2026-08-28
+V043103,SVH029061,2026-07-21,General Medicine,Dr. Anitha Hegde,k/c/o DM - 13 yrs. Sugars not under control. Wt 58 kg. Review 3 months with HbA1c,
+V043104,SVH028218,2026-07-23,Diabetology,Dr. Srikanth Rao,Review. HbA1c 10.3. Sugars running high. Cont same. Review 2 months.,2026-09-20
+V043106,SVH029610,2026-07-23,Diabetology,Dr. Srikanth Rao,"T2DM since 2018. HbA1c 7.1. FBS 138, PPBS 185. c/o tiredness. Refer ophthal for fundus. Review 3 months with HbA1c.",
+V043109,SVH030772,2026-07-27,General Medicine,Dr. Anitha Hegde,"c/o wt gain, tiredness, on thyroxine 50 mcg. TSH 8.6. Incr thyroxine to 75 mcg, rpt TSH 6 wks",
+V043112,SVH025157,2026-07-29,Orthopaedics,Dr. Farhan Qureshi,"Slipped in bathroom, pain L ankle. Tenderness over lat malleolus, X-ray NAD. Ankle sprain gr II. Crepe bandage, ice, limb elevation.",
+V043113,SVH026308,2026-07-30,Paediatrics,Dr. Joseph Kurian,"Came for booster dose, DPT booster given",
+V043116,SVH029826,2026-07-31,General Medicine,Dr. Prakash Shenoy,f/u; home GRBS 125-166; no fresh complaints; cont same meds,2026-09-01
+V043118,SVH029918,2026-07-31,Diabetology,Dr. Srikanth Rao,Known diabetic since 2011. Rpt FBS/PPBS next visit. Review after 3 months.,2026-10-28
+V043119,SVH029803,2026-07-31,General Medicine,Dr. Anitha Hegde,"c/o cough with expectoration x 4 days. RS: b/l scattered rhonchi. Antibiotics x 5 days, steam inhalation",
+V043122,SVH028477,2026-08-01,ENT,Dr. Vikram Gowda,"ear discharge R x 3 wks, central perforation R, discharge +, CSOM R, ear drops, keep ear dry",
+V043123,SVH029084,2026-08-02,Diabetology,Dr. Srikanth Rao,Routine f/u. Home GRBS 143-193. Urine microalbumin adv.,
+V043124,SVH028271,2026-08-02,General Medicine,Dr. Prakash Shenoy,diabetic since 2011; home GRBS 214-276; no hypo episodes; add 2nd OHA; review 6 wks,2026-09-12
+V043125,SVH026193,2026-08-04,Dental,Dr. Harini Balan,"bad breath, deposits on teeth. scaling adv, appointment given",
+V043126,SVH030138,2026-08-05,Cardiology,Dr. Sunil Deshpande,c/o palpitations on and off x 2 months. Palpitations - TSH sent. Holter if recurrent.,2026-08-19
+V043129,SVH029803,2026-08-06,General Medicine,Dr. Anitha Hegde,No relief with previous Rx. Medication changed. Review 1 wk,
+V043132,SVH030783,2026-08-08,Cardiology,Dr. Sunil Deshpande,"Post PTCA f/u, asymptomatic. BP 124/78, pulse 68. Cont antiplatelets, statin.",
+V043133,SVH025668,2026-08-08,General Medicine,Dr. Prakash Shenoy,DM2 since 2025; sugars running high; foot exam NAD; cont same Rx; r/v 3/12,2026-11-04
+V043134,SVH025881,2026-08-10,Diabetology,Dr. Meghana Kamath,"T2DM since 2025, HbA1c 7.7, FBS 157, cont same Rx, review 3 months with HbA1c",
+V043136,SVH029838,2026-08-11,Paediatrics,Dr. Joseph Kurian,"k/c/o Type 1 DM, SMBG 110-260, Wt 45 kg, Counselled parents re diet, sick day rules",2026-11-09
+V043138,SVH030236,2026-08-11,Diabetology,Dr. Meghana Kamath,"follow up visit, HbA1c 8.4, FBS 177, PPBS 246, r/v 3/12",
+V043139,SVH030327,2026-08-12,Diabetology,Dr. Meghana Kamath,"k/c/o DM - 15 yrs, home GRBS 109-154, c/o burning soles, cont same meds",
+V043140,SVH028972,2026-08-12,General Medicine,Dr. Anitha Hegde,Routine f/u. FBS 177. c/o nocturia. Add 2nd OHA,2026-11-07
+V043141,SVH030483,2026-08-12,Orthopaedics,Dr. Farhan Qureshi,"Pain L elbow x 2 months. Tenderness over lat epicondyle. Tennis elbow. Rest, local steroid inj if no relief.",2026-10-11
+V043143,SVH026153,2026-08-14,ENT,Dr. Vikram Gowda,"ear block after bath x 3 days, impacted wax, wax softener x 5 days then syringing",
+V043144,SVH030091,2026-08-15,General Medicine,Dr. Anitha Hegde,Follow up visit. FBS 132 PPBS 207. c/o tiredness. Refer ophthal for fundus,
+V043147,SVH025934,2026-08-15,General Medicine,Dr. Anitha Hegde,"Type 2 DM. HbA1c 9.4. FBS 181, PPBS 275. Missed meds x 2 wks. Review after 3 months",2026-11-10
+V043149,SVH025280,2026-08-15,Diabetology,Dr. Srikanth Rao,"k/c/o DM. FBS 164, PPBS 236. Foot exam NAD. Refer ophthal for fundus.",
+V043150,SVH026808,2026-08-15,Ophthalmology,Dr. Rekha Pillai,"Gradual diminution of vision both eyes; Immature cataract R>L; Senile cataract; Adv cataract surgery, pre-op workup",
+V043152,SVH030138,2026-08-18,General Medicine,Dr. Prakash Shenoy,follow up visit; FBS 236; add 2nd OHA,2026-11-18
+V043153,SVH027161,2026-08-18,General Medicine,Dr. Anitha Hegde,"Known hypertensive on regular Rx, BP check. RFT, lipids adv",2026-09-01
+V043156,SVH027003,2026-08-20,Diabetology,Dr. Meghana Kamath,"type 2 diabetes, FBS 177, cont same meds, review 1 month",2026-09-18
+V043157,SVH029950,2026-08-20,General Medicine,Dr. Anitha Hegde,Diabetes mellitus since 2016. Urine microalbumin adv. Review after 3 months,2026-11-15
+V043158,SVH026702,2026-08-21,Diabetology,Dr. Meghana Kamath,"type 2 DM, FBS 132, PPBS 200, adv diet + daily walk",
+V043159,SVH029204,2026-08-23,General Medicine,Dr. Prakash Shenoy,f/u; HbA1c 8.5; sugars running high; no fresh complaints; cont same meds,2026-10-19
+V043161,SVH030790,2026-08-23,OBG,Dr. Kavya Menon,"c/o lower abdominal pain, discharge x 1 wk. Cervical motion tenderness mild. ?PID. Antibiotics x 14 days, USG pelvis",
+V043162,SVH027925,2026-08-26,Orthopaedics,Dr. Farhan Qureshi,"Low back ache x 6 wks. Back strengthening ex, avoid forward bending.",
+V043163,SVH030309,2026-08-27,Diabetology,Dr. Meghana Kamath,"f/u, HbA1c 8.7, FBS 172, PPBS 258, fundus check due, cont same, review after 3 months",
+V043166,SVH028452,2026-08-27,General Medicine,Dr. Prakash Shenoy,follow up visit; HbA1c 6.4; c/o burning soles; review 3 months with HbA1c,
+V043169,SVH030161,2026-08-27,General Medicine,Dr. Prakash Shenoy,f/u visit; FBS 197; add 2nd OHA,
+V043170,SVH030487,2026-08-27,General Medicine,Dr. Prakash Shenoy,"easy fatiguability x 2 months; pallor +, no icterus; ?B12 deficiency; peripheral smear, B12 sent",
+V043171,SVH029830,2026-08-28,Dermatology,Dr. Nandini Iyengar,"Red itchy patches neck x 1 month. Erythematous papules, excoriation +. Eczema. Topical steroid x 1 wk, emollients",
+V043172,SVH027610,2026-08-28,Paediatrics,Dr. Joseph Kurian,"Came for booster dose, Wt on 50th centile, milestones normal, DPT booster given",
+V043173,SVH028388,2026-08-31,Orthopaedics,Dr. Farhan Qureshi,"Low back ache x 2 wks. Analgesics, muscle relaxant x 5 days.",
+V043176,SVH025948,2026-09-01,General Medicine,Dr. Prakash Shenoy,f/u visit; home GRBS 148-215; urine microalbumin adv; review 1 month,2026-10-02
+V043177,SVH029528,2026-09-02,Diabetology,Dr. Srikanth Rao,Diabetes mellitus. FBS 163 PPBS 251. Refer ophthal for fundus. Review 6 wks.,2026-10-17
+V043178,SVH030189,2026-09-02,Emergency,Dr. Naveen Poojary,"sudden onset abdominal pain x 3 hrs. IV PPI, observed 2 hrs, review in OPD",
+V043179,SVH025157,2026-09-03,Orthopaedics,Dr. Farhan Qureshi,"Low back ache x 6 wks. X-ray LS spine NAD. Lumbar spondylosis. Analgesics, muscle relaxant x 5 days.",
+V043180,SVH030487,2026-09-03,Diabetology,Dr. Srikanth Rao,Follow up visit. Home GRBS 126-168. BP 149/76. Cont same Rx.,
+V043181,SVH030795,2026-09-03,Orthopaedics,Dr. Farhan Qureshi,"Heel pain x 1 month, worse in morning. Plantar fasciitis. MCR footwear, stretching ex.",
+V043182,SVH026507,2026-09-04,General Medicine,Dr. Prakash Shenoy,"came for f/u; FBS 221, PPBS 327; c/o burning soles; refer ophthal for fundus",
+V043183,SVH030226,2026-09-04,Diabetology,Dr. Meghana Kamath,"routine f/u, FBS 170 PPBS 227, c/o burning soles, dose stepped up, review 2 months",2026-11-05
+V043184,SVH027113,2026-09-04,Diabetology,Dr. Srikanth Rao,Follow up visit. HbA1c 9.4. Review after 3 months.,
+V043185,SVH030554,2026-09-05,OBG,Dr. Kavya Menon,"PCOS f/u. Cycles regular on Rx. Cont metformin, wt reduction adv",
+V043186,SVH028910,2026-09-05,Orthopaedics,Dr. Farhan Qureshi,"k/c/o T2DM on OHA. b/l knee pain x 1 month. Crepitus +, no effusion. Wt reduction, physio x 10 days.",
+V043188,SVH027610,2026-09-05,Paediatrics,Dr. Joseph Kurian,"Fever, running nose, cough x 5/7, Active, hydration good, Viral URI, Tepid sponging, review 2 days",
+V043189,SVH027261,2026-09-09,Dermatology,Dr. Nandini Iyengar,"Itchy lesions web spaces, family members also. Burrows +, excoriated papules. Permethrin overnight, rpt after 1 wk, treat all contacts",
+V043190,SVH028189,2026-09-09,General Medicine,Dr. Prakash Shenoy,DM2 (1 yrs); home GRBS 183-236; cont same Rx,2026-12-10
+V043193,SVH029490,2026-09-10,General Medicine,Dr. Anitha Hegde,"Type 2 DM (1 yrs). FBS 113, PPBS 187. r/v 6/12",2027-03-09
+V043194,SVH027610,2026-09-10,Paediatrics,Dr. Joseph Kurian,"Feeling better, No fresh complaints, Review SOS",
+V043197,SVH025157,2026-09-11,Orthopaedics,Dr. Farhan Qureshi,Came with reports. All WNL. Reassured.,
+V043198,SVH026389,2026-09-11,General Medicine,Dr. Anitha Hegde,"c/o tiredness, breathless on climbing stairs x 2 wks. Pallor +, no icterus. Review 1 month",2026-09-25
+V043199,SVH030783,2026-09-14,General Medicine,Dr. Anitha Hegde,"Br asthma, occasional wheeze. RS: occasional rhonchi. Cont inhaler, technique checked",
+V043200,SVH026389,2026-09-14,General Medicine,Dr. Anitha Hegde,Review. Reports NAD. Cont Rx,
+V043201,SVH029373,2026-09-15,Emergency,Dr. Naveen Poojary,"severe R loin pain since morning, vomiting. inj analgesic given, USG KUB adv",
+V043202,SVH027034,2026-09-15,Orthopaedics,Dr. Farhan Qureshi,"Fall at home, pain R wrist. X-ray: undisplaced # distal radius. # distal radius. Below elbow cast applied, review 2 wks.",2026-10-13
+V043203,SVH027261,2026-09-16,Dermatology,Dr. Nandini Iyengar,Came with reports. All WNL. Reassured,
+V043204,SVH030347,2026-09-17,Diabetology,Dr. Srikanth Rao,Came for f/u. Sugars acceptable. Irregular with diet. Adv diet + daily walk. Review 3 months with HbA1c.,2026-12-15
+V043205,SVH028604,2026-09-17,General Medicine,Dr. Prakash Shenoy,"br asthma, occasional wheeze; cont inhaler, technique checked",2026-10-17
+V043207,SVH030828,2026-09-19,Dental,Dr. Harini Balan,c/o toothache lower R x 3 days. pulpitis 26. RCT adv,
+V043208,SVH028039,2026-09-19,Dermatology,Dr. Nandini Iyengar,"White patches over back x 6 wks. Fine scaly hypopigmented macules. Pityriasis versicolor. Antifungal lotion, review 4 wks",
+V043209,SVH025978,2026-09-20,General Medicine,Dr. Anitha Hegde,"Cold, cough, throat pain x 2 days. Throat congested, no LN. Cough syrup, warm fluids",2026-10-24
+V043210,SVH026662,2026-09-20,General Medicine,Dr. Anitha Hegde,"c/o burning micturition x 4 days. Plenty of oral fluids, antibiotics x 5 days",2026-10-12
+V043213,SVH030861,2026-09-21,Ophthalmology,Dr. Rekha Pillai,"Redness, watering L eye x 3 days; Antibiotic drops x 5 days, hand hygiene",
+V043214,SVH027161,2026-09-23,General Medicine,Dr. Anitha Hegde,"High grade fever x 2 days, headache, myalgia. No rash, no neck stiffness, chest clear. ?dengue, NS1 sent. CBC, MP sent, review with reports",2026-10-13
+V043216,SVH026034,2026-09-24,General Medicine,Dr. Prakash Shenoy,"c/o tiredness, breathless on climbing stairs x 6 wks; pallor +, no icterus; iron deficiency anaemia; oral iron x 3 months, deworming",
+V043217,SVH030754,2026-09-24,Dental,Dr. Harini Balan,"bleeding gums x 1/12. scaling done, OHI given",
+V043218,SVH025620,2026-09-26,Emergency,Dr. Naveen Poojary,"severe L loin pain since morning, vomiting. inj analgesic given, USG KUB adv",2026-10-17
+V043220,SVH024817,2026-09-26,General Medicine,Dr. Prakash Shenoy,"c/o giddiness on getting up x 5 days; BP 124/82, no nystagmus; postural giddiness; adequate fluids, rise slowly",
+V043223,SVH029984,2026-09-26,Ophthalmology,Dr. Rekha Pillai,"c/o glare at night, blurring R eye; VA 6/36 R, NS gr III; Senile cataract; Biometry done, surgery date to be fixed",2026-10-23
+V043226,SVH027648,2026-09-27,General Medicine,Dr. Anitha Hegde,"Pain and swelling R great toe x 2 days. MTP joint tender, erythema +. Acute gout. Low purine diet, plenty of water",
+V043228,SVH025658,2026-09-28,ENT,Dr. Vikram Gowda,"throat pain, difficulty swallowing x 2 days, tonsils enlarged gr II, congested, antibiotics x 5 days, warm saline gargles",2026-11-09
+V043230,SVH030869,2026-09-29,ENT,Dr. Vikram Gowda,"recurrent cold, watering of nose, antihistamine HS, avoid dust",
